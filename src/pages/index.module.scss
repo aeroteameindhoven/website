@@ -16,6 +16,11 @@ body{
 }
 
 
+.logo{
+    display: flex;
+    justify-content: flex-start;
+}
+
 .nav{
     display: flex;
     flex-direction: row-reverse;
