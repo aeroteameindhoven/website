@@ -1,9 +1,9 @@
 import { Link } from "gatsby";
 import * as React from "react";
-import { header, nav } from './index.module.scss';
+//import { header, nav } from './index.module.scss';
 
 
-
+/*
 const IndexPage = () => {
 
     return (
@@ -51,4 +51,4 @@ const IndexPage = () => {
     );
     };
   
-  export default IndexPage;
+  export default IndexPage;*/

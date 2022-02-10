@@ -1,18 +1,30 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import { header, nav, logo } from './index.module.scss';
+import Layout from "../components/layout";
 
 
-const IndexPage = () => {
+//var classNames = require('classnames');
+
+//var homeLogo = classNames(logo,nav);
+
+
+/*
+const IndexPage = (props) => {
+
+// Images, these need to be changed to the official images when they are available
+  const logoTop = "../images/placeHolders/logo.png";
+  //const globe = ;
 
   return (
     <div className = {header}>
       <nav>
-      <StaticImage className={logo}
+      <Link to= "index">
+      <StaticImage className={homeLogo}
+        src= {logoTop}
         alt = "placeholder logo"
-        src="../images/placeHolders/logo.png"
-        ></StaticImage>
+        />
+        </Link>
         <ul className={nav}>
           <li className={nav}>
             <Link to='/about' className={nav}>
@@ -47,16 +59,23 @@ const IndexPage = () => {
         </ul>
       </nav>
       <main>
-        <h1>Working towards a sustainable future</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-        <StaticImage
-        alt = "placeholder globe"
-        src="../images/placeHolders/globe.png"
-        ></StaticImage>
+        <Header />
+        {props.children}
+        <img className = {circle} ></img>
       </main>
    </div>
 
   );
   };
+  */
 
-export default IndexPage;
+  const Index = () => {
+    return (
+      <Layout>
+        <h1>Towards a sustainable future</h1>
+        <h2>test</h2>
+      </Layout>
+    );
+  };
+  
+  export default Index;
