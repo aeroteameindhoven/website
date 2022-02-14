@@ -3,7 +3,16 @@ module.exports = {
       title: `Aero Team Eindhoven`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: [{
+  plugins: [
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/
+        }
+      }
+    },
+    {
     resolve: 'gatsby-source-wordpress',
     options: {
       "url": "https://aeroteameindhoven.nl/graphql"
@@ -32,5 +41,6 @@ module.exports = {
         jsxPragma: `jsx`, // defaults to "React"
         allExtensions: true, // defaults to false
       },
+      
     }]
 };

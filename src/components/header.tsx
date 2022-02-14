@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
-import {header, nav} from './index.module.scss';
+import {header, nav, logo} from './styles/index.module.scss';
+import Logo from "../svg/navLogo.svg";
+//<Logo className = {logo} />
 
 const Header = () => {
   return (
   <header className={header}>
     <nav>
+    <Logo className = {logo} />
     <ul className={nav}>
           <li className={nav}>
             <Link to='/about' className={nav}>

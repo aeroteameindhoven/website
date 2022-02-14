@@ -1,0 +1,12 @@
+@import "./main.scss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+.sitefooter {
+    background-color: $primary-pink;
+    color: $primary-white;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 1rem;
+  }

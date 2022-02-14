@@ -1,11 +1,15 @@
 import React from "react";
+//import {footer} from './index.module.scss';
+import {sitefooter, container} from './styles/footer.module.scss';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className = {sitefooter}>
+      <div className = {container}>
       <p>
-        Site developed by AeroTeam Eindhoven &copy; {new Date().getFullYear().toString()}{" "}
+        Copyright  © Aero team Eindhoven &copy; {new Date().getFullYear().toString()}{" "}
       </p>
+      </div>
     </footer>
   );
 };
