@@ -11,7 +11,7 @@ body{
 }
 
 // Header page
-.header, h1, h2 {
+.header, h1 {
     color: $primary-white;
     position: relative;
     font-weight: 400;
@@ -19,15 +19,24 @@ body{
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
     text-align: center;
 }
-
-.footer {
-    color : $primary-white;
-    flex-direction: column-reverse;
+h1::after{
+    content: attr(data-end);
+    color: $primary-pink;
 }
 
+
 // Navigation bar
+.logo{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80px;
+
+}
+
 .nav{
-    display: flex;
+    display: inline-flex;
+    //align-content: flex-end;
     flex-direction: row-reverse;
     justify-content: flex-start;
     gap: 15px;
@@ -44,12 +53,6 @@ body{
         //text-decoration: underline;
     }
 }
-}
-
-.logo{
-    width: 150px;
-    align-self: flex-start;
-    vertical-align: top;
 }
 
 .content{

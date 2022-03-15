@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
       title: `Aero Team Eindhoven`,
+      description: "Exploring the edge of sustainable delivery.",
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [

@@ -1,16 +1,30 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import {header, nav, logo} from './styles/index.module.scss';
 import Logo from "../svg/navLogo.svg";
 //<Logo className = {logo} />
 
+
 const Header = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }
+    `
+  )
   return (
   <header className={header}>
     <nav>
     <Logo className = {logo} />
     <ul className={nav}>
           <li className={nav}>
+          <Link to="/">{data.site.siteMetadata.title}</Link>
             <Link to='/about' className={nav}>
               About Us
             </Link>

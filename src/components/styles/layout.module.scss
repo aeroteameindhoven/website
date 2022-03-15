@@ -1,4 +1,4 @@
-@import "./styles/main.scss";
+@import "./main.scss";
 //@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
 
 .container {
@@ -11,7 +11,7 @@
   flex-grow: 1;
 }
 
-.main-content {
+.mainContent {
   margin: 0 auto;
   max-width: 750px;
   padding: 3rem 1rem 4rem;
