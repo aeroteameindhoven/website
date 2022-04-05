@@ -1,0 +1,75 @@
+@import "./styles/main.scss";
+
+.HomePageSideSection {
+  color: $primary-blue;
+
+  h2.title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+  }
+
+  .text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    padding-bottom: 30px;
+
+    .text {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 120px solid $primary-pink;
+
+      position: absolute;
+
+      left: -40px;
+    }
+  }
+
+  a.button {
+    // background-color: $primary-blue;
+    background: radial-gradient(at bottom right, rgba(255, 255, 255, 0.4) 0%, $primary-blue 60%);
+    outline: none;
+    border: none;
+    padding: 20px 30px;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    transition: box-shadow 200ms ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.26);
+
+    &:hover {
+      // background: radial-gradient(at bottom right, rgba(255, 255, 255, 1) 0%, $primary-blue 70%);
+      cursor: pointer;
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.26);
+    }
+  }
+}
+
+.HomePageSideSection.right {
+  text-align: right;
+
+  .text-wrapper {
+    flex-direction: row-reverse;
+
+    .triangle {
+      left: unset;
+      right: -40px;
+    }
+  }
+}
+
+// $primary-blue: #002878;
+// $primary-pink: #ff6464;

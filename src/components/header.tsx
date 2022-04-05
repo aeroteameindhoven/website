@@ -1,48 +1,82 @@
 import React from "react";
 import { Link } from "gatsby";
-import {header, nav, logo} from './styles/index.module.scss';
-import Logo from "../svg/navLogo.svg";
-//<Logo className = {logo} />
+import {
+  header,
+  nav,
+  listItem,
+  navList,
+  logo,
+  disabled,
+} from "./styles/header.module.scss";
+import Logo from "../svg/white-horizontal.svg";
+import ReactTooltip from "react-tooltip";
+import { Container } from "react-grid-system";
 
 const Header = () => {
   return (
-  <header className={header}>
-    <nav>
-    <Logo className = {logo} />
-    <ul className={nav}>
-          <li className={nav}>
-            <Link to='/about' className={nav}>
-              About Us
-            </Link>
-          </li>
-          <li className={nav}>
-            <Link to="/project" className={nav}>
-              Project
-            </Link>
-          </li>
-          <li className={nav}>
-            <Link to="/journey" className={nav}>
-              Our Journey
-            </Link>
-          </li>
-          <li className={nav}>
-            <Link to="/partners" className={nav}>
-              Partners
-            </Link>
-          </li>
-          <li className={nav}>
-            <Link to="/join" className={nav}>
-              Join
-            </Link>
-          </li>
-          <li className={nav}>
-            <Link to="/contact" className={nav}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-  </header>
+    <Container>
+      <header className={header}>
+        <Link to="/">
+          <Logo className={logo} />
+        </Link>
+
+        <ReactTooltip />
+        <nav>
+          <ul className={navList}>
+            <li className={listItem}>
+              <Link
+                to="/about-us"
+                className={nav + " " + disabled}
+                data-tip="This page is under construction"
+              >
+                About Us
+              </Link>
+            </li>
+            <li className={listItem}>
+              <Link to="/project" className={nav}>
+                Project
+              </Link>
+            </li>
+            <li className={listItem}>
+              <Link
+                to="/journey"
+                className={nav + " " + disabled}
+                data-tip="This page is under construction"
+              >
+                Our Journey
+              </Link>
+            </li>
+            <li className={listItem}>
+              <Link
+                to="/partners"
+                className={nav + " " + disabled}
+                data-tip="This page is under construction"
+              >
+                Partners
+              </Link>
+            </li>
+            <li className={listItem}>
+              <Link
+                to="/join"
+                className={nav + " " + disabled}
+                data-tip="This page is under construction"
+              >
+                Join
+              </Link>
+            </li>
+            <li className={listItem}>
+              <Link
+                to="/contact"
+                className={nav + " " + disabled}
+                data-tip="This page is under construction"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </Container>
   );
 };
 
