@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Aero Team Eindhoven`,
-    siteUrl: `https://aeroteameindhoven.nl`,
+    siteUrl: `https://aeroteameindhoven.nl`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -9,9 +9,9 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /svg/,
-        },
-      },
+          include: /svg/
+        }
+      }
     },
     // {
     //   resolve: "gatsby-source-wordpress",
@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-WN8X4H8WCY",
-      },
+        trackingId: "G-WN8X4H8WCY"
+      }
     },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
@@ -32,8 +32,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
-      },
+        icon: "src/images/icon.png"
+      }
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -41,17 +41,17 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/images/"
       },
-      __key: "images",
+      __key: "images"
     },
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
         isTSX: true, // defaults to false
         jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
-      },
-    },
-  ],
+        allExtensions: true // defaults to false
+      }
+    }
+  ]
 };
