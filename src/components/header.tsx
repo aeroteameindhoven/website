@@ -27,6 +27,11 @@ const Header = () => {
               </Link>
             </li>
             <li className={listItem}>
+              <Link to="/team" className={nav}>
+                Team
+              </Link>
+            </li>
+            <li className={listItem}>
               <Link to="/journey" className={nav + " " + disabled} data-tip="This page is under construction">
                 Our Journey
               </Link>

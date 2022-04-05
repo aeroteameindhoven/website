@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-grid-system";
 import HomePageSideSection from "../components/homePageSideSection";
 import Layout from "../components/layout";
 import renderImage from "../images/render01.png";
+import test1 from "../images/test2.png";
 import "../components/styles/home.scss";
 import GlobeIllustration from "../images/globe.svg";
 
@@ -62,7 +63,10 @@ const Index = () => {
                   />
                 </Col>
                 <Col lg={6}>
-                  <img className="render-image" src={renderImage} alt="3D Render of the drone concept" />
+                  <div className="render-container">
+                    <img className="render-background" src={test1} alt="3D Render of the drone concept" />
+                    <img className="render-image" src={renderImage} alt="3D Render of the drone concept" />
+                  </div>
                 </Col>
               </Row>
             </Container>

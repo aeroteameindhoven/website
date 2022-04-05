@@ -40,8 +40,8 @@
             background-image: url("../../images/air.jpg");
             background-size: cover;
             // Offset the background so it starts at the lightblue part
-            background-position: 0 -800px;
-            filter: blur(8px);
+            background-position: bottom;
+            filter: blur(9px);
             position: absolute;
             top: 0;
             bottom: 0;
@@ -52,7 +52,7 @@
         .air-content {
             position: relative;
             height: 100%;
-            padding: 200px 80px;
+            padding: 200px 80px 300px;
 
             .group-photo {
                 max-width: 600px;
@@ -70,10 +70,23 @@
         }
     }
 
-    .render-image {
-        max-width: 90%;
-        display: block;
+    .render-container {
         padding-left: 30px;
+        position: relative;
+        
+        .render-background {
+            position: absolute;
+            max-width: 100%;
+            display: block;
+        }
+    
+        .render-image {
+            position: absolute;
+            max-width: 100%;
+            display: block;
+            filter: brightness(110%)
+        }
     }
+
 
 }
