@@ -27,8 +27,8 @@ const Header = () => {
               </Link>
             </li>
             <li className={listItem}>
-              <Link to="/team" className={nav}>
-                Team
+              <Link to="/teams" className={nav}>
+                Teams
               </Link>
             </li>
             <li className={listItem}>

@@ -1,0 +1,1037 @@
+{
+"teamMembers" : 
+[
+    {
+        "year": "Bluejay",
+        "lastName": "Syfly"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Tessie",
+        "role": "2019-2022",
+        "period": "Team Manager & Co-Founder",
+        "undefined": "Team Lead"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Lex",
+        "role": "2019-2022",
+        "period": "Acquisition Manager & Co-Founder",
+        "undefined": "Team Manager"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Sil",
+        "role": "2020-2022",
+        "period": "Project Manager",
+        "undefined": "Financial Manager"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Victor",
+        "role": "2021-2022",
+        "period": "External Relations",
+        "undefined": "Promotion Manager"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Rebecca",
+        "role": "2019-2022",
+        "period": "Account Manager",
+        "undefined": "Subteam lead Harvesting"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Bas",
+        "role": "2021-2022",
+        "period": "Logistics Manager",
+        "undefined": "Hardware engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Joep",
+        "role": "2020-2022",
+        "period": "System Architect",
+        "undefined": "Software engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Thomas",
+        "role": "2021-2022",
+        "period": "Mechanical Engineer",
+        "undefined": "Software engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Has",
+        "role": "2020-2022",
+        "period": "Mechanical Engineer",
+        "undefined": "Hardware engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Daniël",
+        "role": "2019-2022",
+        "period": "Control & Powertrain Engineer",
+        "undefined": "Software engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Daan",
+        "role": "2021-2022",
+        "period": "Software Architect",
+        "undefined": "Hardware engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Koen",
+        "role": "2021-2022",
+        "period": "Software Engineer",
+        "undefined": "Hardware engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Tomas",
+        "role": "Vella Bamber",
+        "period": "Designer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Sfia",
+        "role": "Bearzatto",
+        "period": "Control Engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Ruben",
+        "role": "van Dijk",
+        "period": "Designer",
+        "undefined": "Ex-Syfly"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Felix",
+        "role": "2019-2021",
+        "period": "Designer",
+        "undefined": "Team lead"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Pieter",
+        "role": "2020-2021",
+        "period": "Treasurer & Object Recognition Engineer",
+        "undefined": "Hardware engineer"
+    },
+    {
+        "team": "2015-2016",
+        "firstName": "Team 1",
+        "lastName": "Wouter",
+        "role": "2019-2021",
+        "period": "Software Engineer",
+        "undefined": "Acquisition"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Ties",
+        "role": "2019-2022",
+        "period": "Team Manager",
+        "undefined": "Subteam lead Tesseract"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Dennis",
+        "role": "2019-2021",
+        "period": "Project Manager",
+        "undefined": "Software engineer"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Rosa",
+        "role": "2019-2021",
+        "period": "Account Manager",
+        "undefined": "Hardware engineer / acquisition"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Lars",
+        "role": "2019-2021",
+        "period": "Financial Manager",
+        "undefined": "Hardware engineer"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Rens",
+        "role": "2020-2021",
+        "period": "Hardware Architect",
+        "undefined": "Promotion Manager / acquisition"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Iris",
+        "role": "2019-2021",
+        "period": "Software Architect",
+        "undefined": "Team lead"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Valerie",
+        "role": "2019-2021",
+        "period": "Electrical Engineer",
+        "undefined": "Software engineer"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Frederique",
+        "role": "2019-2021",
+        "period": "Interaction Design Engineer",
+        "undefined": "Hardware engineer"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Ileen",
+        "role": "2019-2021",
+        "period": "PR Manager & Interaction Designer",
+        "undefined": "Pilot / Hardware engineer"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Martijn",
+        "role": "2020-2021",
+        "period": "Innovation Accelerator",
+        "undefined": "Subteam lead Harvesting"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Deovrat",
+        "role": "2019-2021",
+        "period": "Electrical Engineer",
+        "undefined": "Software engineer"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Victor",
+        "role": "2019-2020",
+        "period": "Electrical Engineer",
+        "undefined": "Software engineer"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Stijn",
+        "role": "Ebbers",
+        "period": "Designer"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Ilse",
+        "role": "Pouwels",
+        "period": "Interaction Design"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Olivier",
+        "role": "van Duuren",
+        "period": "Interaction Design"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Advait",
+        "role": "Kumar",
+        "period": "Software"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Lorenzo",
+        "role": "Verri",
+        "period": "Software"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Antoni",
+        "role": "Riera Segui",
+        "period": "Software"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Akarsh",
+        "role": "Sinha",
+        "period": "Systems & Control"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Pim",
+        "role": "van Dommelen",
+        "period": "Hardware"
+    },
+    {
+        "team": "2016-2017",
+        "firstName": "Team 2",
+        "lastName": "Daan",
+        "role": "Heijsters",
+        "period": "Strategy"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Liza",
+        "role": "Boormans",
+        "period": "Team Manager"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Mike",
+        "role": "van Sighem",
+        "period": "Project Manager"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Pim",
+        "role": "van Dommelen",
+        "period": "Lead Mechanical Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Niels",
+        "role": "Rood",
+        "period": "Lead Software Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Gabriela",
+        "role": "Feijoo",
+        "period": "Lead Interaction Design Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Yasmine",
+        "role": "Bartelds",
+        "period": "Electrical Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Jari",
+        "role": "van Ewijk",
+        "period": "Electrical Engineer & Software Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Max",
+        "role": "Alden-Montague",
+        "period": "Mechanical Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Derck",
+        "role": "Chu",
+        "period": "Financial Manager & Interaction Designer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Stefan",
+        "role": "Cornelissen",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Iza",
+        "role": "Linders",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Kilian",
+        "role": "van Berlo",
+        "period": "Software & Interaction Design Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Shashank",
+        "role": "Kalavara",
+        "period": "Electronics Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Jiachi",
+        "role": "Zou",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Catherine",
+        "role": "Taelman",
+        "period": "Software Engineer & Newsletter Manager"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Jens",
+        "role": "Bongaerts",
+        "period": "Graphic Designer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Joseph",
+        "role": "Benny",
+        "period": "System Control Engineer"
+    },
+    {
+        "team": "2017-2018",
+        "firstName": "Team 3",
+        "lastName": "Ankit",
+        "role": "Khanore",
+        "period": "System Control Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Emmie",
+        "role": "Schoutens",
+        "period": "PR Manager"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Rik",
+        "role": "Benoist",
+        "period": "Manager"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Suzanne",
+        "role": "Blokland",
+        "period": "Interaction Design Engineer & Recruitment Manager"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Stef",
+        "role": "Jansen",
+        "period": "HR Manager"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Lars",
+        "role": "Hagendoorn",
+        "period": "Event Manager"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Thijs",
+        "role": "Jenneskens",
+        "period": "Lead Software Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Charchika",
+        "role": "Sinha",
+        "period": "Lead AI Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Tijn",
+        "role": "Dieker",
+        "period": "Lead Interaction Design Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Lars",
+        "role": "Zender",
+        "period": "Lead Mechanical Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Guus",
+        "role": "Westendorp",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Olivier",
+        "role": "Spinnler",
+        "period": "AI Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Pablo",
+        "role": "Traversat",
+        "period": "Design Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Mayukh",
+        "role": "Samanta",
+        "period": "Electrical Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Karsten",
+        "role": "Schenk",
+        "period": "Mechanical Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Maria",
+        "role": "Pravin",
+        "period": "AI Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Evie",
+        "role": "de Fouw",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Bram",
+        "role": "Peters",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Sabina",
+        "role": "Pencheva",
+        "period": "AI Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Dirk",
+        "role": "Floren",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2018-2019",
+        "firstName": "Team 4",
+        "lastName": "Vimukthi",
+        "role": "Gunatilleke",
+        "period": "Design Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Marieke",
+        "role": "Vermeulen",
+        "period": "Finance & PR Manager"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Anne",
+        "role": "Smits",
+        "period": "Teams & Project Manager"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Daphne",
+        "role": "van Kuppeveld",
+        "period": "Event Manager"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Florian",
+        "role": "Blom",
+        "period": "Lead Hardware"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Niels",
+        "role": "Verstappen",
+        "period": "Lead Software & AI"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Levy",
+        "role": "van Kempen",
+        "period": "Lead Interaction Design"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Fanni",
+        "role": "Egresits",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Tijmen",
+        "role": "Poell",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Isabel",
+        "role": "Leus",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Susanne",
+        "role": "Loevenberg",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Darryl",
+        "role": "Kock",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Marloes",
+        "role": "van der Burgt",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Jort",
+        "role": "Moor",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Thomas",
+        "role": "van der Sterren",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Rawah",
+        "role": "Abdul Rasheed",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Rahul",
+        "role": "Ramesh",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Joshua",
+        "role": "de Leeuw",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Aditya",
+        "role": "Raghunath",
+        "period": "AI Engineer"
+    },
+    {
+        "team": "2019-2020",
+        "firstName": "Team 5",
+        "lastName": "Blazej",
+        "role": "Manczak",
+        "period": "AI Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Paul",
+        "role": "van Kuppevelt",
+        "period": "Team & Finance Manager"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Luuk",
+        "role": "Baltissen",
+        "period": "Project & PR Manager"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Robin",
+        "role": "van Meijel",
+        "period": "Finance Associate"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Sanne",
+        "role": "van de Vorst",
+        "period": "Event Manager"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Patrick",
+        "role": "Biemans"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Ren Shin",
+        "role": "Li",
+        "period": "Lead Hardware"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Jop",
+        "role": "Hendrikx",
+        "period": "Lead Software & AI"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Rik",
+        "role": "Schutte",
+        "period": "Lead Interaction Design"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Prasanjan",
+        "role": "Chattopadhyay",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Athalla",
+        "role": "Fakhrudin",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Ronald",
+        "role": "de Jong",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Ryoga",
+        "role": "Matsuo",
+        "period": "Hardware & Software Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Hoang",
+        "role": "Nguyen",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Joshua",
+        "role": "de Leeuw",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Saharsh",
+        "role": "Bansal",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Vishnu",
+        "role": "Vivek",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Quoc",
+        "role": "Nguyen",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Simeon",
+        "role": "Stoyanoc",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Mattijs",
+        "role": "van de Vosse",
+        "period": "Software Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Fleur",
+        "role": "de Korver",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Sterre",
+        "role": "Cuppens",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Yana",
+        "role": "Onushkina",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Yulin",
+        "role": "Su",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2020-2021",
+        "firstName": "Team 6",
+        "lastName": "Pien",
+        "role": "Derikx",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Mattijs",
+        "role": "van de Vosse",
+        "period": "Team Leader & Finance"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Daan",
+        "role": "Hegger",
+        "period": "Partnership Manager"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Tom",
+        "role": "Koevoets",
+        "period": "Project Manager"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Maureen",
+        "role": "van de Kruijs",
+        "period": "Event Manager & Interaction Design"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Oyku",
+        "role": "Sanlibayrak",
+        "period": "PR Manager"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Ryoga",
+        "role": "Matsuo",
+        "period": "Lead Software & AI"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Hoang",
+        "role": "Nguyen",
+        "period": "Software & AI Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Stefan",
+        "role": "Hobeijn",
+        "period": "Software & AI Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Bartan",
+        "role": "Oren",
+        "period": "Software & AI Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Ibrahim",
+        "role": "Nasr",
+        "period": "Software & AI Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Isa",
+        "role": "Dantuma",
+        "period": "Lead Interaction Design"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Marthe",
+        "role": "Post",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Ilse",
+        "role": "Doornbusch",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Kaj",
+        "role": "Stolle",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Youssef",
+        "role": "Selim",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Jai",
+        "role": "Wientjes",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Maud",
+        "role": "Vermeulen",
+        "period": "Interaction Design Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Robin",
+        "role": "Smit",
+        "period": "Lead Hardware"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Ruben",
+        "role": "de Jonge",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Efe",
+        "role": "Erturk",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Quentin",
+        "role": "Missinne",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Youssef",
+        "role": "Elgohary",
+        "period": "Hardware Engineer"
+    },
+    {
+        "team": "2021-2022",
+        "firstName": "Team 7",
+        "lastName": "Saurev",
+        "role": "Sureka",
+        "period": "Hardware Engineer"
+    }
+]
+}
