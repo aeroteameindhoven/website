@@ -4,7 +4,6 @@
 // Background of website
 body {
   min-height: 100vh;
-  background: linear-gradient(#021e3a, $primary-blue, #021e3a) fixed;
   font-family: "DM Sans", sans-serif;
   margin: 0;
   line-height: 1.4283;
@@ -12,6 +11,16 @@ body {
   width: 100%;
   flex-direction: column;
   color: white;
+}
+
+.blue-gradient-bg {
+  background: radial-gradient(at bottom center, #103a8d 0%,  #021e3a 70%) fixed;
+  // background: radial-gradient(at bottom right, rgba(255, 255, 255, 0.4) 0%, $primary-blue 60%);
+  
+  &.fullHeight {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 h1,

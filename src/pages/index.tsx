@@ -1,39 +1,48 @@
 import * as React from "react";
-import { Container, Row, Col } from "react-grid-system";
+import { Container, Row, Col, ScreenClassRender } from "react-grid-system";
 import HomePageSideSection from "../components/homePageSideSection";
 import Layout from "../components/layout";
 import renderImage from "../images/render01.png";
 import test1 from "../images/test2.png";
 import "../components/styles/home.scss";
 import GlobeIllustration from "../images/globe.svg";
+import TUELogo from "../images/tue.svg";
 
 const Index = () => {
   return (
-    <Layout>
-      <div className="homepage">
-        <div style={{ height: 100 }} />
-        <div className="content-wrapper">
-          <Container>
-            <Row>
-              <Col lg={6}>
-                <h1 className="slogan">
-                  Redefine Flying<span className="dot">.</span>
-                </h1>
-                <h2 className="secundary">
-                  Developing an autonomous drone network
-                  <br /> for sustainable transport
-                  <br /> by zero-emission in air delivery
-                </h2>
-              </Col>
-              <Col lg={6}>
-                <div className="globe-container">
-                  <GlobeIllustration className="globe" />
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+    <Layout
+      fullScreenHeader
+      postHeader={
+        <div className="homepage-preheader">
+          <div className="content-wrapper">
+            <Container>
+              <Row>
+                <Col lg={12}>
+                  <h1 className="slogan">
+                    Redefine Flying<span className="dot">.</span>
+                  </h1>
+                  <h2 className="secundary">
+                    Developing an autonomous drone network
+                    <br /> for sustainable transport
+                    <br /> by zero-emission in air delivery <br />
+                    <br />
+                    <div className="studentteam">
+                      <span className="pre-tue">Official student team of</span>
+                      <a href="https://tue.nl" target="_blank" rel="noreferrer">
+                        <TUELogo className="tue-logo" />
+                      </a>
+                    </div>
+                  </h2>
+                </Col>
+              </Row>
+            </Container>
 
+            <GlobeIllustration className="globe" />
+          </div>
+        </div>
+      }
+    >
+      <div className="homepage">
         <div className="air-wrapper">
           <div className="air" />
           <div className="air-content">

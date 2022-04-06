@@ -1,40 +1,84 @@
 @import "./main.scss";
 
-.homepage {
+// Part of the homepage that in directly under the header
+// with the blue background
+.homepage-preheader {
+    height: 100%;
     .content-wrapper {
         color: white;
         padding: 80px 0 400px;
+        position: relative;
+        height: 100%;
 
         .slogan {
-            margin-top: 100px;
+            margin-top: 0;
             font-size: 50px;
             text-transform: uppercase;
+        }
+
+        .dot {
+            color: $primary-pink;
         }
     
         .secundary {
             font-size: 25px;
         }
-    
-        .dot {
-            color: $primary-pink;
+
+        .pre-tue {
+            padding-right: 10px;
         }
-    
-        .globe-container {
-            display: flex;
-            justify-content: flex-end;
-    
-            .globe {
-                fill: white;
-                max-width: 400px;
-            }
+
+        .tue-logo {
+            width: 180px;
+            display: inline;
+            position: relative;
+            top: 10px;
+        }
+
+        .tue-logo * {
+            fill: white !important;
+        }
+
+        .globe {
+            fill: rgba(255, 255, 255, 0.8);
+            display: block;
+            width: 90%;
+            max-width: min(1200px, 100vh);
+            position: absolute;
+            transform: translate(-50%, 50%);
+            left: 50%;
+            bottom: 0;
+
+            animation: glow 1500ms ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction:  alternate;
+            
+            // OPTIONAL: when the user hovers over the globe it stays fully white
+            // transition: fill 300ms ease-in-out;
+            // &:hover {
+            //     fill: rgba(255, 255, 255, 0.95);
+            //     animation: none;
+            // }
         }
     }
+}
 
+// Animation for the glowing effect of the globe
+@keyframes glow {
+    from {
+        fill: rgba(255, 255, 255, 0.8);
+    }
+    to {
+        fill: rgba(255, 255, 255, 1);
+    }
+}
 
+.homepage {
     // The part where the homepage background turns into the air background
     .air-wrapper {
         position: relative;
         background: white;
+        box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.5) inset;
 
         .air {
             background-image: url("../../images/air.jpg");
