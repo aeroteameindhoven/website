@@ -1,0 +1,20 @@
+.CompactNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .main-logo {
+    width: 300px;
+    height: 30px;
+  }
+
+  .hamburger-icon {
+    width: 30px;
+    height: 30px;
+
+    * {
+      fill: white;
+    }
+  }
+}

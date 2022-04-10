@@ -7,7 +7,7 @@ import Helmet from "react-helmet";
 import classNames from "classnames";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   pageTitle?: string;
   postHeader?: React.ReactNode;
   fullScreenHeader?: boolean;

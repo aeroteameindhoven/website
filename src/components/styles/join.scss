@@ -1,0 +1,89 @@
+
+@import "./main.scss";
+
+.join-page {
+  padding-top: 100px;
+
+  .join-header {
+    padding-bottom: 50px;
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  .a {
+    height: 1100px;
+  }
+
+  .vacancy {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin-bottom: 30px;
+    
+    background-size: cover;
+    background-position: center;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    transition: box-shadow 150ms ease-in-out; 
+    overflow: hidden;
+
+    &.management {
+      background-image: url("../../images/join/management.jpg");
+    }
+
+    &.engineering {
+      background-image: url("../../images/join/engineer.jpg");
+    }
+
+    &.marketing {
+      background-image: url("../../images/join/marketing.jpg");
+    }
+
+    &.interactionresearch {
+      background-image: url("../../images/join/interaction.jpg");
+    }
+
+    .extra {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 100%;
+      left: 0;
+      background-color: rgba($primary-blue, 0.8);
+      padding: 18px;
+      padding-top: 100px;
+      transition: all 300ms ease-in-out;
+      font-size: 18px;
+    }
+
+    .text {
+      padding: 14px 20px ;
+      font-size: 18px;
+      // background-color: $primary-blue;
+      background-color: rgba($primary-pink, 0.7);
+      border-radius: 40px;
+      margin-bottom: 15px;
+      z-index: 120;
+      position: relative;
+      transition: all 300ms ease-in-out;
+    }
+
+    &:hover {
+      .text {
+        transform: translateY(-260px);
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      .extra {
+        top: 0;
+      }
+    }
+  }
+}

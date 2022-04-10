@@ -1,3 +1,10 @@
+/* 
+ * Purpose:
+ * Assign height: "100%" to
+ * html, body, #___gatsby &  
+ * div with role="group"
+*/
+
 html, body, #___gatsby {
     height: 100%;
 }

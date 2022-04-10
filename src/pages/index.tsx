@@ -20,6 +20,7 @@ const Index = () => {
                 <Col lg={12}>
                   <h1 className="slogan">
                     Redefine Flying<span className="dot">.</span>
+                    <ScreenClassRender render={(screenClass) => screenClass} />
                   </h1>
                   <h2 className="secundary">
                     Developing an autonomous drone network

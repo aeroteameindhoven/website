@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
-import { header, nav, listItem, navList, logo, disabled } from "./styles/header.module.scss";
-import Logo from "../svg/white-horizontal.svg";
-import { Container } from "react-grid-system";
+import { header } from "./styles/header.module.scss";
+import { Container, Visible } from "react-grid-system";
+import CompactNav from "./layout/CompactNav";
+import FullsizeNav from "./layout/FullsizeNav";
 
 interface Props {
   children?: React.ReactNode;
@@ -18,49 +18,12 @@ const Header: React.FC<Props> = ({ children }) => {
     <div className="Header">
       <Container>
         <header className={header}>
-          <Link to="/">
-            <Logo className={logo} />
-          </Link>
-
-          <nav>
-            <ul className={navList}>
-              <li className={listItem}>
-                <Link to="/about-us" className={nav + " " + disabled} data-tip="This page is under construction">
-                  About Us
-                </Link>
-              </li>
-              <li className={listItem}>
-                <Link to="/project" className={nav}>
-                  Project
-                </Link>
-              </li>
-              <li className={listItem}>
-                <Link to="/team" className={nav}>
-                  Team
-                </Link>
-              </li>
-              <li className={listItem}>
-                <Link to="/journey" className={nav + " " + disabled} data-tip="This page is under construction">
-                  Our Journey
-                </Link>
-              </li>
-              <li className={listItem}>
-                <Link to="/partners" className={nav + " " + disabled} data-tip="This page is under construction">
-                  Partners
-                </Link>
-              </li>
-              <li className={listItem}>
-                <Link to="/join" className={nav + " " + disabled} data-tip="This page is under construction">
-                  Join
-                </Link>
-              </li>
-              <li className={listItem}>
-                <Link to="/contact" className={nav + " " + disabled} data-tip="This page is under construction">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          <Visible xs sm md>
+            <CompactNav />
+          </Visible>
+          <Visible lg xl xxl xxxl>
+            <FullsizeNav />
+          </Visible>
         </header>
       </Container>
       {children && <div className="post-header">{children}</div>}
