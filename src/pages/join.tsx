@@ -21,6 +21,18 @@ const Join = () => {
                 where students from various study programs come together to create solutions for aerial transportation?
                 You can apply by sending your resume and motivation letter to join@aeroteameindhoven.nl!
               </div>
+              <p>
+                Within Aero Team Eindhoven you have the possibility and flexibility to choose how you want to contribute
+                to our cause. With positions ranging from part-time options next to your studies to opting for a gap
+                year as a board member, you have the flexibility to see what fits you and the team best. Like every
+                other team, Aero requires a management subteam responsible for project management, finance, partners,
+                etc. Are you into engineering? Aero has a wide variety of engineering teams, ranging from software to
+                electronics and hardware.
+              </p>
+
+              <div className="button-wrapper">
+                <MailA className="apply-button">Apply now!</MailA>
+              </div>
             </div>
 
             <Row>
@@ -37,7 +49,6 @@ const Join = () => {
               ))}
             </Row>
           </Container>
-          <div className="a" />
         </div>
       }
     />
@@ -56,11 +67,29 @@ const vacancies = [
     text: "As an engineer you are in charge of researching, designing and developing crucial technology for the future of aerial transportation. You will be working together in a multidisciplinary team of students of various backgrounds towards a single goal."
   },
   {
-    title: "Marketing"
+    title: "Marketing",
+    text: "As a marketing member, you will be thinking of various different and creative ways to make Aero team Eindhoven known to students, people and companies. Create social media posts, set-up events, design team clothing and anything else you can think of."
   },
   {
-    title: "Interaction Research"
+    title: "Interaction Research",
+    text: "As an interaction research member, you will be investigating how people react to drones and how we can adapt our design process to better accommodate the integration of drones within society through various technologies like Virtual Reality."
   }
 ];
 
 const toClass = (s: string) => s.replace(" ", "").toLowerCase();
+
+interface MailAProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const MailA: React.FC<MailAProps> = ({ children, className }) => {
+  return (
+    <a
+      href={`mailto:join@aeroteameindhoven.nl?subject=Interest in joining Aero Team Eindhoven!&body=Tell us about yourself!`}
+      className={className}
+    >
+      {children}
+    </a>
+  );
+};

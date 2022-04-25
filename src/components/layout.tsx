@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import "./styles/index.scss";
-import { content } from "./styles/layout.module.scss";
+import { layoutWrapper, content } from "./styles/layout.module.scss";
 import Helmet from "react-helmet";
 import classNames from "classnames";
 
@@ -15,7 +15,7 @@ interface Props {
 
 const Layout: React.FC<Props> = (props) => {
   return (
-    <div>
+    <div className={layoutWrapper}>
       <Helmet defaultTitle="Aero Team Eindhoven" titleTemplate="%s | Aero Team Eindhoven">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=awoinurniahdw" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=awoinurniahdw" />

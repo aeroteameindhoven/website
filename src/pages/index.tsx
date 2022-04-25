@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Container, Row, Col, ScreenClassRender } from "react-grid-system";
+import { Container, Row, Col } from "react-grid-system";
 import HomePageSideSection from "../components/homePageSideSection";
 import Layout from "../components/layout";
 import renderImage from "../images/render01.png";
@@ -7,6 +7,9 @@ import test1 from "../images/test2.png";
 import "../components/styles/home.scss";
 import GlobeIllustration from "../images/globe.svg";
 import TUELogo from "../images/tue.svg";
+
+import "react-slideshow-image/dist/styles.css";
+import { Fade } from "react-slideshow-image";
 
 const Index = () => {
   return (
@@ -20,7 +23,6 @@ const Index = () => {
                 <Col lg={12}>
                   <h1 className="slogan">
                     Redefine Flying<span className="dot">.</span>
-                    <ScreenClassRender render={(screenClass) => screenClass} />
                   </h1>
                   <h2 className="secundary">
                     Developing an autonomous drone network
@@ -50,15 +52,26 @@ const Index = () => {
             <Container>
               <Row>
                 <Col lg={6}>
-                  <div className="group-photo">group photo</div>
+                  <div className="group-photo">
+                    <Fade>
+                      {[1, 2, 3].map((slideImage, index) => (
+                        <div className="each-fade" key={index}>
+                          <div
+                            className="each-photo"
+                            style={{ backgroundImage: `url("/homepage-slides/${slideImage}.jpg")` }}
+                          />
+                        </div>
+                      ))}
+                    </Fade>
+                  </div>
                 </Col>
                 <Col lg={6}>
                   <HomePageSideSection
                     title="About us"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia orci ligula, vitae pharetra nisi vulputate non. Nulla rhoncus lorem nec enim bibendum, ac viverra mauris"
+                    text="We are a student team from the TU/e, striving to achieve ambitious goals together. With a wide variety of disciplines within the team, we form a diverse and bursting group of students."
                     buttonLabel="Meet the team"
                     allignment="right"
-                    href="/about-us"
+                    href="/team"
                   />
                 </Col>
               </Row>
@@ -67,7 +80,7 @@ const Index = () => {
                 <Col lg={6}>
                   <HomePageSideSection
                     title="Our mission"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia orci ligula, vitae pharetra nisi vulputate non. Nulla rhoncus lorem nec enim bibendum, ac viverra mauris"
+                    text="Aero Team Eindhoven aims to contribute to making the world of flying more sustainable. By creating a global network of autonomously flying drones that can be refueled in air, fast and sustainable delivery of high priority packages can be realized."
                     buttonLabel="Read more"
                     href="/project"
                   />

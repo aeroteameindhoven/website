@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Logo from "../../svg/white-horizontal.svg";
 import "./FullsizeNav.scss";
+import classNames from "classnames";
 
 const FullsizeNav = () => {
   return (
@@ -10,44 +11,57 @@ const FullsizeNav = () => {
         <Logo className="logo" />
       </Link>
       <ul className="navList">
-        <li className="listItem">
-          <Link to="/about-us" className="nav disabled">
-            About Us
-          </Link>
-        </li>
-        <li className="listItem">
-          <Link to="/project" className="nav">
-            Project
-          </Link>
-        </li>
-        <li className="listItem">
-          <Link to="/team" className="nav">
-            Team
-          </Link>
-        </li>
-        <li className="listItem">
-          <Link to="/journey" className="nav disabled">
-            Our Journey
-          </Link>
-        </li>
-        <li className="listItem">
-          <Link to="/partners" className="nav disabled">
-            Partners
-          </Link>
-        </li>
-        <li className="listItem">
-          <Link to="/join" className="nav">
-            Apply
-          </Link>
-        </li>
-        <li className="listItem">
-          <Link to="/contact" className="nav disabled">
-            Contact
-          </Link>
-        </li>
+        {navItems.map((item) => (
+          <li key={item.link} className="listItem">
+            <Link to={item.link} className={classNames("nav", { disabled: item.disabled })}>
+              {item.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
 };
 
 export default FullsizeNav;
+
+export interface NavItem {
+  label: string;
+  link: string;
+  disabled?: boolean;
+}
+
+export const navItems: NavItem[] = [
+  {
+    label: "About Us",
+    link: "/about-us",
+    disabled: true
+  },
+  {
+    label: "Project",
+    link: "/project"
+  },
+  {
+    label: "Team",
+    link: "/team"
+  },
+  {
+    label: "Our Journey",
+    link: "/journey",
+    disabled: true
+  },
+  {
+    label: "Partners",
+    link: "/partners",
+    disabled: true
+  },
+  {
+    label: "Apply",
+    link: "/join"
+  },
+  {
+    label: "Contact",
+    link: "/contact",
+    disabled: true
+  }
+];
