@@ -24,7 +24,7 @@ const Index = () => {
                   <h1 className="slogan">
                     Redefine Flying<span className="dot">.</span>
                   </h1>
-                  <h2 className="secundary">
+                  <h2 className="secondary">
                     Developing an autonomous drone network
                     <br /> for sustainable transport
                     <br /> by zero-emission in air delivery <br />

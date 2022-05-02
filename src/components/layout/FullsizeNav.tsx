@@ -52,8 +52,8 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Partners",
-    link: "/partners",
-    disabled: true
+    link: "/partners"
+    //disabled: true
   },
   {
     label: "Apply",
