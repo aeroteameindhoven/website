@@ -1,11 +1,15 @@
 
 @import "./main.scss";
 
-.join-page {
+.logo{
+  text-align: center;
+}
+
+.partner-page {
   padding-top: 100px;
   padding-bottom: 100px;
 
-  .join-header {
+  .partner-header {
     padding-bottom: 50px;
     h1 {
       font-size: 35px;
@@ -17,7 +21,7 @@
       padding: 20px 0;
     }
 
-    .apply-button {
+    .contact-button {
       display: inline-block;
       text-align: center;
       color: white;

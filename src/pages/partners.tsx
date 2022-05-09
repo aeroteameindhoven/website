@@ -2,28 +2,30 @@ import React from "react";
 import classNames from "classnames";
 import { Container, Row, Col } from "react-grid-system";
 import Layout from "../components/layout";
-import * as uuid from "uuid";
-import { withPrefix } from "gatsby";
+import "../components/styles/partners.scss";
+
+import TUELogo from "../images/tue.svg";
+import GLSLogo from "../images/gls.svg";
+import NXPLogo from "../images/nxp.svg";
 
 const Partners: React.FC = () => {
   return (
     <Layout>
       <div className="partner-page">
         <Container>
-          {/* <div className="partner-page"></div> */}
-          <h1>Partners</h1>
-          <p>Helping us lift off!</p>
-          <Row>
-            {partnerInfo.map((v) => (
-              <div key={`svg_image_container${uuid.v4()}`}>
-                <img key={`svg_image_${uuid.v4()}`} src={withPrefix(v.logo)} alt={v.name} />
-              </div>
-            ))}
-          </Row>
-
-          <div className="button-wrapper">
-            Do you want to help us redefine flying? Contact us!
-            <Contact className="contactButton">Contact</Contact>
+          <div className="partner-header">
+            <h1>Partners</h1>
+            <p>Helping us lift off!</p>
+            <div>
+              {partnerInfo.map((v) => {
+                const Logo = v.logo;
+                return Logo;
+              })}
+            </div>
+            <p> Do you want to help us redefine flying? Feel free to contact us!</p>
+            <div className="button-wrapper">
+              <Contact className="contact-button">Contact</Contact>
+            </div>
           </div>
         </Container>
       </div>
@@ -35,23 +37,33 @@ export default Partners;
 
 const partnerInfo = [
   {
+    name: "GLS",
+    logo: (
+      <div className="logo">
+        <GLSLogo height={600} width={600} />
+      </div>
+    ),
+    text: "GLS is one of the biggest players in the shipping industry. Aside from being a titan of industry, GLS aims to constantly evolve, innovate and grow. Topics such as sustainability cannot be overlooked and are actively considered and tackled in the company. To Aero, GLS is the main strategical sponsor, and supplies the funding, advice and platform for the initial use case of package-delivery. Our solution fits perfectly within the vision of GLS and by actively working together faster and better progress can be booked. To this end, strategic advice is given on how the technological development of Aero can be properly implemented in the world of shipping, and how developments can be steered towards the right direction."
+  },
+  {
     name: "Tu/E",
-    logo: "../images/tue.svg",
+    logo: (
+      <div className="logo">
+        <TUELogo height={400} width={400} />
+      </div>
+    ),
     text: ""
   },
   {
     name: "NXP",
-    logo: "../images/nxp.svg",
-    text: ""
-  },
-  {
-    name: "GLS",
-    logo: "../images/gls.svg",
-    text: ""
+    logo: (
+      <div className="logo">
+        <NXPLogo height={300} width={300} />
+      </div>
+    ),
+    text: "Across a broad spectrum of applications, NXP aims to advance our world by developing and supporting technological innovations. Their state-of-the-art components and extensive expertise allow them to actively compete in the world of technical parts, software and components. With a mindset of going towards a sustainable world they are one of the frontrunners in supporting sustainable innovation. NXP supports Aero in twofold by supplying both technical components for prototyping and product development, as well as professional technical support from experienced engineers."
   }
 ];
-
-const toClass = (s: string) => s.replace(" ", "").toLowerCase();
 
 interface MailAProps {
   className?: string;
