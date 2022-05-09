@@ -1,17 +1,26 @@
 
 @import "./main.scss";
 
-.logo{
-  text-align: center;
+.partner-info{
+  padding-left: 100px;
+  display: flex;
   transition: transform .2s ease-in-out;
+  .text{
+    position: right;
+    display:inline-block;
+    color: transparent;
+  }
   &:hover {
-    background-color: rgba($primary-pink, 0.1);
     /*TODO make this dependent on screensize and image size*/
-    transform: translate3d(-250px, 0px, 50px);
+    transform: translate3d(-150px, 0px, 50px);
     .text {
-      transform: translateY(-260px);
-      background-color: transparent;
-      text-decoration: underline;
+      float: right;
+      color: white;
+      width: 100%;
+      left: 0;
+      padding: 18px;
+      transition: all 300ms ease-in-out;
+      font-size: 18px;
     }
   }
 }
@@ -53,59 +62,5 @@
     height: 1100px;
   }
 
-  .currentPartners {
-    width: 100%;
-    height: 350px;
-    position: relative;
-    margin-bottom: 30px;
-    
-    background-size: cover;
-    background-position: center;
-    
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
 
-    overflow: hidden;
-
-
-    .extra {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 100%;
-      left: 0;
-      background-color: rgba($primary-blue, 0.8);
-      padding: 18px;
-      padding-top: 100px;
-      transition: all 300ms ease-in-out;
-      font-size: 18px;
-    }
-
-    .text {
-      padding: 14px 20px ;
-      font-size: 18px;
-      // background-color: $primary-blue;
-      background-color: rgba($primary-pink, 0.7);
-      margin-bottom: 15px;
-      z-index: 120;
-      position: relative;
-      transition: all 300ms ease-in-out;
-      clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
-    }
-
-    &:hover {
-      .text {
-        transform: translateY(-260px);
-        background-color: transparent;
-        text-decoration: underline;
-      }
-
-      .extra {
-        top: 0;
-      }
-    }
-  }
 }
