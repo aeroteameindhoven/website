@@ -10,33 +10,36 @@ import NXPLogo from "../images/nxp.svg";
 
 const Partners: React.FC = () => {
   return (
-    <Layout>
-      <div className="partner-page">
-        <Container>
-          <div className="partner-header">
-            <h1>Partners</h1>
-            <p>Helping us lift off!</p>
-            <div>
-              {partnerInfo.map((v) => {
-                const Logo = <div className="partner-logo">{v.logo}</div>;
-                const Text = <p className="text">{v.text}</p>;
-                const Info = (
-                  <div className="partner-info">
-                    {Logo}
-                    {Text}
-                  </div>
-                );
-                return Info;
-              })}
+    <Layout
+      pageTitle="Join Aero Team"
+      postHeader={
+        <div className="partner-page">
+          <Container>
+            <div className="partner-header">
+              <h1>Partners</h1>
+              <p>Helping us lift off!</p>
+              <div>
+                {partnerInfo.map((v) => {
+                  const Logo = <div className="partner-logo">{v.logo}</div>;
+                  const Text = <p className="text">{v.text}</p>;
+                  const Info = (
+                    <div className="partner-info">
+                      {Logo}
+                      {Text}
+                    </div>
+                  );
+                  return Info;
+                })}
+              </div>
+              <p> Do you want to help us redefine flying? Feel free to contact us!</p>
+              <div className="button-wrapper">
+                <Contact className="contact-button">Contact</Contact>
+              </div>
             </div>
-            <p> Do you want to help us redefine flying? Feel free to contact us!</p>
-            <div className="button-wrapper">
-              <Contact className="contact-button">Contact</Contact>
-            </div>
-          </div>
-        </Container>
-      </div>
-    </Layout>
+          </Container>
+        </div>
+      }
+    />
   );
 };
 
