@@ -3,6 +3,17 @@
 
 .logo{
   text-align: center;
+  transition: transform .2s ease-in-out;
+  &:hover {
+    background-color: rgba($primary-pink, 0.1);
+    /*TODO make this dependent on screensize and image size*/
+    transform: translate3d(-250px, 0px, 50px);
+    .text {
+      transform: translateY(-260px);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
 }
 
 .partner-page {
