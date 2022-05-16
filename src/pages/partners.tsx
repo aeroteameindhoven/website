@@ -18,23 +18,23 @@ const Partners: React.FC = () => {
             <div className="partner-header">
               <h1>Partners</h1>
               <p>Helping us lift off!</p>
-              <div>
-                {partnerInfo.map((v) => {
-                  const Logo = <div className="partner-logo">{v.logo}</div>;
-                  const Text = <p className="text">{v.text}</p>;
-                  const Info = (
-                    <div className="partner-info">
-                      {Logo}
-                      {Text}
-                    </div>
-                  );
-                  return Info;
-                })}
-              </div>
-              <p> Do you want to help us redefine flying? Feel free to contact us!</p>
-              <div className="button-wrapper">
-                <Contact className="contact-button">Contact</Contact>
-              </div>
+            </div>
+            <div>
+              {partnerInfo.map((v) => {
+                const Logo = <div className="partner-logo">{v.logo}</div>;
+                const Text = <p className="text">{v.text}</p>;
+                const Info = (
+                  <div className="partner-info">
+                    {Logo}
+                    {Text}
+                  </div>
+                );
+                return Info;
+              })}
+            </div>
+            <p> Do you want to help us redefine flying? Feel free to contact us!</p>
+            <div className="button-wrapper">
+              <Contact className="contact-button">Contact</Contact>
             </div>
           </Container>
         </div>

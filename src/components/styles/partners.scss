@@ -2,6 +2,7 @@
 @import "./main.scss";
 
 .partner-info{
+  background-color: white;
   width: 110%;
   padding-left: 150px;
   display: flex;
@@ -16,8 +17,9 @@
     transform: translate3d(-150px, 0px, 50px);
     .text {
       float: right;
-      color: white;
+      color: $primary-blue;
       left: 0;
+      padding-left: 50px;
       padding: 18px;
       transition: all 300ms ease-in-out;
       font-size: 18px;
@@ -26,7 +28,6 @@
 }
 
 .partner-page {
-  padding-top: 100px;
   padding-bottom: 100px;
 
   .partner-header {
