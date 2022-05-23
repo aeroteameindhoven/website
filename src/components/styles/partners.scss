@@ -1,28 +1,47 @@
-
 @import "./main.scss";
 
-.partner-info{
-  background-color: white;
-  width: 110%;
-  padding-left: 150px;
+.partner-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 330px;
+  padding: 0 60px;
+  margin-bottom: 30px;
   display: flex;
-  transition: transform .2s ease-in-out;
-  .text{
-    position: right;
-    display:inline-block;
-    color: transparent;
+  justify-content: flex-end;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+
+  .partner-logo {
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
+
+  .text {
+    color: transparent;
+    max-width: 50%;
+    font-size: 18px;
+    transition: all 200ms ease-in-out;
+    transform: translateX(300px);
+  }
+
   &:hover {
-    /*TODO make this dependent on screensize and image size*/
-    transform: translate3d(-150px, 0px, 50px);
+    background-color: rgba(255, 255, 255, 0.9);
+
+    .partner-logo {
+      left: 60px;
+      transform: translateX(0px);
+    }
+
     .text {
-      float: right;
       color: $primary-blue;
-      left: 0;
       padding-left: 50px;
       padding: 18px;
-      transition: all 300ms ease-in-out;
       font-size: 18px;
+      
+      transform: translateX(0px);
     }
   }
 }
@@ -32,6 +51,7 @@
 
   .partner-header {
     padding-bottom: 50px;
+    
     h1 {
       font-size: 35px;
     }
@@ -45,15 +65,14 @@
     .contact-button {
       display: inline-block;
       text-align: center;
-      color: white;
+      color: $primary-blue;
       text-decoration: none;
       padding: 10px 30px;
-      background: $primary-pink;
+      background: white;
       clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
       transition: all 200ms ease-in-out;
 
       &:hover {
-        // background: darken($primary-pink, 5%);
         background: $primary-light-blue;
       }
     }
@@ -62,6 +81,4 @@
   .a {
     height: 1100px;
   }
-
-
 }
