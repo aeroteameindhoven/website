@@ -52,7 +52,7 @@ const Index = () => {
             <Container>
               <Row>
                 <Col lg={6}>
-                  <div className="group-photo">
+                  {/* <div className="group-photo">
                     <Fade>
                       {[1, 2, 3].map((slideImage, index) => (
                         <div className="each-fade" key={index}>
@@ -63,7 +63,17 @@ const Index = () => {
                         </div>
                       ))}
                     </Fade>
-                  </div>
+                  </div> */}
+                  <iframe
+                    className="animation-video"
+                    width="672"
+                    height="378"
+                    src="https://www.youtube.com/embed/Bbd129OPXqo"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </Col>
                 <Col lg={6}>
                   <HomePageSideSection
