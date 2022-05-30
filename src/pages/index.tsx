@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Container, Row, Col } from "react-grid-system";
+import { Container, Row, Col, Visible } from "react-grid-system";
 import HomePageSideSection from "../components/homePageSideSection";
 import Layout from "../components/layout";
 import renderImage from "../images/render01.png";
@@ -74,6 +74,9 @@ const Index = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
+                  <Visible xs sm md>
+                    <div style={{ height: 50 }} />
+                  </Visible>
                 </Col>
                 <Col lg={6}>
                   <HomePageSideSection
@@ -94,6 +97,9 @@ const Index = () => {
                     buttonLabel="Read more"
                     href="/project"
                   />
+                  <Visible xs sm md>
+                    <div style={{ height: 50 }} />
+                  </Visible>
                 </Col>
                 <Col lg={6}>
                   <div className="render-container">
