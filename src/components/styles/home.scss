@@ -4,6 +4,7 @@
 // with the blue background
 .homepage-preheader {
     height: 100%;
+
     .content-wrapper {
         color: white;
         padding: 80px 0 400px;
@@ -20,9 +21,10 @@
             color: $primary-pink;
         }
     
-        .secundary {
+        .secondary {
             font-size: 25px;
         }
+
 
         .pre-tue {
             padding-right: 10px;
@@ -52,13 +54,6 @@
             animation: glow 1500ms ease-in-out;
             animation-iteration-count: infinite;
             animation-direction:  alternate;
-            
-            // OPTIONAL: when the user hovers over the globe it stays fully white
-            // transition: fill 300ms ease-in-out;
-            // &:hover {
-            //     fill: rgba(255, 255, 255, 0.95);
-            //     animation: none;
-            // }
         }
     }
 }
@@ -98,6 +93,15 @@
             height: 100%;
             padding: 200px 80px 300px;
 
+            @media screen and (max-width: $breakpoint-lg) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .animation-video {
+                max-width: 100%;
+            }
+
             .group-photo {
                 max-width: 600px;
                 min-width: 100%;
@@ -110,6 +114,10 @@
     .render-container {
         padding-left: 30px;
         position: relative;
+
+        @media screen and (max-width: $breakpoint-lg) {
+            padding-left: 0;
+        }
         
         .render-background {
             position: absolute;

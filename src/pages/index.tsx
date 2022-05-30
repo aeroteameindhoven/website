@@ -88,7 +88,14 @@ const Index = () => {
                   />
                 </Col>
               </Row>
-              <div style={{ height: 300 }} />
+
+              <Visible xs sm md>
+                <div style={{ height: 200 }} />
+              </Visible>
+              <Visible lg xl xxl xxxl>
+                <div style={{ height: 300 }} />
+              </Visible>
+
               <Row>
                 <Col lg={6}>
                   <HomePageSideSection
