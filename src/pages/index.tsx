@@ -9,12 +9,13 @@ import GlobeIllustration from "../images/globe.svg";
 import TUELogo from "../images/tue.svg";
 
 import "react-slideshow-image/dist/styles.css";
-import { Fade } from "react-slideshow-image";
+// import { Fade } from "react-slideshow-image";
 
 const Index = () => {
   return (
     <Layout
       fullScreenHeader
+      metaDescription="Redefine Flying! Aero Team Eindhoven is a team of students from Eindhoven University of Technology working towards a sustainable world by developing an autonomous drone network for zero-emmision air delivery."
       postHeader={
         <div className="homepage-preheader">
           <div className="content-wrapper">
