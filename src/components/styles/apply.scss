@@ -19,9 +19,13 @@
     filter: blur(3px);
   }
 
-  .window {
+  .column {
     width: 800px;
-    max-width: 95%;
+    max-width: 92%;
+
+  }
+
+  .window {
     padding: 55px 40px;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
@@ -47,6 +51,10 @@
       align-items: center;
       margin-right: 20px;
       color: white;
+    }
+
+    .description {
+      word-break: break-word;
     }
   }
 
