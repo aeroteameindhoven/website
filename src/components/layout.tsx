@@ -11,6 +11,7 @@ interface Props {
   pageTitle?: string;
   postHeader?: React.ReactNode;
   fullScreenHeader?: boolean;
+  metaDescription?: string;
 }
 
 const Layout: React.FC<Props> = (props) => {
@@ -23,6 +24,7 @@ const Layout: React.FC<Props> = (props) => {
         <link rel="manifest" href="/site.webmanifest?v=awoinurniahdw" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg?v=awoinurniahdw" color="#002878" />
         <link rel="shortcut icon" href="/favicon.ico?v=awoinurniahdw" />
+        <meta name="description" content={props.metaDescription} />
         <meta name="msapplication-TileColor" content="#002878" />
         <meta name="theme-color" content="#ffffff" />
         {props.pageTitle ? <title>{props.pageTitle}</title> : null}

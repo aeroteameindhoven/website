@@ -53,15 +53,13 @@ export const navItems: NavItem[] = [
   {
     label: "Partners",
     link: "/partners"
-    //disabled: true
   },
   {
-    label: "Apply",
+    label: "Join",
     link: "/join"
   },
   {
     label: "Contact",
-    link: "/contact",
-    disabled: true
+    link: "/contact"
   }
 ];
