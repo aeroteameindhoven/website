@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import "../components/styles/team.scss";
 import { graphql } from "gatsby";
 
-import LinkedIn from "../images/icons/linkedin.svg";
+// import LinkedIn from "../images/icons/linkedin.svg";
 import Mail from "../images/icons/email.svg";
 
 /**
