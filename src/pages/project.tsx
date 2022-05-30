@@ -15,10 +15,10 @@ const Project = () => {
               <p>
                 Aviation contributes to a big part of emissions globally, this remains a huge problem. Around 80% of
                 aviation C02 emissions are emitted from flights of over 1500 kilometers, for which there is no practical
-                alternative mode of transport. Current solutions aren't there yet or don't scale well enough. Therefore
-                something has to change structurally. A transition needs to be started towards electric aviation,
-                possible of overcoming the problems the sector currently faces, to empower more important players to
-                embrace the transition towards a sustainable form of transport and aviation.
+                alternative mode of transport. Current solutions aren&apos;t there yet or don&apos;t scale well enough.
+                Therefore something has to change structurally. A transition needs to be started towards electric
+                aviation, possible of overcoming the problems the sector currently faces, to empower more important
+                players to embrace the transition towards a sustainable form of transport and aviation.
               </p>
             </Col>
             <Col md={6}>
