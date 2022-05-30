@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row } from "react-grid-system";
 import Layout from "../components/layout";
@@ -31,7 +32,9 @@ const Join = () => {
               </p>
 
               <div className="button-wrapper">
-                <MailA className="apply-button">Apply now!</MailA>
+                <Link to="/apply" className="apply-button">
+                  Apply now!
+                </Link>
               </div>
             </div>
 
