@@ -1,6 +1,5 @@
 import * as React from "react";
 import Layout from "../components/layout";
-import { Col, Container, Row } from "react-grid-system";
 import "../components/styles/apply.scss";
 
 const Apply = () => {
