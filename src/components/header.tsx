@@ -15,7 +15,7 @@ interface Props {
  */
 const Header: React.FC<Props> = ({ children }) => {
   return (
-    <div className="Header">
+    <div className="HeaderMain">
       <Container>
         <header className={header}>
           <Visible xs sm md>
