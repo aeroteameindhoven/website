@@ -6,6 +6,7 @@ import "../components/styles/partners.scss";
 import TUELogo from "../images/tue.svg";
 import GLSLogo from "../images/gls.svg";
 import NXPLogo from "../images/nxp.svg";
+import ZoomworksLogo from "../images/zoomworks.svg";
 
 const Partners: React.FC = () => {
   return (
@@ -45,6 +46,18 @@ const Partners: React.FC = () => {
                   </div>
                 ))}
             </div>
+
+            <h1>SILVER</h1>
+            <div>
+              {partnerInfo
+                .filter((p) => p.level === "Silver")
+                .map((v) => (
+                  <div key={v.name} className="partner-info">
+                    <div className="partner-logo">{v.logo}</div>
+                    <div className="text">{v.text}</div>
+                  </div>
+                ))}
+            </div>
           </Container>
         </div>
       }
@@ -74,6 +87,12 @@ const partnerInfo = [
     level: "Gold",
     logo: <NXPLogo height={300} width={300} />,
     text: "Across a broad spectrum of applications, NXP aims to advance our world by developing and supporting technological innovations. Their state-of-the-art components and extensive expertise allow them to actively compete in the world of technical parts, software and components. With a mindset of going towards a sustainable world they are one of the frontrunners in supporting sustainable innovation. NXP supports Aero in twofold by supplying both technical components for prototyping and product development, as well as professional technical support from experienced engineers."
+  },
+  {
+    name: "Zoomworks",
+    level: "Silver",
+    logo: <ZoomworksLogo height={300} width={300} />,
+    text: "Do you want to give your marketing a strong boost with powerful video marketing? We don't just make cool videos and awesome animations. With our smart solutions in findability, interactivity and personalization, we really go one step further. We are ZoomWorks. Digital marketers and audiovisual specialists. We deliver customization and are addicted to customer satisfaction."
   }
 ];
 
