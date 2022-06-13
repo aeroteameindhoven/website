@@ -12,7 +12,6 @@ import Mail from "../images/icons/email.svg";
  */
 const Team = ({ data }) => {
   const membersCSV = data.allMembersCsv.nodes;
-
   const members: TeamMember[] = membersCSV.map((m) => ({
     id: m.id,
     name: m.first_name + " " + m.surname,
@@ -20,6 +19,17 @@ const Team = ({ data }) => {
     email: m.Aero_e_mail,
     time: m.time
   }));
+
+  const [subteam, setSubteam] = React.useState<string | null>(null);
+  const handleSubteamChange = (choice: string) => {
+    if (choice !== subteam) {
+      setSubteam(choice);
+    } else {
+      setSubteam(null);
+    }
+  };
+
+  const membersToShow = subteam ? members.filter((m) => titleToSubteams(m.title).includes(subteam)) : members;
 
   return (
     <Layout pageTitle="Meet the team">
@@ -32,10 +42,11 @@ const Team = ({ data }) => {
             In 2022 the first year of Aero Team started, and was founded by members from the old teams Blue Jay
             Eindhoven and Team Syfly.
           </p>
+          <SubTeamSelector currentSelection={subteam} onSelect={handleSubteamChange} />
           <Row>
             {
               // Loop over all members
-              members.map((member) => (
+              membersToShow.map((member) => (
                 <Col key={member.name} sm={12} md={6} lg={4} className="TeamMemberCol">
                   <TeamMemberCard member={member} />
                 </Col>
@@ -101,3 +112,43 @@ interface TeamMember {
 function getPictureFileName(s: string): string {
   return s.replace(/\s/g, "").toLowerCase();
 }
+
+const conversion = {
+  Management: (title) => title.includes("Manager"),
+  "Battery Swap": (title) => title.includes("Battery Swap"),
+  "Autonomous Flight": (title) => title.includes("Autonomous Flight"),
+  "Structure Design": (title) => title.includes("Structure Design"),
+  "Interaction Research": (title) => title.includes("Interaction Research"),
+  Harvesting: (title) => title.includes("Harvesting"),
+  Promotion: (title) =>
+    title.includes("Promotion") || title.includes("Operations Manager") || title.includes("Team Manager")
+};
+
+const subTeams = Object.keys(conversion);
+
+const titleToSubteams = (title: string): string[] => {
+  return subTeams.filter((subTeam) => conversion[subTeam](title));
+};
+
+interface SubTeamSelectorProps {
+  currentSelection: string | null;
+  onSelect(subteam: string): void;
+}
+
+const SubTeamSelector: React.FC<SubTeamSelectorProps> = ({ currentSelection, onSelect }) => {
+  return (
+    <div className="SubTeamSelector">
+      <ul>
+        {subTeams.map((subTeam) => (
+          <li
+            key={subTeam}
+            onClick={() => onSelect(subTeam)}
+            className={currentSelection === subTeam ? "selected" : undefined}
+          >
+            {subTeam}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
