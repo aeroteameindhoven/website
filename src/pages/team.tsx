@@ -36,10 +36,12 @@ const allTeams: TeamInfo[] = [
  * Team page, containing all team members and their details
  */
 const Team = ({ data }) => {
-  const [activeTeam, setActiveTeam] = React.useState<TeamInfo>(allTeams[0]);
+  const [activeTeamId, setActiveTeamId] = React.useState<number>(1);
+
+  const activeTeam = allTeams[activeTeamId];
 
   const handleChangeTeam = () => {
-    setActiveTeam(allTeams[1]);
+    setActiveTeamId(activeTeamId == 1 ? 0 : 1);
   };
 
   const membersData = {

@@ -34,7 +34,7 @@ const TeamView: React.FC<Props> = ({ teamInfo, members }) => {
           // Loop over all members
           membersToShow.map((member) => (
             <Col key={member.name} sm={12} md={6} lg={4}>
-              <TeamMemberCard member={member} />
+              <TeamMemberCard member={member} teamId={teamInfo.name.replace("/", "-")} />
             </Col>
           ))
         }
@@ -47,12 +47,18 @@ export default TeamView;
 
 interface TeamMemberCardProps {
   member: TeamMember;
+  teamId: string;
 }
 
-const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
+const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member, teamId }) => {
   return (
     <div className="TeamMember">
-      <div style={{ backgroundImage: `url('/members/${getPictureFileName(member.name)}.jpg')` }} className="photo" />
+      <div
+        style={{
+          backgroundImage: `url('/members/${teamId}/${getPictureFileName(member.name)}.jpg'), url("/placeholder.png")`
+        }}
+        className="photo"
+      />
       <div className="contact-details">
         <a href={`mailto:${member.email}`}>
           <Mail className="icon mail" />
