@@ -66,6 +66,7 @@ const Team = ({ data }) => {
             OUR TEAM{" "}
             <span className="year" onClick={handleChangeTeam}>
               {activeTeam.name}
+              <img src="/switch.png" alt="Switch to a different team" className="switch-team" />
             </span>
           </h1>
           <TeamView teamInfo={activeTeam} members={members} />

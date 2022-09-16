@@ -21,6 +21,20 @@
       display: inline-block;
       margin-left: 10px;
       color: #7689AF;
+      border-bottom: 3px solid white;
+      transition: border-bottom 0.2s ease-in-out;
+
+      .switch-team {
+        margin-left: 5px;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+      }
+
+      &:hover {
+        border-bottom: 3px solid #7689AF;
+        cursor: pointer;
+      }
     }
   }
 
