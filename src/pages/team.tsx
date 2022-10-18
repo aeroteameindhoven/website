@@ -28,7 +28,7 @@ const allTeams: TeamInfo[] = [
   },
   {
     name: "22/23",
-    text: ""
+    text: "The second year of Aero Team, our focus is on the Battery Swap mechanism and the construction of our Cargo Drone"
   }
 ];
 
