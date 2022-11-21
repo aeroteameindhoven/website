@@ -1,9 +1,9 @@
 {
   "name": "aero-team-eindhoven",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
-  "description": "Aero Team Eindhoven",
-  "author": "Daan",
+  "description": "Aero Team Eindhoven Website",
+  "author": "aeroteameindhoven",
   "keywords": [
     "gatsby"
   ],
