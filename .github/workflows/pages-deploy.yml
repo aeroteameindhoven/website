@@ -4,6 +4,8 @@ on:
   push:
     branches: ["main"]
 
+  pull_request:
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -43,7 +45,7 @@ jobs:
         run: npm ci
       - name: Build with Gatsby
         env:
-          PREFIX_PATHS: 'true'
+          PREFIX_PATHS: "true"
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
