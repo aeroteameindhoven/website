@@ -4,16 +4,18 @@ ID,first name,surname,Aero e-mail,function,subteam,time
 3,Omar,Raafat,o.raafat@aeroteameindhoven.nl,HR & External Relations Manager,Management,Part-time
 10,Tirtha,Kaloor,t.kaloor@aeroteameindhoven.nl,Finance Manager,Management,Part-time
 14,Isa,Dantuma,i.dantuma@aeroteameindhoven.nl,Lead VR Experience,"Management, VR Experience",Part-time
-15,Pranav Natesh ,Ramanathan,p.ramanathan@aeroteameindhoven.nl,Lead Avionics,"Management, Avionics, Aerodynamics",Part-time
+15,Pranav Natesh ,Ramanathan,p.ramanathan@aeroteameindhoven.nl,Lead Overall Design,"Management, Overall Design",Part-time
 4,Zachary,Kohnen,z.kohnen@aeroteameindhoven.nl,Lead Battery Swap & Autonomous Flight,"Management, Battery Swap, Autonomous Flight",Part-time
-20,Berk,Eraltan,b.eraltan@aeroteameindhoven.nl,PR & Data Scientist,"Promotion, Avionics",Part-time
-11,Egor ,Obidin,e.obidin@aeroteameindhoven.nl,Software Engineer,"Battery Swap, Autonomous Flight",Part-time
-19,Harsh,Nagouda,h.nagouda@aeroteameindhoven.nl,Data Scientist,"Battery Swap, Autonomous Flight",Part-time
-9,Hoang,Nguyen,h.nguyen@aeroteameindhoven.nl,Software Engineer,Autonomous Flight,Part-time
-7,Igor,Vasiljev,i.vasiljev@aeroteameindhoven.nl,Mechanical Engineer,Avionics,Part-time
-6,Jakub,Szkudlarek,j.szkudlarek@aeroteameindhoven.nl,Electrical Engineer,Battery Swap,Part-time
-18,Long,Tran,l.tran@aeroteameindhoven.nl,Mechanical Engineer,Aerodynamics,Part-time
-12,Marijn ,Ruiter,m.ruiter@aeroteameindhoven.nl,Mechanical Engineer,Autonomous Flight,Part-time
-13,Oyku,Sanlibayrak,o.sanlibayrak@aeroteameindhoven.nl,Human-Technology Interaction,VR Experience,Part-time
-5,Vincent,Rummler,v.rummler@aeroteameindhoven.nl,Mechanical Engineer,Battery Swap,Full-time
-8,Yuvan,Dwaraga,y.dwaraga@aeroteameindhoven.nl,Mechanical Engineer,Battery Swap,Part-time
+8,Yuvan,Dwaraga,y.dwaraga@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,Part-time
+23,Bianca,Eni,b.eni@aeroteameindhoven.nl,PR,Promotion,part-time
+20,Berk,Eraltan,b.eraltan@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,Part-time
+24,Khanh,Lo,khanh@aeroteameindhoven.nl,Overall Designer,Overall Design,part-time
+19,Harsh,Nagouda,h.nagouda@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,Part-time
+9,Hoang,Nguyen,h.nguyen@aeroteameindhoven.nl,Autonomous Flight Engineer,Autonomous Flight,Part-time
+22,Nam,Nguyen,n.nguyen@aeroteameindhoven.nl,Overall Designer,Overall Design,part-time
+11,Egor ,Obidin,e.obidin@aeroteameindhoven.nl,Autonomous Flight & Batter Swap Engineer ,"Battery Swap, Autonomous Flight",Part-time
+12,Marijn ,Ruiter,m.ruiter@aeroteameindhoven.nl,Autonomous Flight Engineer,Autonomous Flight,Part-time
+5,Vincent,Rummler,v.rummler@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,Full-time
+13,Oyku,Sanlibayrak,o.sanlibayrak@aeroteameindhoven.nl,VR Experience,VR Experience,Part-time
+6,Jakub,Szkudlarek,j.szkudlarek@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,Part-time
+18,Long,Tran,l.tran@aeroteameindhoven.nl,Overall Designer,Overall Design,Part-time
