@@ -14,7 +14,8 @@
 		"vscode": {
 			"extensions": [
 				"redhat.vscode-yaml",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				"mechatroner.rainbow-csv"
 			]
 		}
 	}
