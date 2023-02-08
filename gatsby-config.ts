@@ -3,10 +3,11 @@ import { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Aero Team Eindhoven`,
-    siteUrl: `https://aeroteameindhoven.nl`
+    siteUrl: `https://aeroteameindhoven.nl`,
+    description:
+      "Redefine Flying! Aero Team Eindhoven is a team of students from Eindhoven University of Technology working towards a sustainable world by developing an autonomous drone network for zero-emmision air delivery."
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -29,7 +30,6 @@ const config: GatsbyConfig = {
       }
     },
     "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",

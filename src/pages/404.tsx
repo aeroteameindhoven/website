@@ -1,10 +1,15 @@
-import * as React from "react";
+import React from "react";
 import { Container, Row, Col } from "react-grid-system";
-import Layout from "../components/layout";
+import { HeadContent } from "../components/HeadContent";
+import Layout from "../components/Layout";
 
-const NotFoundPage = () => {
+export function Head() {
+  return <HeadContent title="404 - Page not found" />;
+}
+
+export default function NotFoundPage() {
   return (
-    <Layout pageTitle="404 - Page not found">
+    <Layout>
       <Container>
         <Row>
           <Col>
@@ -15,6 +20,4 @@ const NotFoundPage = () => {
       </Container>
     </Layout>
   );
-};
-
-export default NotFoundPage;
+}

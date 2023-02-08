@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-grid-system";
 import { sitefooter, mailLink } from "./styles/footer.module.scss";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className={sitefooter}>
       <Container>
@@ -69,6 +69,4 @@ const Footer = () => {
       </Container>
     </footer>
   );
-};
-
-export default Footer;
+}

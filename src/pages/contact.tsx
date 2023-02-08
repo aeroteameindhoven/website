@@ -1,14 +1,18 @@
-import * as React from "react";
-import Layout from "../components/layout";
+import React from "react";
+import Layout from "../components/Layout";
 import { Col, Container, Row } from "react-grid-system";
 import "../components/styles/contact.scss";
-
 import Mail from "../images/icons/email.svg";
 import Phone from "../images/icons/phone.svg";
+import { HeadContent } from "../components/HeadContent";
 
-const Contact = () => {
+export function Head() {
+  return <HeadContent title="Contact" />;
+}
+
+export default function Contact() {
   return (
-    <Layout pageTitle="Contact">
+    <Layout>
       <div className="contact-page">
         <Container>
           <Row>
@@ -17,26 +21,28 @@ const Contact = () => {
               <h2>Contact us at</h2>
               <p>
                 <table>
-                  <tr>
-                    <td>
-                      <Phone className="icon mail" />
-                    </td>
-                    <td>
-                      <a className="nolink" href="tel:+31619183031">
-                        +31 6 19183031
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <Mail className="icon mail" />
-                    </td>
-                    <td>
-                      <a className="nolink" href="mailto:info@aeroteameindhoven.nl">
-                        info@aeroteameindhoven.nl
-                      </a>
-                    </td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <Phone className="icon mail" />
+                      </td>
+                      <td>
+                        <a className="nolink" href="tel:+31619183031">
+                          +31 6 19183031
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <Mail className="icon mail" />
+                      </td>
+                      <td>
+                        <a className="nolink" href="mailto:info@aeroteameindhoven.nl">
+                          info@aeroteameindhoven.nl
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </p>
 
@@ -57,8 +63,8 @@ const Contact = () => {
                   src="https://maps.google.com/maps?q=Aero%20Team%20Eindhoven&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   frameBorder="0"
                   scrolling="no"
-                  marginHeight="0"
-                  marginWidth="0"
+                  marginHeight={0}
+                  marginWidth={0}
                 />
               </div>
             </Col>
@@ -67,9 +73,7 @@ const Contact = () => {
       </div>
     </Layout>
   );
-};
-
-export default Contact;
+}
 
 // const ContactForm = () => {
 //     return (

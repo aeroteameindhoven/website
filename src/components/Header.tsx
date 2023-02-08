@@ -4,16 +4,12 @@ import { Container, Visible } from "react-grid-system";
 import CompactNav from "./layout/CompactNav";
 import FullsizeNav from "./layout/FullsizeNav";
 
-interface Props {
-  children?: React.ReactNode;
-}
-
 /**
  * Main header of the page
  * - Team Logo
  * - Navigation menu
  */
-const Header: React.FC<Props> = ({ children }) => {
+export default function Header({ children }: React.PropsWithChildren) {
   return (
     <div className="HeaderMain">
       <Container>
@@ -29,6 +25,4 @@ const Header: React.FC<Props> = ({ children }) => {
       {children && <div className="post-header">{children}</div>}
     </div>
   );
-};
-
-export default Header;
+}

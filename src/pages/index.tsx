@@ -1,7 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { Container, Row, Col, Visible } from "react-grid-system";
-import HomePageSideSection from "../components/homePageSideSection";
-import Layout from "../components/layout";
+import HomePageSideSection from "../components/HomePageSideSection";
+import Layout from "../components/Layout";
 import renderImage from "../images/render01.png";
 import test1 from "../images/test2.png";
 import "../components/styles/home.scss";
@@ -9,43 +9,48 @@ import GlobeIllustration from "../images/globe.svg";
 import TUELogo from "../images/tue.svg";
 
 import "react-slideshow-image/dist/styles.css";
+import { HeadContent } from "../components/HeadContent";
 // import { Fade } from "react-slideshow-image";
 
-const Index = () => {
-  return (
-    <Layout
-      fullScreenHeader
-      metaDescription="Redefine Flying! Aero Team Eindhoven is a team of students from Eindhoven University of Technology working towards a sustainable world by developing an autonomous drone network for zero-emmision air delivery."
-      postHeader={
-        <div className="homepage-preheader">
-          <div className="content-wrapper">
-            <Container>
-              <Row>
-                <Col lg={12}>
-                  <h1 className="slogan">
-                    Redefine Flying<span className="dot">.</span>
-                  </h1>
-                  <h2 className="secondary">
-                    Developing an autonomous drone network
-                    <br /> for sustainable transport
-                    <br /> by zero-emission in air delivery <br />
-                    <br />
-                    <div className="studentteam">
-                      <span className="pre-tue">Official student team of</span>
-                      <a href="https://tue.nl" target="_blank" rel="noreferrer">
-                        <TUELogo className="tue-logo" />
-                      </a>
-                    </div>
-                  </h2>
-                </Col>
-              </Row>
-            </Container>
+export function Head() {
+  return <HeadContent title="Contact" />;
+}
 
-            <GlobeIllustration className="globe" />
-          </div>
-        </div>
-      }
-    >
+function PostHeader() {
+  return (
+    <div className="homepage-preheader">
+      <div className="content-wrapper">
+        <Container>
+          <Row>
+            <Col lg={12}>
+              <h1 className="slogan">
+                Redefine Flying<span className="dot">.</span>
+              </h1>
+              <h2 className="secondary">
+                Developing an autonomous drone network
+                <br /> for sustainable transport
+                <br /> by zero-emission in air delivery <br />
+                <br />
+                <div className="studentteam">
+                  <span className="pre-tue">Official student team of</span>
+                  <a href="https://tue.nl" target="_blank" rel="noreferrer">
+                    <TUELogo className="tue-logo" />
+                  </a>
+                </div>
+              </h2>
+            </Col>
+          </Row>
+        </Container>
+
+        <GlobeIllustration className="globe" />
+      </div>
+    </div>
+  );
+}
+
+export default function Index() {
+  return (
+    <Layout fullScreenHeader postHeader={<PostHeader />}>
       <div className="homepage">
         <div className="air-wrapper">
           <div className="air" />
@@ -54,17 +59,17 @@ const Index = () => {
               <Row>
                 <Col lg={6}>
                   {/* <div className="group-photo">
-                    <Fade>
-                      {[1, 2, 3].map((slideImage, index) => (
-                        <div className="each-fade" key={index}>
-                          <div
-                            className="each-photo"
-                            style={{ backgroundImage: `url("/homepage-slides/${slideImage}.jpg")` }}
-                          />
-                        </div>
-                      ))}
-                    </Fade>
-                  </div> */}
+              <Fade>
+                {[1, 2, 3].map((slideImage, index) => (
+                  <div className="each-fade" key={index}>
+                    <div
+                      className="each-photo"
+                      style={{ backgroundImage: `url("/homepage-slides/${slideImage}.jpg")` }}
+                    />
+                  </div>
+                ))}
+              </Fade>
+            </div> */}
                   <iframe
                     className="animation-video"
                     width="672"
@@ -84,7 +89,7 @@ const Index = () => {
                     title="About us"
                     text="We are a student team from the TU/e, striving to achieve ambitious goals together. With a wide variety of disciplines within the team, we form a diverse and bursting group of students."
                     buttonLabel="Meet the team"
-                    allignment="right"
+                    alignment="right"
                     href="/team"
                   />
                 </Col>
@@ -122,6 +127,4 @@ const Index = () => {
       </div>
     </Layout>
   );
-};
-
-export default Index;
+}

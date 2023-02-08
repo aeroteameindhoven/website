@@ -1,12 +1,17 @@
 // import { Link } from "gatsby";
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import { Container, Row, Col } from "react-grid-system";
 import "../components/styles/project.scss";
+import { HeadContent } from "../components/HeadContent";
 
-const Project = () => {
+export function Head() {
+  return <HeadContent title="Project" />;
+}
+
+export default function Project() {
   return (
-    <Layout pageTitle="Project">
+    <Layout>
       <div className="project-page">
         <Container>
           <Row>
@@ -41,7 +46,7 @@ const Project = () => {
                 single drone, we are creating a network with a scalable range, practically endless. Using this network,
                 we can connect Europe through the sky, in a sustainable way, electrically. We want to create the
                 technology that enables the first steps of this network.
-              </p>{" "}
+              </p>
               <p>
                 The idea is that a cargo drone, transporting high priority products or necessities, is refueled in air
                 by a second drone. The second drone carries a second battery and will switch the empty cargo battery
@@ -55,6 +60,4 @@ const Project = () => {
       </div>
     </Layout>
   );
-};
-
-export default Project;
+}
