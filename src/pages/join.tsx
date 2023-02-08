@@ -2,63 +2,67 @@ import classNames from "classnames";
 import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row } from "react-grid-system";
-import Layout from "../components/layout";
+import { HeadContent } from "../components/HeadContent";
+import Layout from "../components/Layout";
 import "../components/styles/join.scss";
+import { JoinEmail } from "../components/Email";
+
+export function Head() {
+  return <HeadContent title="Join" />;
+}
+
+function PostHeader() {
+  return (
+    <div className="join-page">
+      <Container>
+        <div className="join-header">
+          <h1>Join Aero Team</h1>
+          <div>
+            Do you want to be part of Eindhoven&apos;s big, ambitious drone team? Do you want to work in a team where
+            students from various study programs come together to create solutions for aerial transportation? You can
+            apply by sending your resume and motivation letter to{" "}
+            <JoinEmail className="nolink">join@aeroteameindhoven.nl</JoinEmail>!
+          </div>
+          <p>
+            Within Aero Team Eindhoven you have the possibility and flexibility to choose how you want to contribute to
+            our cause. With positions ranging from part-time options next to your studies to opting for a gap year as a
+            board member, you have the flexibility to see what fits you and the team best. Like every other team, Aero
+            requires a management subteam responsible for project management, finance, partners, etc. Are you into
+            engineering? Aero has a wide variety of engineering teams, ranging from software to electronics and
+            hardware.
+          </p>
+
+          <div className="button-wrapper">
+            <Link to="/apply" className="apply-button">
+              Apply now!
+            </Link>
+          </div>
+        </div>
+
+        <Row>
+          {vacancies.map((v) => (
+            <Col key={v.title} md={12} lg={4}>
+              <div className={classNames("vacancy", toClass(v.title))}>
+                <div className="text">{v.title}</div>
+                <div className="extra">
+                  {v.text ||
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, magni et. Consectetur, debitis laborum magni nisi quidem eius accusantium dolor. Doloremque consectetur incidunt voluptatem harum. Nulla ab repudiandae dolorem at."}
+                </div>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </div>
+  );
+}
 
 /**
  * Join page
  */
-const Join = () => {
-  return (
-    <Layout
-      pageTitle="Join Aero Team"
-      postHeader={
-        <div className="join-page">
-          <Container>
-            <div className="join-header">
-              <h1>Join Aero Team</h1>
-              <div>
-                Do you want to be part of Eindhoven&apos;s big, ambitious drone team? Do you want to work in a team
-                where students from various study programs come together to create solutions for aerial transportation?
-                You can apply by sending your resume and motivation letter to join@aeroteameindhoven.nl!
-              </div>
-              <p>
-                Within Aero Team Eindhoven you have the possibility and flexibility to choose how you want to contribute
-                to our cause. With positions ranging from part-time options next to your studies to opting for a gap
-                year as a board member, you have the flexibility to see what fits you and the team best. Like every
-                other team, Aero requires a management subteam responsible for project management, finance, partners,
-                etc. Are you into engineering? Aero has a wide variety of engineering teams, ranging from software to
-                electronics and hardware.
-              </p>
-
-              <div className="button-wrapper">
-                <Link to="/apply" className="apply-button">
-                  Apply now!
-                </Link>
-              </div>
-            </div>
-
-            <Row>
-              {vacancies.map((v) => (
-                <Col key={v.title} md={12} lg={4}>
-                  <div className={classNames("vacancy", toClass(v.title))}>
-                    <div className="text">{v.title}</div>
-                    <div className="extra">
-                      {v.text ||
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, magni et. Consectetur, debitis laborum magni nisi quidem eius accusantium dolor. Doloremque consectetur incidunt voluptatem harum. Nulla ab repudiandae dolorem at."}
-                    </div>
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </div>
-      }
-    />
-  );
-};
-
-export default Join;
+export default function Join() {
+  return <Layout postHeader={<PostHeader />} />;
+}
 
 const vacancies = [
   {
@@ -80,19 +84,3 @@ const vacancies = [
 ];
 
 const toClass = (s: string) => s.replace(" ", "").toLowerCase();
-
-interface MailAProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const MailA: React.FC<MailAProps> = ({ children, className }) => {
-  return (
-    <a
-      href={`mailto:join@aeroteameindhoven.nl?subject=Interest in joining Aero Team Eindhoven!&body=Tell us about yourself!`}
-      className={className}
-    >
-      {children}
-    </a>
-  );
-};

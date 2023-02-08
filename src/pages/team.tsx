@@ -1,9 +1,10 @@
 import React from "react";
-import { Container, Row, Col } from "react-grid-system";
-import Layout from "../components/layout";
+import { Container } from "react-grid-system";
+import Layout from "../components/Layout";
 import "../components/styles/team.scss";
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import TeamView from "../components/team/TeamView";
+import { HeadContent } from "../components/HeadContent";
 
 export interface TeamInfo {
   name: string;
@@ -15,13 +16,14 @@ export interface TeamMember {
   name: string;
   title: string;
   email: string;
-  photo: string;
-  linkedin: string;
+  // FIXME:
+  // photo: string;
+  // linkedin: string;
   time: string;
   subteams: string[];
 }
 
-const allTeams: TeamInfo[] = [
+const allTeams: [TeamInfo, TeamInfo] = [
   {
     name: "21/22",
     text: "In 2022 the first year of Aero Team started, and was founded by members from the old teams Blue Jay Eindhoven and Team Syfly."
@@ -32,11 +34,16 @@ const allTeams: TeamInfo[] = [
   }
 ];
 
+export function Head() {
+  return <HeadContent title="The Team" />;
+}
+
 /**
  * Team page, containing all team members and their details
  */
-const Team = ({ data }) => {
-  const [activeTeamId, setActiveTeamId] = React.useState<number>(1);
+export default function Team({ data }: PageProps<Query>) {
+  // TODO: FIXME: this is a super duper hack what the heck
+  const [activeTeamId, setActiveTeamId] = React.useState<0 | 1>(1);
 
   const activeTeam = allTeams[activeTeamId];
 
@@ -49,17 +56,19 @@ const Team = ({ data }) => {
     "22/23": data.allMembers2223Csv.nodes
   };
 
-  const members: TeamMember[] = membersData[activeTeam.name].map((m) => ({
-    id: m.id,
-    name: m.first_name + " " + m.surname,
-    title: m.function,
-    email: m.Aero_e_mail,
-    time: m.time,
-    subteams: m.subteam.split(", ")
-  }));
+  const members: TeamMember[] = membersData[activeTeam.name as keyof typeof membersData].map((m): TeamMember => {
+    return {
+      id: m.id,
+      name: m.first_name + " " + m.surname,
+      title: m.function,
+      email: m.Aero_e_mail,
+      time: m.time,
+      subteams: m.subteam.split(", ")
+    };
+  });
 
   return (
-    <Layout pageTitle="Meet the team">
+    <Layout>
       <div className="TeamPage">
         <Container className="teamcontainer">
           <h1>
@@ -74,9 +83,7 @@ const Team = ({ data }) => {
       </div>
     </Layout>
   );
-};
-
-export default Team;
+}
 
 export const query = graphql`
   query MyQuery {
@@ -100,7 +107,28 @@ export const query = graphql`
         function
         subteam
         time
+        status
       }
     }
   }
 `;
+
+interface MemberInfo {
+  id: string;
+  first_name: string;
+  surname: string;
+  Aero_e_mail: string;
+  function: string;
+  subteam: string;
+  time: string;
+  // TODO: status
+}
+
+interface Query {
+  allMembers2122Csv: {
+    nodes: MemberInfo[];
+  };
+  allMembers2223Csv: {
+    nodes: MemberInfo[];
+  };
+}

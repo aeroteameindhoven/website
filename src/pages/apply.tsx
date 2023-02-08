@@ -1,14 +1,15 @@
-import * as React from "react";
-import Layout from "../components/layout";
+import React from "react";
+import { HeadContent } from "../components/HeadContent";
+import Layout from "../components/Layout";
 import "../components/styles/apply.scss";
 
-const Apply = () => {
+export function Head() {
+  return <HeadContent title="Apply" description="Fill in our application form to show your interest in the team!" />;
+}
+
+export default function Apply() {
   return (
-    <Layout
-      pageTitle="Apply"
-      metaDescription="Fill in our application form to show your interest in the team!"
-      postHeader={<div style={{ height: 30 }} />}
-    >
+    <Layout postHeader={<div style={{ height: 30 }} />}>
       <div className="apply-page">
         <div className="apply-page-bg" />
         <div className="column">
@@ -49,6 +50,4 @@ const Apply = () => {
       </div>
     </Layout>
   );
-};
-
-export default Apply;
+}

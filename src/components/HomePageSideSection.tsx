@@ -8,13 +8,13 @@ interface Props {
   title: string;
   text: React.ReactNode;
   buttonLabel: string;
-  href?: string;
-  allignment?: "left" | "right";
+  href: string;
+  alignment?: "left" | "right";
 }
 
-const HomePageSideSection: React.FC<Props> = ({ title, text, buttonLabel, href, allignment = "left" }) => {
+export default function HomePageSideSection({ title, text, buttonLabel, href, alignment = "left" }: Props) {
   return (
-    <div className={classNames("HomePageSideSection", allignment)}>
+    <div className={classNames("HomePageSideSection", alignment)}>
       <h2 className="title">{title}</h2>
       <div className="text-wrapper">
         <Hidden xs sm md>
@@ -29,6 +29,4 @@ const HomePageSideSection: React.FC<Props> = ({ title, text, buttonLabel, href, 
       </div>
     </div>
   );
-};
-
-export default HomePageSideSection;
+}
