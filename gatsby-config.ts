@@ -1,4 +1,6 @@
-module.exports = {
+import { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Aero Team Eindhoven`,
     siteUrl: `https://aeroteameindhoven.nl`
@@ -63,3 +65,5 @@ module.exports = {
     }
   ]
 };
+
+export default config;

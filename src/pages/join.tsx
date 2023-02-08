@@ -8,7 +8,7 @@ import "../components/styles/join.scss";
 /**
  * Join page
  */
-const Join = () => {
+export default function Join() {
   return (
     <Layout
       pageTitle="Join Aero Team"
@@ -56,9 +56,7 @@ const Join = () => {
       }
     />
   );
-};
-
-export default Join;
+}
 
 const vacancies = [
   {
@@ -86,7 +84,7 @@ interface MailAProps {
   children?: React.ReactNode;
 }
 
-const MailA: React.FC<MailAProps> = ({ children, className }) => {
+function MailA({ children, className }: MailAProps) {
   return (
     <a
       href={`mailto:join@aeroteameindhoven.nl?subject=Interest in joining Aero Team Eindhoven!&body=Tell us about yourself!`}
@@ -95,4 +93,4 @@ const MailA: React.FC<MailAProps> = ({ children, className }) => {
       {children}
     </a>
   );
-};
+}

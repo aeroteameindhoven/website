@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-grid-system";
+import { Container } from "react-grid-system";
 import Layout from "../components/layout";
 import "../components/styles/team.scss";
 import { graphql } from "gatsby";
