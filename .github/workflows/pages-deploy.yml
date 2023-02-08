@@ -75,6 +75,7 @@ jobs:
           PREFIX_PATHS: "true"
         run: yarn run build
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
