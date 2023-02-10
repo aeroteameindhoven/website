@@ -8,6 +8,30 @@ const config: GatsbyConfig = {
       "Redefine Flying! Aero Team Eindhoven is a team of students from Eindhoven University of Technology working towards a sustainable world by developing an autonomous drone network for zero-emmision air delivery."
   },
   plugins: [
+    /** BEGIN Image optimization */
+    "gatsby-plugin-image",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          formats: ["auto", "webp", "avif"],
+          placeholder: "blurred",
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          blurredOptions: {
+            width: 40
+          },
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {}
+        }
+      }
+    },
+    /** END Image optimization */
+
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -16,6 +40,7 @@ const config: GatsbyConfig = {
         }
       }
     },
+
     // {
     //   resolve: "gatsby-source-wordpress",
     //   options: {
@@ -29,23 +54,21 @@ const config: GatsbyConfig = {
         trackingId: "G-WN8X4H8WCY"
       }
     },
-    "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png"
+        icon: `${__dirname}/src/images/icon.png`
       }
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+
+    // BEGIN member list
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/"
-      },
-      __key: "images"
+        name: "member-images",
+        path: `${__dirname}/src/images/members`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -54,7 +77,15 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/data/`
       }
     },
-    `gatsby-transformer-csv`,
+    {
+      resolve: `gatsby-transformer-csv`,
+      options: {
+        typeName: "members",
+        nodePerFile: "members"
+      }
+    },
+    // END member list
+
     {
       resolve: `gatsby-plugin-typescript`,
       options: {

@@ -1,15 +1,17 @@
 import React from "react";
 import { Col, Row } from "react-grid-system";
-import { TeamInfo, TeamMember } from "../../pages/team";
+import { TeamMember } from "../../hooks/useTeamMembers";
+import { TeamInfo } from "../../pages/team";
+import { SubTeamSelector } from "./SubTeamSelector";
 // import LinkedIn from "../images/icons/linkedin.svg";
-import Mail from "../../images/icons/email.svg";
+import { TeamMemberCard } from "./TeamMemberCard";
 
 interface Props {
   teamInfo: TeamInfo;
   members: TeamMember[];
 }
 
-const TeamView: React.FC<Props> = ({ teamInfo, members }) => {
+export default function TeamView({ teamInfo, members }: Props) {
   const [subteam, setSubteam] = React.useState<string | null>(null);
 
   const handleSubteamChange = (choice: string) => {
@@ -33,71 +35,12 @@ const TeamView: React.FC<Props> = ({ teamInfo, members }) => {
         {
           // Loop over all members
           membersToShow.map((member) => (
-            <Col key={member.name} sm={12} md={6} lg={4}>
-              <TeamMemberCard member={member} teamId={teamInfo.name.replace("/", "-")} />
+            <Col key={member.email} sm={12} md={6} lg={4}>
+              <TeamMemberCard member={member} />
             </Col>
           ))
         }
       </Row>
     </div>
   );
-};
-
-export default TeamView;
-
-interface TeamMemberCardProps {
-  member: TeamMember;
-  teamId: string;
 }
-
-const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member, teamId }) => {
-  return (
-    <div className="TeamMember">
-      <div
-        style={{
-          backgroundImage: `url('/members/${teamId}/${getPictureFileName(member.name)}.jpg'), url("/placeholder.png")`
-        }}
-        className="photo"
-      />
-      <div className="contact-details">
-        <a href={`mailto:${member.email}`}>
-          <Mail className="icon mail" />
-        </a>
-        {/* <a href={member.linkedin} target="_blank" rel="noreferrer">
-          <LinkedIn className="icon linkedin" />
-        </a> */}
-      </div>
-      <div className="line" />
-      <div className="name">{member.name}</div>
-      <div className="title">{member.title}</div>
-    </div>
-  );
-};
-
-function getPictureFileName(s: string): string {
-  return s.replace(/\s/g, "").toLowerCase();
-}
-
-interface SubTeamSelectorProps {
-  subTeams: string[];
-  currentSelection: string | null;
-  onSelect(subteam: string): void;
-}
-
-const SubTeamSelector: React.FC<SubTeamSelectorProps> = ({ subTeams, currentSelection, onSelect }) => {
-  return (
-    <div className="SubTeamSelector">
-      <ul>
-        {subTeams.map((subTeam) => (
-          <li
-            key={subTeam}
-            onClick={() => onSelect(subTeam)}
-            className={currentSelection === subTeam ? "selected" : undefined}
-          >
-            {subTeam}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
