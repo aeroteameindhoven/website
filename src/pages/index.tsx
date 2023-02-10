@@ -2,14 +2,13 @@ import React from "react";
 import { Container, Row, Col, Visible } from "react-grid-system";
 import HomePageSideSection from "../components/HomePageSideSection";
 import Layout from "../components/Layout";
-import renderImage from "../images/render01.png";
-import test1 from "../images/test2.png";
 import "../components/styles/home.scss";
 import GlobeIllustration from "../images/globe.svg";
 import TUELogo from "../images/tue.svg";
 
 import "react-slideshow-image/dist/styles.css";
 import { HeadContent } from "../components/HeadContent";
+import { StaticImage } from "gatsby-plugin-image";
 // import { Fade } from "react-slideshow-image";
 
 export function Head() {
@@ -116,8 +115,18 @@ export default function Index() {
                 </Col>
                 <Col lg={6}>
                   <div className="render-container">
-                    <img className="render-background" src={test1} alt="3D Render of the drone concept" />
-                    <img className="render-image" src={renderImage} alt="3D Render of the drone concept" />
+                    <StaticImage
+                      className="render-background"
+                      src="../images/render-background.png"
+                      placeholder="blurred"
+                      alt="3D Render of the drone concept"
+                    />
+                    <StaticImage
+                      className="render-image"
+                      src="../images/render.png"
+                      placeholder="blurred"
+                      alt="3D Render of the drone concept"
+                    />
                   </div>
                 </Col>
               </Row>

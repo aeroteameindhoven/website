@@ -15,7 +15,7 @@ interface MetadataQuery {
   };
 }
 
-export function HeadContent(props: React.PropsWithChildren<Props>) {
+export function HeadContent(props: Props) {
   const meta = useStaticQuery<MetadataQuery>(graphql`
     query MetadataQuery {
       site {
@@ -45,7 +45,6 @@ export function HeadContent(props: React.PropsWithChildren<Props>) {
       ) : (
         <title>{meta.site.siteMetadata.title}</title>
       )}
-      {props.children}
     </>
   );
 }
