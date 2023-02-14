@@ -34,17 +34,17 @@ export default function Team(props: PageProps) {
   })();
 
   const { setSubteam, clearSubteam, subteam } = (() => {
-    const params = new URLSearchParams(props.location.search);
-    const subteam = params.get("subteam");
+    const params = new URLSearchParams(props.location.hash.substring(1));
+    const subteam = params.get("filter");
 
     return {
       setSubteam: (team: string) => {
-        params.set("subteam", team);
-        navigate(`${props.location.pathname}?${params.toString()}`);
+        params.set("filter", team);
+        navigate(`#${params.toString()}`);
       },
       clearSubteam: () => {
-        params.delete("subteam");
-        navigate(`${props.location.pathname}?${params.toString()}`);
+        params.delete("filter");
+        navigate(`#${params.toString()}`);
       },
       subteam
     };
