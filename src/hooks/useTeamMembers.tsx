@@ -13,7 +13,6 @@ const QUERY = graphql`
           subteam
           aero_email
           time
-          status
         }
         parent {
           ... on File {
@@ -53,9 +52,6 @@ export interface MemberCSVInfo {
   function: string;
   subteam: string;
   time: "part-time" | "full-time";
-
-  // New fields for 22-23
-  status?: "active" | "inactive";
 }
 
 interface MemberPhotoFile extends FileNode {
@@ -123,7 +119,6 @@ export class TeamMember {
   public time: "part-time" | "full-time";
 
   // New fields for 22-23
-  public status?: "active" | "inactive";
   // TODO: linkedin?: string
 
   public photo?: IGatsbyImageData;
@@ -135,10 +130,12 @@ export class TeamMember {
     this.email = csv_info.aero_email;
 
     this.title = csv_info.function;
-    this.subteams = csv_info.subteam.split(", ");
+    this.subteams = csv_info.subteam
+      .split(",")
+      .map((x) => x.trim())
+      .filter((x) => x.length > 0);
 
     this.time = csv_info.time;
-    this.status = csv_info.status;
 
     this.photo = photo;
   }

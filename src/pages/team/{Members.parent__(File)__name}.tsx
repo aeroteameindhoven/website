@@ -1,5 +1,5 @@
 import React from "react";
-import { HeadProps, Link, PageProps } from "gatsby";
+import { HeadProps, Link, navigate, PageProps } from "gatsby";
 import { HeadContent } from "../../components/HeadContent";
 import { useTeamMembers, Years } from "../../hooks/useTeamMembers";
 import { ALL_TEAMS } from "../team";
@@ -7,6 +7,7 @@ import Layout from "../../components/Layout";
 import { Container } from "react-grid-system";
 import { StaticImage } from "gatsby-plugin-image";
 import TeamView from "../../components/team/TeamView";
+import "../../components/styles/team.scss";
 
 export function Head(props: HeadProps) {
   return <HeadContent title={`The ${props.params["parent__name"]} Team`} />;
@@ -20,7 +21,7 @@ export default function Team(props: PageProps) {
 
   const activeTeam = ALL_TEAMS.get(year)!;
   // TODO: make these members show seperatly somehow
-  const current_members = useTeamMembers(year)!.filter((member) => member.status != "inactive");
+  const current_members = useTeamMembers(year)!;
 
   // TODO: make this a dropdown, not a toggle
   const nextTeam = (() => {
@@ -30,6 +31,23 @@ export default function Team(props: PageProps) {
     const nextKey = keys[(currentIndex + 1) % keys.length]!;
 
     return `/team/${nextKey}`;
+  })();
+
+  const { setSubteam, clearSubteam, subteam } = (() => {
+    const params = new URLSearchParams(props.location.search);
+    const subteam = params.get("subteam");
+
+    return {
+      setSubteam: (team: string) => {
+        params.set("subteam", team);
+        navigate(`${props.location.pathname}?${params.toString()}`);
+      },
+      clearSubteam: () => {
+        params.delete("subteam");
+        navigate(`${props.location.pathname}?${params.toString()}`);
+      },
+      subteam
+    };
   })();
 
   return (
@@ -51,7 +69,16 @@ export default function Team(props: PageProps) {
               />
             </Link>
           </h1>
-          <TeamView teamInfo={activeTeam} members={current_members} />
+          <TeamView
+            teamInfo={activeTeam}
+            members={current_members}
+            subteam={subteam}
+            setSubteam={setSubteam}
+            clearSubteam={clearSubteam}
+            // FIXME: less janky
+            // Do not show the subteams under the 21-22 year
+            show_subteams={year !== "21-22"}
+          />
         </Container>
       </div>
     </Layout>

@@ -1,28 +1,25 @@
-first name,surname,aero email,function,subteam,time,status
-Bram,Schut,b.schut@aeroteameindhoven.nl,Team Lead,Management,full-time,active
-Omar,Raafat,o.raafat@aeroteameindhoven.nl,HR & External Relations Manager,Management,part-time,active
-Tirtha,Kaloor,t.kaloor@aeroteameindhoven.nl,Finance Manager,Management,part-time,active
-Jai,Wientjes,j.wientjes@aeroteameindhoven.nl,PR Manager,"Management, Promotion",part-time,active
-Isa,Dantuma,i.dantuma@aeroteameindhoven.nl,Lead VR Experience,"Management, VR Experience",part-time,active
-Pranav Natesh,Ramanathan,p.ramanathan@aeroteameindhoven.nl,Lead Overall Design,"Management, Overall Design",part-time,active
-Zachary,Kohnen,z.kohnen@aeroteameindhoven.nl,Lead Battery Swap & Autonomous Flight,"Management, Battery Swap, Autonomous Flight",part-time,active
-Ties,Aben,t.aben@aeroteameindhoven.nl,Intergration Developer,Battery Swap,full-time,active
-Yuvan,Dwaraga,y.dwaraga@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,part-time,active
-Bianca,Eni,b.eni@aeroteameindhoven.nl,PR,Promotion,part-time,active
-Berk,Eraltan,b.eraltan@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,part-time,active
-Tim,Htet Yan Oo,t.htet.yan.oo@aeroteameindhoven.nl,Intergration developer ,Battery Swap,part-time,active
-Abdelrahman,Jaber,a.jaber@aeroteameindhoven.nl,Overall Designer ,Overall Design,full-time,active
-Khanh,Lo,khanh@aeroteameindhoven.nl,Overall Designer,Overall Design,part-time,active
-Harsh,Nagouda,h.nagouda@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,part-time,active
-Hoang,Nguyen,h.nguyen@aeroteameindhoven.nl,Autonomous Flight Engineer,Autonomous Flight,part-time,active
-Nam,Nguyen,n.nguyen@aeroteameindhoven.nl,Overall Designer,Overall Design,part-time,active
-Egor ,Obidin,e.obidin@aeroteameindhoven.nl,Autonomous Flight & Batter Swap Engineer ,"Battery Swap, Autonomous Flight",part-time,active
-Eashwar,Ravikkumar,e.ravikkumar@aeroteameindhoven.nl,Overall designer,Overall Design,part-time,active
-Marijn ,Ruiter,m.ruiter@aeroteameindhoven.nl,Autonomous Flight Engineer,Autonomous Flight,part-time,active
-Vincent,Rummler,v.rummler@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,full-time,inactive
-Oyku,Sanlibayrak,o.sanlibayrak@aeroteameindhoven.nl,VR Experience,VR Experience,part-time,active
-Nooruddin ,Solangi,n.solangi@aeroteameindhoven.nl,Intergration developer ,Battery Swap,part-time,active
-Zhuorong ,Su,z.su@aeroteameindhoven.nl,Overall Designer,Overall Design,full-time,active
-Jakub,Szkudlarek,j.szkudlarek@aeroteameindhoven.nl,Battery Swap Engineer,Battery Swap,part-time,inactive
-Long,Tran,l.tran@aeroteameindhoven.nl,Overall Designer,Overall Design,part-time,active
-Grant,van Vuuren,g.vuuren@aeroteameindhoven.nl,Technical manager,Management,full-time,active
+first name,surname,aero email,function,subteam,time
+Bram,Schut,b.schut@aeroteameindhoven.nl,Team Manager,Management,full-time
+Grant,van Vuuren,g.vuuren@aeroteameindhoven.nl,Technical Manager,Management,full-time
+Omar,Raafat,o.raafat@aeroteameindhoven.nl,HR Manager,Management,part-time
+Tirtha,Kaloor,t.kaloor@aeroteameindhoven.nl,Finance Manager,Management,part-time
+Jai,Wientjes,j.wientjes@aeroteameindhoven.nl,PR Manager,"Management, Promotion",part-time
+Isa,Dantuma,i.dantuma@aeroteameindhoven.nl,VR Experience Lead,VR Experience,part-time
+Ties,Aben,t.aben@aeroteameindhoven.nl,Engineer,,full-time
+Bianca,Eni,b.eni@aeroteameindhoven.nl,PR,Promotion,part-time
+Berk,Eraltan,b.eraltan@aeroteameindhoven.nl,Engineer,"Aerodynamics, Avionics, Manufacturing and Maintenance, Materials And Structure",part-time
+Tim,Htet Yan Oo,t.htet.yan.oo@aeroteameindhoven.nl,Engineer,Avionics,part-time
+Abdelrahman,Jaber,a.jaber@aeroteameindhoven.nl,Engineer,,full-time
+Zachary,Kohnen,z.kohnen@aeroteameindhoven.nl,Engineer,"Avionics, Manufacturing and Maintenance, Software",part-time
+Khanh,Lo,khanh@aeroteameindhoven.nl,Engineer,"Avionics, Software",part-time
+Harsh,Nagouda,h.nagouda@aeroteameindhoven.nl,Engineer,Manufacturing and Maintenance,part-time
+Hoang,Nguyen,h.nguyen@aeroteameindhoven.nl,Software Engineer,Software,part-time
+Nam,Nguyen,n.nguyen@aeroteameindhoven.nl,Engineer,"Aerodynamics, Avionics, Materials And Structure",part-time
+Egor ,Obidin,e.obidin@aeroteameindhoven.nl,Engineer,"Avionics, Software",part-time
+Pranav Natesh,Ramanathan,p.ramanathan@aeroteameindhoven.nl,Engineer,Aerodynamics,part-time
+Eashwar,Ravikkumar,e.ravikkumar@aeroteameindhoven.nl,Engineer,"Avionics, Manufacturing and Maintenance, Software",part-time
+Marijn ,Ruiter,m.ruiter@aeroteameindhoven.nl,Software Engineer,Software,part-time
+Oyku,Sanlibayrak,o.sanlibayrak@aeroteameindhoven.nl,VR Engineer,VR Experience,part-time
+Nooruddin ,Solangi,n.solangi@aeroteameindhoven.nl,Engineer,,part-time
+Zhuorong ,Su,z.su@aeroteameindhoven.nl,Engineer,Materials And Structure,full-time
+Long,Tran,l.tran@aeroteameindhoven.nl,Engineer,Aerodynamics,part-time
