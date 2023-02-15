@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { TeamMember } from "../../hooks/useTeamMembers";
@@ -5,16 +6,21 @@ import Mail from "../../images/icons/email.svg";
 
 export interface TeamMemberCardProps {
   member: TeamMember;
+  above_fold: boolean;
+  show_subteam: boolean;
+
+  currentSelection: string | null;
+  onSelect(subteam: string): void;
 }
 
-export function TeamMemberCard({ member }: TeamMemberCardProps) {
+export function TeamMemberCard({ member, above_fold, show_subteam, currentSelection, onSelect }: TeamMemberCardProps) {
   const alt = `profile picture of ${member.fullName()}`;
 
   let image;
   if (member.photo === undefined) {
     image = <StaticImage src="../../images/placeholders/member.png" alt={alt} className="photo" loading="eager" />;
   } else {
-    image = <GatsbyImage image={member.photo} alt={alt} className="photo" loading="lazy" />;
+    image = <GatsbyImage image={member.photo} alt={alt} className="photo" loading={above_fold ? "eager" : "lazy"} />;
   }
 
   return (
@@ -34,6 +40,17 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
       {/* TODO: style first and last names differently */}
       <div className="name">{member.fullName()}</div>
       <div className="title">{member.title}</div>
+      <div className="subteams" aria-hidden={!show_subteam}>
+        {member.subteams.map((team) => (
+          <div
+            className={classNames("subteam", currentSelection === team ? "selected" : undefined)}
+            key={team}
+            onClick={() => onSelect(team)}
+          >
+            {team}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

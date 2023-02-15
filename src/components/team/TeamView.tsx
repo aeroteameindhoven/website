@@ -9,16 +9,20 @@ import { TeamMemberCard } from "./TeamMemberCard";
 interface Props {
   teamInfo: TeamInfo;
   members: TeamMember[];
+
+  show_subteams: boolean;
+  subteam: string | null;
+
+  setSubteam: (team: string) => void;
+  clearSubteam: () => void;
 }
 
-export default function TeamView({ teamInfo, members }: Props) {
-  const [subteam, setSubteam] = React.useState<string | null>(null);
-
+export default function TeamView({ teamInfo, members, subteam, setSubteam, clearSubteam, show_subteams }: Props) {
   const handleSubteamChange = (choice: string) => {
     if (choice !== subteam) {
       setSubteam(choice);
     } else {
-      setSubteam(null);
+      clearSubteam();
     }
   };
 
@@ -34,9 +38,15 @@ export default function TeamView({ teamInfo, members }: Props) {
       <Row>
         {
           // Loop over all members
-          membersToShow.map((member) => (
+          membersToShow.map((member, i) => (
             <Col key={member.email} sm={12} md={6} lg={4}>
-              <TeamMemberCard member={member} />
+              <TeamMemberCard
+                member={member}
+                above_fold={i < 4}
+                onSelect={handleSubteamChange}
+                currentSelection={subteam}
+                show_subteam={show_subteams}
+              />
             </Col>
           ))
         }
