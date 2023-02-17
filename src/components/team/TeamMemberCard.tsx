@@ -14,13 +14,25 @@ export interface TeamMemberCardProps {
 }
 
 export function TeamMemberCard({ member, above_fold, show_subteam, currentSelection, onSelect }: TeamMemberCardProps) {
-  const alt = `profile picture of ${member.fullName()}`;
-
   let image;
   if (member.photo === undefined) {
-    image = <StaticImage src="../../images/placeholders/member.png" alt={alt} className="photo" loading="eager" />;
+    image = (
+      <StaticImage
+        src="../../images/placeholders/member.png"
+        alt={member.fullName()}
+        className="photo"
+        loading="eager"
+      />
+    );
   } else {
-    image = <GatsbyImage image={member.photo} alt={alt} className="photo" loading={above_fold ? "eager" : "lazy"} />;
+    image = (
+      <GatsbyImage
+        image={member.photo}
+        alt={member.fullName()}
+        className="photo"
+        loading={above_fold ? "eager" : "lazy"}
+      />
+    );
   }
 
   return (
