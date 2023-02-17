@@ -28,7 +28,8 @@ const QUERY = graphql`
           id
           name
           childImageSharp {
-            gatsbyImageData
+            # 330px is width of member image card
+            gatsbyImageData(width: 330)
           }
         }
       }
