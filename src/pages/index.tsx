@@ -5,14 +5,18 @@ import Layout from "../components/Layout";
 import "../components/styles/home.scss";
 import GlobeIllustration from "../images/globe.svg";
 import TUELogo from "../images/tue.svg";
-
 import "react-slideshow-image/dist/styles.css";
 import { HeadContent } from "../components/HeadContent";
 import { StaticImage } from "gatsby-plugin-image";
+import DialogModalTester from "../components/NotificationTester";
 // import { Fade } from "react-slideshow-image";
 
 export function Head() {
   return <HeadContent title="Contact" />;
+}
+
+export function Notify() {
+  return <DialogModalTester />;
 }
 
 function PostHeader() {

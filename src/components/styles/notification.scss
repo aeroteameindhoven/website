@@ -1,0 +1,19 @@
+@import "./main.scss";
+.dialog {
+  position: absolute;
+  width: 1095px;
+  height: 649px;
+  left: 101px;
+  top: 109px;
+  
+  background: #F7F9FB;
+  
+    ::backdrop {
+      background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.div {
+    display: flex;
+    gap: 20px;
+}
