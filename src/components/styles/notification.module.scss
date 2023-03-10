@@ -1,0 +1,25 @@
+@import "./main.scss";
+
+.dialog {
+  position: absolute;
+  z-index: 9;
+  inset: 3em;
+  width: auto;
+  height: auto;
+
+  background: #f7f9fb;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 1);
+  }
+
+  /*
+ width: 400px;
+  border-radius: 8px;
+  border: 1px solid #888;
+
+  ::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  */
+}
