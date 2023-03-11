@@ -12,7 +12,7 @@ import BoardNotification from "../components/BoardNotification";
 // import { Fade } from "react-slideshow-image";
 
 export function Head() {
-  return <HeadContent title="Contact" />;
+  return <HeadContent />;
 }
 
 function PostHeader() {
