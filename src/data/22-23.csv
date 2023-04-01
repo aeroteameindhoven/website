@@ -1,6 +1,6 @@
 first name,surname,aero email,function,subteam,time
 Bram,Schut,b.schut@aeroteameindhoven.nl,Team Manager,Management,full-time
-Grant,van Vuuren,g.vuuren@aeroteameindhoven.nl,Technical Manager,Management,full-time
+Grant,van Vuuren,g.vuuren@aeroteameindhoven.nl,Technical Manager,"Management, Aerodynamics, Software",full-time
 Omar,Raafat,o.raafat@aeroteameindhoven.nl,HR Manager,Management,part-time
 Tirtha,Kaloor,t.kaloor@aeroteameindhoven.nl,Finance Manager,Management,part-time
 Jai,Wientjes,j.wientjes@aeroteameindhoven.nl,PR Manager,"Management, Promotion",part-time
@@ -12,7 +12,7 @@ Tim,Htet Yan Oo,t.htet.yan.oo@aeroteameindhoven.nl,Engineer,Avionics,part-time
 Abdelrahman,Jaber,a.jaber@aeroteameindhoven.nl,Engineer,"Materials and Structure, Internship",full-time
 Zachary,Kohnen,z.kohnen@aeroteameindhoven.nl,Engineer,"Avionics, Manufacturing and Maintenance, Software",part-time
 Khanh,Lo,khanh@aeroteameindhoven.nl,Engineer,"Avionics, Software",part-time
-Harsh,Nagouda,h.nagouda@aeroteameindhoven.nl,Engineer,Manufacturing and Maintenance,part-time
+Harsh,Nagouda,h.nagouda@aeroteameindhoven.nl,Engineer,"Manufacturing and Maintenance, Materials and Structure",part-time
 Hoang,Nguyen,h.nguyen@aeroteameindhoven.nl,Software Engineer,Software,part-time
 Nam,Nguyen,n.nguyen@aeroteameindhoven.nl,Engineer,"Aerodynamics, Avionics, Materials and Structure",part-time
 Egor ,Obidin,e.obidin@aeroteameindhoven.nl,Engineer,"Avionics, Software",part-time
@@ -20,6 +20,5 @@ Pranav Natesh,Ramanathan,p.ramanathan@aeroteameindhoven.nl,Engineer,Aerodynamics
 Eashwar,Ravikkumar,e.ravikkumar@aeroteameindhoven.nl,Engineer,"Manufacturing and Maintenance, Software",part-time
 Marijn,Ruiter,m.ruiter@aeroteameindhoven.nl,Software Engineer,Software,part-time
 Oyku,Sanlibayrak,o.sanlibayrak@aeroteameindhoven.nl,VR Engineer,VR Experience,part-time
-Nooruddin,Solangi,n.solangi@aeroteameindhoven.nl,Engineer,,part-time
 Zhuorong,Su,z.su@aeroteameindhoven.nl,Engineer,"Materials and Structure, Internship",full-time
 Long,Tran,l.tran@aeroteameindhoven.nl,Engineer,Aerodynamics,part-time
