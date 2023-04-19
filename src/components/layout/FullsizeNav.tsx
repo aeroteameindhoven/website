@@ -47,8 +47,7 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Our Journey",
-    link: "/journey",
-    disabled: true
+    link: "/journey"
   },
   {
     label: "Partners",
