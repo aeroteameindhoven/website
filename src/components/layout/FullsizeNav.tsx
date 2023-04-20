@@ -33,21 +33,17 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   {
-    label: "About Us",
-    link: "/about-us",
-    disabled: true
+    label: "Team",
+    link: "/team"
   },
   {
     label: "Project",
     link: "/project"
   },
   {
-    label: "Team",
-    link: "/team"
-  },
-  {
     label: "Our Journey",
-    link: "/journey"
+    link: "/journey",
+    disabled: true
   },
   {
     label: "Partners",
@@ -58,7 +54,8 @@ export const navItems: NavItem[] = [
     link: "/join"
   },
   {
-    label: "Contact",
-    link: "/contact"
+    label: "Internships",
+    link: "/internships",
+    disabled: true
   }
 ];

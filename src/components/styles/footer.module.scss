@@ -11,9 +11,20 @@
 .mail-link {
   color: white;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+
+  .app-name {
+    padding-left: 1rem;
+  }
+
+  .icon {
+    width: 2rem;
+    margin-right: 1rem;
+  }
 
   &:hover {
     text-decoration: underline;
   }
 }
-
