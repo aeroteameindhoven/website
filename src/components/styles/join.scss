@@ -136,5 +136,17 @@
     transform: translate(-50%, -50%); /* center the text */
     font-size: 4rem;
     text-shadow: 0.2rem 0.2rem 0px rgba($primary-pink, 1);
+
+    @media screen and (max-width: $breakpoint-lg) {
+      // TODO: FIXME: use background image instead of absolute position of text
+      font-size: 2rem;
+      position: relative;
+      transform: unset;
+      top:unset;
+      left: unset;
+      text-align: center;
+      text-shadow: 0.1rem 0.1rem 0px rgba($primary-pink, 1);
+
+  }
   }
 }
