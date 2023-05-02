@@ -1,13 +1,12 @@
 /* eslint-disable react/jsx-key */
 import classNames from "classnames";
-import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row } from "react-grid-system";
 import { HeadContent } from "../components/HeadContent";
 import Layout from "../components/Layout";
 import "../components/styles/join.scss";
-import { JoinEmail } from "../components/Email";
 import { Carousel } from "3d-react-carousal";
+import { StaticImage } from "gatsby-plugin-image";
 
 export function Head() {
   return <HeadContent title="Join" />;
@@ -16,14 +15,16 @@ export function Head() {
 function PostHeader() {
   return (
     <div className="join-page">
+      <div className="photo-container">
+        <h1 className="join-aero">JOIN AERO TEAM.</h1>
+        <StaticImage src="../images/join/teampicture.jpg" alt="group picture" className="photo" loading="eager" />
+      </div>
       <Container>
         <div className="join-header">
-          <h1>JOIN AERO TEAM</h1>
           <div>
             Do you want to be part of Eindhoven&apos;s big, ambitious drone team? Do you want to work in a team where
             students from various study programs come together to create solutions for aerial transportation? You can
-            apply by sending your resume and motivation letter to{" "}
-            <JoinEmail className="nolink">join@aeroteameindhoven.nl</JoinEmail>!
+            apply by filling in our interest form!
           </div>
           <p>
             Within Aero Team Eindhoven you have the possibility and flexibility to choose how you want to contribute to
@@ -35,17 +36,22 @@ function PostHeader() {
           </p>
 
           <div className="button-wrapper">
-            <Link to="/apply" className="apply-button">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSch1kiTE33zF5nW2WTz0WfSersjoqQcEDsEOiFNQncdMoM-Qw/viewform"
+              target="_blank"
+              rel="noreferrer"
+              className="apply-button"
+            >
               Apply now!
-            </Link>
+            </a>
           </div>
         </div>
         <div className="quotes">
-          <h1>MEMBER EXPERIENCES</h1>
+          <h1>Member spotlight</h1>
           <Carousel slides={slides} autoplay={true} interval={5000} />
         </div>
         <div>
-          <h1>VACANCIES</h1>
+          <h1>Vacancies</h1>
           <Row>
             {vacancies.map((v) => (
               <Col key={v.title} md={12} lg={4}>
@@ -79,20 +85,18 @@ const vacancies = [
   },
   {
     title: "Engineering",
-    text: "As an engineer you are in charge of researching, designing and developing crucial technology for the future of aerial transportation. You will be working together in a multidisciplinary team of students of various backgrounds towards a single goal."
+    text: "As an engineer you are in charge of researching, designing and developing technology for the future of aerial transportation. You will be working together in a multidisciplinary team of students of various backgrounds towards a single goal."
   },
   {
     title: "Software & AI",
-    text: "As a marketing member, you will be thinking of various different and creative ways to make Aero team Eindhoven known to students, people and companies. Create social media posts, set-up events, design team clothing and anything else you can think of."
+    text: "As a member of the Software and AI team at Aero Team Eindhoven, your role would be critical in designing and developing the software and algorithms that enable our drones to fly autonomously, using technologies such as machine learning and computer vision. "
   }
 ];
 
 const toClass = (s: string) => s.replace(" & ", "").replace(" ", "").toLowerCase();
 
 const slides = [
-  <img src="https://picsum.photos/800/300/?random" alt="1" />,
-  <img src="https://picsum.photos/800/301/?random" alt="2" />,
-  <img src="https://picsum.photos/800/302/?random" alt="3" />,
-  <img src="https://picsum.photos/800/303/?random" alt="4" />,
-  <img src="https://picsum.photos/800/304/?random" alt="5" />
+  <StaticImage src="../images/join/teampicture.jpg" alt="1" />,
+  <StaticImage src="../images/join/teampicture.jpg" alt="2" />,
+  <StaticImage src="../images/join/teampicture.jpg" alt="3" />
 ];
