@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import classNames from "classnames";
 import { Link } from "gatsby";
 import React from "react";
@@ -6,6 +7,7 @@ import { HeadContent } from "../components/HeadContent";
 import Layout from "../components/Layout";
 import "../components/styles/join.scss";
 import { JoinEmail } from "../components/Email";
+import { Carousel } from "3d-react-carousal";
 
 export function Head() {
   return <HeadContent title="Join" />;
@@ -16,7 +18,7 @@ function PostHeader() {
     <div className="join-page">
       <Container>
         <div className="join-header">
-          <h1>Join Aero Team</h1>
+          <h1>JOIN AERO TEAM</h1>
           <div>
             Do you want to be part of Eindhoven&apos;s big, ambitious drone team? Do you want to work in a team where
             students from various study programs come together to create solutions for aerial transportation? You can
@@ -38,20 +40,26 @@ function PostHeader() {
             </Link>
           </div>
         </div>
-
-        <Row>
-          {vacancies.map((v) => (
-            <Col key={v.title} md={12} lg={4}>
-              <div className={classNames("vacancy", toClass(v.title))}>
-                <div className="text">{v.title}</div>
-                <div className="extra">
-                  {v.text ||
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, magni et. Consectetur, debitis laborum magni nisi quidem eius accusantium dolor. Doloremque consectetur incidunt voluptatem harum. Nulla ab repudiandae dolorem at."}
+        <div className="quotes">
+          <h1>MEMBER EXPERIENCES</h1>
+          <Carousel slides={slides} autoplay={true} interval={5000} />
+        </div>
+        <div>
+          <h1>VACANCIES</h1>
+          <Row>
+            {vacancies.map((v) => (
+              <Col key={v.title} md={12} lg={4}>
+                <div className={classNames("vacancy", toClass(v.title))}>
+                  <div className="text">{v.title}</div>
+                  <div className="extra">
+                    {v.text ||
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, magni et. Consectetur, debitis laborum magni nisi quidem eius accusantium dolor. Doloremque consectetur incidunt voluptatem harum. Nulla ab repudiandae dolorem at."}
+                  </div>
                 </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
+              </Col>
+            ))}
+          </Row>
+        </div>
       </Container>
     </div>
   );
@@ -66,7 +74,7 @@ export default function Join() {
 
 const vacancies = [
   {
-    title: "Management",
+    title: "Board 3",
     text: "As a management member, you are responsible for coordinating a big team together with a group of passionate and diverse students. Here you can tackle a variety of exciting problems and have the possibility to take on several different roles."
   },
   {
@@ -74,13 +82,17 @@ const vacancies = [
     text: "As an engineer you are in charge of researching, designing and developing crucial technology for the future of aerial transportation. You will be working together in a multidisciplinary team of students of various backgrounds towards a single goal."
   },
   {
-    title: "Marketing",
+    title: "Software & AI",
     text: "As a marketing member, you will be thinking of various different and creative ways to make Aero team Eindhoven known to students, people and companies. Create social media posts, set-up events, design team clothing and anything else you can think of."
-  },
-  {
-    title: "Interaction Research",
-    text: "As an interaction research member, you will be investigating how people react to drones and how we can adapt our design process to better accommodate the integration of drones within society through various technologies like Virtual Reality."
   }
 ];
 
-const toClass = (s: string) => s.replace(" ", "").toLowerCase();
+const toClass = (s: string) => s.replace(" & ", "").replace(" ", "").toLowerCase();
+
+const slides = [
+  <img src="https://picsum.photos/800/300/?random" alt="1" />,
+  <img src="https://picsum.photos/800/301/?random" alt="2" />,
+  <img src="https://picsum.photos/800/302/?random" alt="3" />,
+  <img src="https://picsum.photos/800/303/?random" alt="4" />,
+  <img src="https://picsum.photos/800/304/?random" alt="5" />
+];

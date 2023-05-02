@@ -1,4 +1,3 @@
-
 @import "./main.scss";
 
 .join-page {
@@ -43,11 +42,8 @@
     height: 350px;
     position: relative;
     margin-bottom: 30px;
-    
     background-size: cover;
     background-position: center;
-    
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +51,7 @@
 
     overflow: hidden;
 
-    &.management {
+    &.board3 {
       background-image: url("../../images/join/management.jpg");
     }
 
@@ -63,12 +59,8 @@
       background-image: url("../../images/join/engineer.jpg");
     }
 
-    &.marketing {
+    &.softwareai {
       background-image: url("../../images/join/marketing.jpg");
-    }
-
-    &.interactionresearch {
-      background-image: url("../../images/join/interaction.jpg");
     }
 
     .extra {
@@ -85,7 +77,7 @@
     }
 
     .text {
-      padding: 14px 20px ;
+      padding: 14px 20px;
       font-size: 18px;
       // background-color: $primary-blue;
       background-color: rgba($primary-pink, 0.7);
@@ -107,5 +99,21 @@
         top: 0;
       }
     }
+  }
+
+  .quotes {
+    padding-bottom: 50px;
+    display: block;
+    height: fit-content;
+    min-height: 350px;
+    overflow: hidden;
+  }
+
+  .react-3d-carousel .slider-container .slider-right div {
+    border: none;
+  }
+
+  .react-3d-carousel .slider-container .slider-left div {
+    border: none;
   }
 }
