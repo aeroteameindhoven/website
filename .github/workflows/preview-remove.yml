@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+          ref: main # PR branch may be deleted at this point
 
       - name: Delete preview
         uses: rossjrw/pr-preview-action@v1
