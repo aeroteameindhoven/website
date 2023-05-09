@@ -118,9 +118,10 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: github-pages
-          path: .
+          path: public
 
       - name: Exract
+        working-directory: public
         run: tar -xvf artifact.tar && rm artifact.tar
 
       - name: Deploy preview
@@ -128,7 +129,7 @@ jobs:
         id: deployment
         with:
           action: deploy
-          source-dir: .
+          source-dir: public
           preview-branch: previews
           deploy-repository: aeroteameindhoven/website-staging
           custom-url: staging.aeroteameindhoven.nl
