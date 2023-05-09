@@ -13,6 +13,9 @@
     "clean": "gatsby clean",
     "typecheck": "tsc",
     "lint": "eslint src/**/*.{ts,tsx}",
+    "__fmt": "prettier src types gatsby-config.ts .eslintrc .yarnrc.yml package.json tsconfig.json .prettierrc .github .vscode",
+    "fmt:check": "yarn __fmt --check",
+    "fmt:write": "yarn __fmt --write",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\""
   },
   "dependencies": {
