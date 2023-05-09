@@ -114,6 +114,9 @@ jobs:
           name: github-pages
           path: public
 
+      # Initialize git repo for pr-preview-action
+      - run: git init
+
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         id: deployment
