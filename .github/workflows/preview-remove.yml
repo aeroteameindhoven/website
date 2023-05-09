@@ -1,0 +1,30 @@
+name: Remove closed pull request preview
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  # Remove PR-Preview
+  remove-preview:
+    environment:
+      name: github-pages-staging
+    runs-on: ubuntu-latest
+    steps:
+      # Initialize git repo for pr-preview-action
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Delete preview
+        uses: rossjrw/pr-preview-action@v1
+        id: deployment
+        with:
+          action: remove
+          preview-branch: previews
+          deploy-repository: aeroteameindhoven/website-staging
+          custom-url: staging.aeroteameindhoven.nl
+          umbrella-dir: preview
+          token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
