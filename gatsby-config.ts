@@ -1,11 +1,12 @@
 import { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  pathPrefix: process.env["PATH_PREFIX"],
   siteMetadata: {
     title: `Aero Team Eindhoven`,
     siteUrl: `https://aeroteameindhoven.nl`,
     description:
-      "Redefine Flying! Aero Team Eindhoven is a team of students from Eindhoven University of Technology working towards a sustainable world by developing an autonomous drone network for zero-emmision air delivery."
+      "Redefine Flying! Aero Team Eindhoven is a team of students from Eindhoven University of Technology working towards a sustainable world by developing an autonomous drone network for zero-emission air delivery."
   },
   plugins: [
     /** BEGIN Image optimization */
