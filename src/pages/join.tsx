@@ -96,7 +96,13 @@ const vacancies = [
 const toClass = (s: string) => s.replace(" & ", "").replace(" ", "").toLowerCase();
 
 const slides = [
-  <StaticImage src="../images/join/teampicture.jpg" alt="1" />,
+  <StaticImage
+    src="../images/join/website_card.png"
+    alt="1"
+    aspectRatio={16 / 9}
+    objectFit="contain"
+    objectPosition="50% 50%"
+  />,
   <StaticImage src="../images/join/teampicture.jpg" alt="2" />,
   <StaticImage src="../images/join/teampicture.jpg" alt="3" />
 ];

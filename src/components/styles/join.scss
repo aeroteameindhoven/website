@@ -6,6 +6,7 @@
 
   .join-header {
     padding-bottom: 50px;
+    margin-top: 5%;
     h1 {
       font-size: 35px;
     }
@@ -123,7 +124,7 @@
     height: auto;
     max-width: 100%;
     align-content: start;
-    mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1), transparent);
+    mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
     position: relative;
     z-index: 1;
   }
@@ -142,11 +143,11 @@
       font-size: 2rem;
       position: relative;
       transform: unset;
-      top:unset;
+      top: unset;
       left: unset;
       text-align: center;
       text-shadow: 0.1rem 0.1rem 0px rgba($primary-pink, 1);
+    }
+  }
 
-  }
-  }
 }
