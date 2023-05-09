@@ -1,8 +1,9 @@
 @import "./main.scss";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
 // Make sure root wrapper has a full height
-#___gatsby, #gatsby-focus-wrapper {
+#___gatsby,
+#gatsby-focus-wrapper {
   min-height: 100vh;
 }
 
@@ -20,9 +21,9 @@ body {
 }
 
 .blue-gradient-bg {
-  background: radial-gradient(at bottom center, #103a8d 0%,  #021e3a 70%) fixed;
+  background: radial-gradient(at bottom center, #103a8d 0%, #021e3a 70%) fixed;
   // background: radial-gradient(at bottom right, rgba(255, 255, 255, 0.4) 0%, $primary-blue 60%);
-  
+
   &.fullHeight {
     height: 100vh;
     overflow: hidden;

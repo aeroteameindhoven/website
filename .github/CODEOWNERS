@@ -1,0 +1,16 @@
+# Ownership of all infrastructure files is given to @DusterTheFirst
+# to ensure that the workflow or deployment is not broken unintentionally
+.github         z.kohnen@aeroteameindhoven.nl
+.vscode         z.kohnen@aeroteameindhoven.nl
+.yarn           z.kohnen@aeroteameindhoven.nl
+
+# Ensure packages are verified and decent
+package.json    z.kohnen@aeroteameindhoven.nl
+
+# Ensure no typescript strictness is loosened
+tsconfig.json   z.kohnen@aeroteameindhoven.nl
+
+# Ensure no linter or style rules are bypassed or suppressed
+.eslintc        z.kohnen@aeroteameindhoven.nl
+.prettierrc     z.kohnen@aeroteameindhoven.nl
+.yarnrc.yml     z.kohnen@aeroteameindhoven.nl
