@@ -59,12 +59,10 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v3
         with:
-          path: |
-            public
-            .cache
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+          path: .cache
+          key: ${{ runner.os }}-gatsby-build
           restore-keys: |
-            ${{ runner.os }}-gatsby-build-
+            ${{ runner.os }}-gatsby-build
 
       - name: Install dependencies
         run: yarn install

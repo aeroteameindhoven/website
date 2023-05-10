@@ -1,12 +1,11 @@
-/* eslint-disable react/jsx-key */
 import classNames from "classnames";
 import React from "react";
 import { Col, Container, Row } from "react-grid-system";
 import { HeadContent } from "../components/HeadContent";
 import Layout from "../components/Layout";
 import "../components/styles/join.scss";
-import { Carousel } from "3d-react-carousal";
 import { StaticImage } from "gatsby-plugin-image";
+import Carousel from "../components/3d-carousel/Carousel";
 
 export function Head() {
   return <HeadContent title="Join" />;
@@ -48,7 +47,7 @@ function PostHeader() {
         </div>
         <div className="quotes">
           <h1>Member spotlight</h1>
-          <Carousel slides={slides} autoplay={true} interval={5000} />
+          <Carousel slides={slides} interval={5000} />
         </div>
         <div>
           <h1>Vacancies</h1>
@@ -99,10 +98,25 @@ const slides = [
   <StaticImage
     src="../images/join/website_card.png"
     alt="1"
+    key="1"
     aspectRatio={16 / 9}
     objectFit="contain"
     objectPosition="50% 50%"
   />,
-  <StaticImage src="../images/join/teampicture.jpg" alt="2" />,
-  <StaticImage src="../images/join/teampicture.jpg" alt="3" />
+  <StaticImage
+    src="../images/join/teampicture.jpg"
+    alt="2"
+    key="2"
+    aspectRatio={16 / 9}
+    objectFit="contain"
+    objectPosition="50% 50%"
+  />,
+  <StaticImage
+    src="../images/join/teampicture.jpg"
+    alt="3"
+    key="3"
+    aspectRatio={16 / 9}
+    objectFit="contain"
+    objectPosition="50% 50%"
+  />
 ];

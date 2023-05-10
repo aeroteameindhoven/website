@@ -1,8 +1,9 @@
 // Declare bundler files so they can be read by tsx
-declare module "*.scss";
 declare module "*.svg";
 declare module "*.jpg";
 declare module "*.png";
 
-// No types :(
-declare module "3d-react-carousal";
+// CSS and SCSS for the bundler
+declare module "*.module.css";
+
+declare module "*.module.scss";

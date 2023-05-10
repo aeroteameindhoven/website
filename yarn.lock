@@ -5,20 +5,6 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"3d-react-carousal@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "3d-react-carousal@npm:5.0.0"
-  dependencies:
-    prop-types: ^15.7.2
-    react-fast-compare: ^3.2.0
-    react-swipeable: ^6.1.2
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ">=17.0.2"
-  checksum: b52258c5e7eedf698dbf23ecb00a10c0f24ed469de818fdc654f04361bcb626d5689ef734ca4654ba1cd5d259f08a9aa1e3c408f5defd3374e8098c940613194
-  languageName: node
-  linkType: hard
-
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.2.1
   resolution: "@ampproject/remapping@npm:2.2.1"
@@ -3486,7 +3472,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "aero-team-eindhoven@workspace:."
   dependencies:
-    3d-react-carousal: ^5.0.0
     "@types/react": ^18.0.28
     "@typescript-eslint/eslint-plugin": ^5.52.0
     "@typescript-eslint/parser": ^5.52.0
@@ -3519,6 +3504,7 @@ __metadata:
     react-grid-system: ^8.1.8
     react-helmet: ^6.1.0
     react-slideshow-image: ^4.2.0
+    react-swipeable: ^7.0.0
     sass: ^1.58.2
     typescript: ^4.9.5
   languageName: unknown
@@ -12013,7 +11999,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-fast-compare@npm:^3.1.1, react-fast-compare@npm:^3.2.0":
+"react-fast-compare@npm:^3.1.1":
   version: 3.2.1
   resolution: "react-fast-compare@npm:3.2.1"
   checksum: 209b4dc3a9cc79c074a26ec020459efd8be279accaca612db2edb8ada2a28849ea51cf3d246fc0fafb344949b93a63a43798b6c1787559b0a128571883fe6859
@@ -12094,12 +12080,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-swipeable@npm:^6.1.2":
-  version: 6.2.2
-  resolution: "react-swipeable@npm:6.2.2"
+"react-swipeable@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "react-swipeable@npm:7.0.0"
   peerDependencies:
     react: ^16.8.3 || ^17 || ^18
-  checksum: a707aa9438cedcafbe1e0b9e133d518c423199fc6465e6ae862951c1cfdac2945088b3c12313e8fcc05906d0be0ecfe7ddd8221f9262a0e28c12d2eb98150434
+  checksum: 54d15933483f7aea8f69e6a9930e220fb3bd98f314cae89a8b797e8a3bb959b68e777fe199cd7729edfe65edfcb5d933c7312ea08626f1613a6fd5d30e646598
   languageName: node
   linkType: hard
 
