@@ -43,7 +43,7 @@ jobs:
     needs: check
     runs-on: ubuntu-latest
     env:
-      PATH_PREFIX: ${{ github.event_name == 'pull_request' && format('/preview/pr-{0}/', github.event.number) || '/' }}
+      PATH_PREFIX: ${{ format('/preview/pr-{0}/', github.event.number) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -71,7 +71,7 @@ jobs:
 
       - name: Build with Gatsby
         env:
-          PREFIX_PATHS: "true"
+          PREFIX_PATHS: ${{ github.event_name == 'pull_request' }}
         run: yarn run build
 
       - name: Upload artifact
