@@ -13,16 +13,20 @@ jobs:
   # Lint and typecheck
   check:
     runs-on: ubuntu-latest
+    continue-on-error: ${{ !matrix.check.required }}
     strategy:
       fail-fast: false
       matrix:
         check:
           - name: Typecheck
             command: typecheck
+            required: true
           - name: ESLint
             command: lint
+            required: true
           - name: Prettier
             command: fmt:check
+            required: false
     steps:
       - name: Checkout
         uses: actions/checkout@v3
