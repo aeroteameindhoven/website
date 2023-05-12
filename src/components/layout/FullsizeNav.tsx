@@ -4,13 +4,7 @@ import Logo from "../../svg/white-horizontal.svg";
 import "./FullsizeNav.scss";
 import classNames from "classnames";
 
-const FullsizeNav: React.FC = () => {
-  const [isProjectDropdownOpen, setIsProjectDropdownOpen] = React.useState(false);
-
-  const handleProjectClick = () => {
-    setIsProjectDropdownOpen((prevState) => !prevState);
-  };
-  // const FullsizeNav = () => {
+const FullsizeNav = () => {
   return (
     <nav className="FullsizeNav">
       <Link to="/">
@@ -18,33 +12,16 @@ const FullsizeNav: React.FC = () => {
       </Link>
       <ul className="navList">
         {navItems.map((item) => (
-          // <li key={item.link} className="listItem">
-          //   <Link to={item.link} className={classNames("nav", { disabled: item.disabled })}>
-          //     {item.label}
-          //   </Link>
-          // </li>
           <li key={item.link} className="listItem">
-            {item.label === "Project" ? (
-              <div className="dropdownWrapper">
-                <button onClick={handleProjectClick} className="nav">
-                  {item.label}
-                </button>
-                {isProjectDropdownOpen && (
-                  <div className="dropdownContent">
-                    <Link to="/project/one" className="nav">
-                      Battery Swap
-                    </Link>
-                    <Link to="/project/two" className="nav">
-                      VR Experience
-                    </Link>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link to={item.link} className={classNames("nav", { disabled: item.disabled })}>
-                {item.label}
-              </Link>
-            )}
+            <Link to={item.link} className={classNames("nav", { disabled: item.disabled })}>
+              {item.label}
+              {item.label === "Project" && (
+                <div className="dropdown-content">
+                  <a href="#">Battery Swap</a>
+                  <a href="#">VR Experience</a>
+                </div>
+              )}
+            </Link>
           </li>
         ))}
       </ul>
