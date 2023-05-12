@@ -13,7 +13,7 @@ export default function Footer() {
       <Container>
         <Row>
           <Col md={12} lg={4}>
-            <h2>Aero Team Eindhoven</h2>
+            <h2>Contact</h2>
             <p>
               <a className={mailLink} href="tel:+31619183031">
                 <Phone className={icon} />

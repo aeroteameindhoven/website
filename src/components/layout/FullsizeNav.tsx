@@ -4,7 +4,13 @@ import Logo from "../../svg/white-horizontal.svg";
 import "./FullsizeNav.scss";
 import classNames from "classnames";
 
-const FullsizeNav = () => {
+const FullsizeNav: React.FC = () => {
+  const [isProjectDropdownOpen, setIsProjectDropdownOpen] = React.useState(false);
+
+  const handleProjectClick = () => {
+    setIsProjectDropdownOpen((prevState) => !prevState);
+  };
+  // const FullsizeNav = () => {
   return (
     <nav className="FullsizeNav">
       <Link to="/">
@@ -12,10 +18,33 @@ const FullsizeNav = () => {
       </Link>
       <ul className="navList">
         {navItems.map((item) => (
+          // <li key={item.link} className="listItem">
+          //   <Link to={item.link} className={classNames("nav", { disabled: item.disabled })}>
+          //     {item.label}
+          //   </Link>
+          // </li>
           <li key={item.link} className="listItem">
-            <Link to={item.link} className={classNames("nav", { disabled: item.disabled })}>
-              {item.label}
-            </Link>
+            {item.label === "Project" ? (
+              <div className="dropdownWrapper">
+                <button onClick={handleProjectClick} className="nav">
+                  {item.label}
+                </button>
+                {isProjectDropdownOpen && (
+                  <div className="dropdownContent">
+                    <Link to="/project/one" className="nav">
+                      Battery Swap
+                    </Link>
+                    <Link to="/project/two" className="nav">
+                      VR Experience
+                    </Link>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link to={item.link} className={classNames("nav", { disabled: item.disabled })}>
+                {item.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
