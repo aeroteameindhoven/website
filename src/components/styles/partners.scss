@@ -1,51 +1,37 @@
 @import "./main.scss";
 
 .partner-info {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   width: 100%;
-  height: auto;
-  padding: 0 60px;
+
+  padding: 2em 3em;
   margin-bottom: 30px;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
   transition: transform 0.2s ease-in-out;
   position: relative;
-  overflow: hidden;
 
   .partner-logo {
-    transition: all 0.2s ease-in-out;
-    position: absolute;
-    left: 50%;
-    width: 50%;
-    padding: 5%;
-    transform: translateX(-50%);
+    min-width: 40%;
+    padding: 0 3rem;
   }
 
   .text {
-    color: transparent;
-    max-width: 50%;
+    color: $primary-blue;
     font-size: 16px;
-    transition: all 200ms ease-in-out;
-    transform: translateX(300px);
   }
+}
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+@media (max-width: 960px) {
+  .partner-info {
+    flex-direction: column;
 
     .partner-logo {
-      left: 7%;
-      width: 40%;
-      transform: translateX(0px);
-    }
-
-    .text {
-      color: $primary-blue;
-      padding-left: 50px;
-      padding: 18px;
-      font-size: 16px;
-      overflow: auto;
-      transform: translateX(0px);
+      min-width: 70%;
+      padding: 2rem 0;
     }
   }
 }
@@ -80,9 +66,5 @@
         background: $primary-light-blue;
       }
     }
-  }
-
-  .a {
-    height: 1100px;
   }
 }

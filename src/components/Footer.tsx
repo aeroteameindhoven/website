@@ -6,6 +6,7 @@ import Phone from "../images/icons/phone.svg";
 import LinkedIn from "../images/icons/icons-linkedin.svg";
 import Instagram from "../images/icons/icons-instagram.svg";
 import Youtube from "../images/icons/icons-youtube.svg";
+import PressKit from "../images/icons/presskit.svg";
 
 export default function Footer() {
   return (
@@ -50,8 +51,23 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <a className={mailLink} target="_blank" rel="noreferrer" href="https://twitter.com/AeroTeamEhv">
+              <a
+                className={mailLink}
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.youtube.com/channel/UC48Rt9YAXZIi9RsOdSUUcFQ"
+              >
                 <Youtube /> <span className={appName}>Youtube</span>
+              </a>
+            </div>
+            <div>
+              <a
+                className={mailLink}
+                target="_blank"
+                rel="noreferrer"
+                href="https://drive.google.com/drive/folders/1mH-nZTwSS00_Fjs5461rFtP1sns_o-v2?usp=sharing"
+              >
+                <PressKit /> <span className={appName}>Press Kit</span>
               </a>
             </div>
           </Col>

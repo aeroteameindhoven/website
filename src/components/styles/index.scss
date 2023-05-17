@@ -6,7 +6,6 @@
 #gatsby-focus-wrapper {
   min-height: 100vh;
 }
-
 // Background of website
 body {
   min-height: 100vh;
@@ -29,7 +28,7 @@ body {
     overflow: hidden;
 
     @media screen and (max-width: $breakpoint-lg) {
-      height: 800px;
+      height: fit-content;
     }
   }
 }
@@ -65,4 +64,34 @@ a.nolink {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.reveal-video {
+  position: relative;
+  z-index: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 4rem;
+  z-index: 2;
+  font-size: clamp(1rem, 2vw, 2rem);
+
+  @media screen and (max-width: $breakpoint-md) {
+    position: relative;
+    top: unset;
+    left: unset;
+    font-size: 1rem;
+    margin: 2em;
+  }
+}
+.studentteam {
+  padding-top: 3em;
+}
+
+.color-a, .bold-details {
+  color: $primary-pink;
 }

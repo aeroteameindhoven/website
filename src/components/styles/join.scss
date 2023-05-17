@@ -34,71 +34,62 @@
     }
   }
 
-  .a {
-    height: 1100px;
-  }
-
   .vacancy {
     width: 100%;
     height: 350px;
-    position: relative;
-    margin-bottom: 30px;
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
     overflow: hidden;
+    margin-bottom: 30px;
+    display: grid;
 
-    &.board3 {
-      background-image: url("../../images/join/management.png");
-    }
-
-    &.engineering {
-      background-image: url("../../images/join/engineer.jpg");
-    }
-
-    &.softwareai {
-      background-image: url("../../images/join/marketing.jpg");
-    }
-
-    .extra {
-      position: absolute;
-      width: 100%;
+    .image {
+      grid-area: 1/1;
       height: 100%;
-      top: 100%;
-      left: 0;
-      background-color: rgba($primary-blue, 0.8);
-      padding: 14px;
-      padding-top: 100px;
-      transition: all 300ms ease-in-out;
-      font-size: 18px;
     }
 
-    .text {
-      padding: 14px 20px;
-      font-size: 18px;
-      // background-color: $primary-blue;
-      background-color: rgba($primary-pink, 0.7);
-      margin-bottom: 15px;
-      z-index: 120;
+    .overlay {
+      grid-area: 1/1;
       position: relative;
-      transition: all 300ms ease-in-out;
-      clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
-    }
 
-    &:hover {
-      .text {
-        transform: translateY(-260px);
-        background-color: transparent;
-        text-decoration: underline;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
 
       .extra {
-        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        left: 0;
+        background-color: rgba($primary-blue, 0.8);
+        padding: 14px;
+        padding-top: 100px;
+        transition: all 300ms ease-in-out;
+        font-size: 18px;
+      }
+
+      .text {
+        padding: 14px 20px;
+        font-size: 18px;
+        // background-color: $primary-blue;
+        background-color: rgba($primary-pink, 0.7);
+        margin-bottom: 15px;
+        z-index: 120;
+        position: relative;
+        transition: all 300ms ease-in-out;
+        clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+      }
+
+      &:hover {
+        .text {
+          transform: translateY(-260px);
+          background-color: transparent;
+          text-decoration: underline;
+        }
+
+        .extra {
+          top: 0;
+        }
       }
     }
   }
@@ -110,13 +101,6 @@
     overflow: hidden;
   }
 
-  .react-3d-carousel .slider-container .slider-right div {
-    border: none;
-  }
-
-  .react-3d-carousel .slider-container .slider-left div {
-    border: 100vw;
-  }
   .photo-container {
     position: relative;
   }
@@ -133,22 +117,18 @@
 
   .join-aero {
     z-index: 5;
-    position: absolute; /* set the text to absolute positioning */
-    top: 5%; /* position the text vertically at 50% from the top */
-    left: 50%; /* position the text horizontally at 50% from the left */
-    transform: translate(-50%, -50%); /* center the text */
-    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: max(2rem, 5vw);
     text-shadow: 0.2rem 0.2rem 0px rgba($primary-pink, 1);
+    text-align: center;
 
-    @media screen and (max-width: $breakpoint-lg) {
-      // TODO: FIXME: use background image instead of absolute position of text
-      font-size: 2rem;
-      position: relative;
-      transform: unset;
+    @media screen and (max-width: $breakpoint-sm) {
       top: unset;
-      left: unset;
-      text-align: center;
       text-shadow: 0.1rem 0.1rem 0px rgba($primary-pink, 1);
+      bottom: 0;
     }
   }
 }
