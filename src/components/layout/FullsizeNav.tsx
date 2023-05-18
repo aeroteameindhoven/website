@@ -15,6 +15,12 @@ const FullsizeNav = () => {
           <li key={item.link} className="listItem">
             <Link to={item.link} className={classNames("nav", { disabled: item.disabled })}>
               {item.label}
+              {item.label === "Project" && (
+                <div className="dropdown-content">
+                  <a href="#">Battery Swap</a>
+                  <a href="#">VR Experience</a>
+                </div>
+              )}
             </Link>
           </li>
         ))}
@@ -33,17 +39,12 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   {
-    label: "About Us",
-    link: "/about-us",
-    disabled: true
+    label: "Team",
+    link: "/team"
   },
   {
     label: "Project",
     link: "/project"
-  },
-  {
-    label: "Team",
-    link: "/team"
   },
   {
     label: "Our Journey",
@@ -59,7 +60,8 @@ export const navItems: NavItem[] = [
     link: "/join"
   },
   {
-    label: "Contact",
-    link: "/contact"
+    label: "Internships",
+    link: "/internships",
+    disabled: true
   }
 ];
