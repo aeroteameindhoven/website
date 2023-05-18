@@ -115,7 +115,7 @@ const vacancies = [
 
 const slides = [
   <StaticImage
-    src="../images/join/card/bram.png"
+    src="../images/join/carousel/bram-card.png"
     alt="Quote from Bram Schut: Student teams are a good place to develop yourself in skills not taught  in technical studies, like project management, presenting, getting funds, and motivating people!"
     key="bram"
     aspectRatio={16 / 9}
@@ -123,15 +123,15 @@ const slides = [
     objectPosition="50% 50%"
   />,
   <StaticImage
-    src="../images/join/card/isa.png"
-    alt="Qoute from Isa Dantuma: It is awesome to see that our hard work paid off and that this VR project is now ready to go to the next stage and be used in actual research!"
+    src="../images/join/carousel/isa-card.png"
+    alt="Quote from Isa Dantuma: It is awesome to see that our hard work paid off and that this VR project is now ready to go to the next stage and be used in actual research!"
     key="isa"
     aspectRatio={16 / 9}
     objectFit="contain"
     objectPosition="50% 50%"
   />,
   <StaticImage
-    src="../images/join/card/zach.png"
+    src="../images/join/carousel/zach-card.png"
     alt="Quote from Zach Kohnen: Student teams such as Aero are the perfect places to apply yourself. We have access to tools, materials, and knowledge that are harder for an average student to come by."
     key="zach"
     aspectRatio={16 / 9}
@@ -139,16 +139,16 @@ const slides = [
     objectPosition="50% 50%"
   />,
   <StaticImage
-    src="../images/join/card/bianca.png"
-    alt="Qoute from Bianca Eni: Working in Aero has been a very fun and useful experience. Being in the PR team gives me the creative freedom that is sometimes missing in my technical study."
+    src="../images/join/carousel/bianca-card.png"
+    alt="Quote from Bianca Eni: Working in Aero has been a very fun and useful experience. Being in the PR team gives me the creative freedom that is sometimes missing in my technical study."
     key="bianca"
     aspectRatio={16 / 9}
     objectFit="contain"
     objectPosition="50% 50%"
   />,
   <StaticImage
-    src="../images/join/jai-card.png"
-    alt="Qoute from Jai Wientjes: It's amazing to see how you can take an idea and turn it into a real, physical product in just one year."
+    src="../images/join/carousel/jai-card.png"
+    alt="Quote from Jai Wientjes: It's amazing to see how you can take an idea and turn it into a real, physical product in just one year."
     key="jai"
     aspectRatio={16 / 9}
     objectFit="contain"
