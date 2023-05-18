@@ -5,8 +5,6 @@ import Layout from "../components/Layout";
 import "../components/styles/join.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import Carousel from "../components/3d-carousel/Carousel";
-import BoardNotification from "../components/BoardNotification";
-
 export function Head() {
   return <HeadContent title="Join" />;
 }
