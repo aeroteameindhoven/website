@@ -31,6 +31,15 @@ function PostHeader() {
             <br /> for an extraordinary launch event,
             <br /> where we will unveil and demonstrate the flight
             <br /> of our new cutting-edge drone.
+            <br />
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSch1kiTE33zF5nW2WTz0WfSersjoqQcEDsEOiFNQncdMoM-Qw/viewform"
+              target="_blank"
+              rel="noreferrer"
+              className="apply-button"
+            >
+              Get your ticket!
+            </a>
             <div className="studentteam">
               <span className="pre-tue">Official student team of</span>
               <a href="https://tue.nl" target="_blank" rel="noreferrer">

@@ -73,12 +73,7 @@ function PostHeader() {
  * Join page
  */
 export default function Join() {
-  return (
-    <>
-      <BoardNotification />
-      <Layout postHeader={<PostHeader />} />
-    </>
-  );
+  return <Layout postHeader={<PostHeader />} />;
 }
 
 const vacancies = [
@@ -149,6 +144,14 @@ const slides = [
     src="../images/join/bianca-card.png"
     alt="Qoute from Bianca Eni: Working in Aero has been a very fun and useful experience. Being in the PR team gives me the creative freedom that is sometimes missing in my technical study."
     key="bianca"
+    aspectRatio={16 / 9}
+    objectFit="contain"
+    objectPosition="50% 50%"
+  />,
+  <StaticImage
+    src="../images/join/jai-card.png"
+    alt="Qoute from Jai Wientjes: It's amazing to see how you can take an idea and turn it into a real, physical product in just one year."
+    key="jai"
     aspectRatio={16 / 9}
     objectFit="contain"
     objectPosition="50% 50%"

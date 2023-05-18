@@ -78,7 +78,7 @@ a.nolink {
   right: 0;
   margin: 4rem;
   z-index: 2;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 2rem);
 
   @media screen and (max-width: $breakpoint-md) {
     position: relative;
@@ -95,4 +95,22 @@ a.nolink {
 .color-a,
 .bold-details {
   color: $primary-pink;
+}
+
+.apply-button {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-top: 1rem;
+  font-size: medium;
+  background: $primary-pink;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    // background: darken($primary-pink, 5%);
+    background: $primary-light-blue;
+  }
 }
