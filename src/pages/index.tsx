@@ -33,7 +33,7 @@ function PostHeader() {
             <br /> of our new cutting-edge drone.
             <br />
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSch1kiTE33zF5nW2WTz0WfSersjoqQcEDsEOiFNQncdMoM-Qw/viewform"
+              href="https://www.eventbrite.com/e/aero-reveals-aegle-takes-flight-tickets-633934102967"
               target="_blank"
               rel="noreferrer"
               className="apply-button"

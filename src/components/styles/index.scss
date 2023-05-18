@@ -110,7 +110,7 @@ a.nolink {
   transition: all 200ms ease-in-out;
 
   &:hover {
-    // background: darken($primary-pink, 5%);
-    background: $primary-light-blue;
+    background: darken($primary-pink, 5%);
+    // background: $primary-light-blue;
   }
 }
