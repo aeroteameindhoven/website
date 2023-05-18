@@ -4,11 +4,10 @@ import HomePageSideSection from "../components/HomePageSideSection";
 import Layout from "../components/Layout";
 import "../components/styles/home.scss";
 // import GlobeIllustration from "../images/globe.svg";
-import TUELogo from "../images/tue.svg";
+import TUELogo from "../images/sponsors/tue.svg";
 import "react-slideshow-image/dist/styles.css";
 import { HeadContent } from "../components/HeadContent";
 import { StaticImage } from "gatsby-plugin-image";
-// import YouTubeVideo from "../components/youtube-video/YoutubeVideo";
 import Video from "../components/Video";
 
 export function Head() {
@@ -64,18 +63,6 @@ export default function Index() {
             <Container>
               <Row>
                 <Col lg={6}>
-                  {/* <div className="group-photo">
-              <Fade>
-                {[1, 2, 3].map((slideImage, index) => (
-                  <div className="each-fade" key={index}>
-                    <div
-                      className="each-photo"
-                      style={{ backgroundImage: `url("/homepage-slides/${slideImage}.jpg")` }}
-                    />
-                  </div>
-                ))}
-              </Fade>
-            </div> */}
                   <iframe
                     className="animation-video"
                     width="672"
