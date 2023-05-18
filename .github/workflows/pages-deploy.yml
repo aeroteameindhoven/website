@@ -3,62 +3,59 @@ name: Deploy Gatsby site to Pages
 on:
   push:
     branches: ["main"]
-
   pull_request:
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    types:
+      - opened
+      - reopened
+      - synchronize
 
 jobs:
   # Lint and typecheck
   check:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        check:
+          - name: Typecheck
+            command: typecheck
+          - name: ESLint
+            command: lint
+          - name: Prettier
+            command: fmt:check
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: yarn
-      - name: Restore cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            public
-            .cache
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
-          restore-keys: |
-            ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
         run: yarn install
-      - name: Typecheck
-        run: yarn run typecheck
-      - name: Lint
-        run: yarn run lint
+      - name: ${{ matrix.check.name }}
+        run: yarn run ${{ matrix.check.command }}
 
   # Build job
   build:
-    # Allow one concurrent deployment
-    concurrency:
-      group: "pages"
-      cancel-in-progress: true
     needs: check
     runs-on: ubuntu-latest
+    env:
+      PATH_PREFIX: ${{ format('/preview/pr-{0}/', github.event.number) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: yarn
+
       - name: Restore cache
         uses: actions/cache@v3
         with:
@@ -68,14 +65,16 @@ jobs:
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
+
       - name: Install dependencies
         run: yarn install
+
       - name: Build with Gatsby
         env:
-          PREFIX_PATHS: "true"
+          PREFIX_PATHS: ${{ github.event_name == 'pull_request' }}
         run: yarn run build
+
       - name: Upload artifact
-        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
@@ -86,6 +85,11 @@ jobs:
     concurrency:
       group: "pages"
       cancel-in-progress: true
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -96,3 +100,38 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+  # Deploy PR-Preview
+  deploy-preview:
+    environment:
+      name: github-pages-staging
+      url: ${{ steps.deployment.outputs.deployment-url }}
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      # Initialize git repo for pr-preview-action
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: github-pages
+          path: public
+
+      - name: Exract
+        working-directory: public
+        run: tar -xvf artifact.tar && rm artifact.tar
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        id: deployment
+        with:
+          source-dir: public
+          preview-branch: previews
+          deploy-repository: aeroteameindhoven/website-staging
+          custom-url: staging.aeroteameindhoven.nl
+          umbrella-dir: preview
+          token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}

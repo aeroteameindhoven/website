@@ -5,7 +5,7 @@
   justify-content: center;
   flex-direction: center;
   padding: 30px 0;
-  
+
   .apply-page-bg {
     background-image: url("../../images/apply.jpg");
     background-size: cover;
@@ -22,7 +22,6 @@
   .column {
     width: 800px;
     max-width: 92%;
-
   }
 
   .window {
@@ -39,7 +38,7 @@
     &:last-child {
       margin-bottom: 0;
     }
-    
+
     .step-number {
       min-width: 50px;
       width: 50px;

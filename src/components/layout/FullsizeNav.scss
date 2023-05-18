@@ -8,7 +8,7 @@
   .logo {
     width: 300px;
   }
-  
+
   .navList {
     display: flex;
     gap: 15px;
@@ -16,24 +16,23 @@
     margin: 0px;
     list-style-type: none;
   }
-  
-  .nav {  
+
+  .nav {
     color: $primary-white;
     font-size: 18px;
     opacity: 0.8;
     text-decoration: none;
-  
+
     &:hover {
       color: $primary-pink;
       text-decoration: underline;
     }
   }
-  
+
   .disabled {
     color: $primary-white !important;
     text-decoration: none !important;
     opacity: 0.5;
     pointer-events: none;
   }
-  
 }

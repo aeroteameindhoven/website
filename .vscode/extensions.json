@@ -1,8 +1,8 @@
 {
-    "recommendations": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "redhat.vscode-yaml",
-        "mechatroner.rainbow-csv"
-    ]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml",
+    "mechatroner.rainbow-csv"
+  ]
 }
