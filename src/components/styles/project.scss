@@ -9,4 +9,15 @@
         margin-bottom: 0;
         text-transform: uppercase;
     }
+
+    .animation-video {
+        width: 50vw;
+        height: calc(50vw/1.77);
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 }
