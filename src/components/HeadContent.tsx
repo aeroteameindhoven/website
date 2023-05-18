@@ -31,7 +31,6 @@ export function HeadContent(props: Props) {
     <>
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#002878" />
       <meta name="description" content={props.description || meta.site.siteMetadata.description} />
-      <meta name="msapplication-TileColor" content="#002878" />
       {props.title ? (
         <title>
           {props.title} | {meta.site.siteMetadata.title}
