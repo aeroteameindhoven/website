@@ -3,21 +3,21 @@
 .project-page {
   padding: 100px 0;
 
-    .header {
-        text-shadow: -2px 2px 0px rgba(255, 100, 100, 1);
-        font-size: 44px;
-        margin-bottom: 0;
-        text-transform: uppercase;
-    }
+  .header {
+    text-shadow: -2px 2px 0px rgba(255, 100, 100, 1);
+    font-size: 44px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
 
-    .animation-video {
-        width: 50vw;
-        height: calc(50vw/1.77);
-    }
+  .animation-video {
+    width: 50vw;
+    height: calc(50vw / 1.77);
+  }
 
-    .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
