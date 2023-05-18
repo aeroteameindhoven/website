@@ -3,10 +3,10 @@ import { Container } from "react-grid-system";
 import Layout from "../components/Layout";
 import "../components/styles/partners.scss";
 
-import TUELogo from "../images/tue.svg";
-import GLSLogo from "../images/gls.svg";
-import NXPLogo from "../images/nxp.svg";
-import ZoomworksLogo from "../images/zoomworks.svg";
+import TUELogo from "../images/sponsors/tue.svg";
+import GLSLogo from "../images/sponsors/gls.svg";
+import NXPLogo from "../images/sponsors/nxp.svg";
+import ZoomworksLogo from "../images/sponsors/zoomworks.svg";
 import { InfoEmail } from "../components/Email";
 import { HeadContent } from "../components/HeadContent";
 

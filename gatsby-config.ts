@@ -59,7 +59,18 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: `${__dirname}/src/images/icon.png`
+        lang: "en",
+
+        name: "Aero Team Eindhoven",
+        short_name: "Aero Team",
+
+        start_url: "/",
+
+        theme_color: "#021e3a",
+        background_color: "#051320",
+
+        display: "standalone",
+        icon: `${__dirname}/src/images/site-icon.png`
       }
     },
 
