@@ -59,14 +59,15 @@
       }
 
       .contact-details {
-        position: absolute;
-        display: block;
+        display: flex;
+        justify-content: flex-end;
         bottom: 0;
         right: 0;
         padding-right: 10px;
 
         a {
           margin-top: -20px;
+          margin-left: 10px;
           display: block;
           line-height: 0;
 
@@ -79,6 +80,10 @@
             &.mail {
               position: relative;
               bottom: -2px;
+            }
+
+            &.linkedin {
+              position: relative;
             }
 
             &:hover {

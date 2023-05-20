@@ -3,6 +3,7 @@ import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { TeamMember } from "../../hooks/useTeamMembers";
 import Mail from "../../images/icons/email.svg";
+import LinkedIn from "../../images/icons/linkedin-minimalist.svg";
 
 export interface TeamMemberCardProps {
   member: TeamMember;
@@ -43,9 +44,9 @@ export function TeamMemberCard({ member, above_fold, show_subteam, currentSelect
           <a href={`mailto:${member.email}`}>
             <Mail className="icon mail" />
           </a>
-          {/* <a href={member.linkedin} target="_blank" rel="noreferrer">
-                  <LinkedIn className="icon linkedin" />
-                </a> */}
+          <a href={member.linkedin} target="_blank" rel="noreferrer">
+            <LinkedIn className="icon linkedin" />
+          </a>
         </div>
       </div>
       <div className="line" />
