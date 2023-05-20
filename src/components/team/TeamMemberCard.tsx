@@ -53,6 +53,7 @@ export function TeamMemberCard({ member, above_fold, show_subteam, currentSelect
       {/* TODO: style first and last names differently */}
       <div className="name">{member.fullName()}</div>
       <div className="title">{member.title}</div>
+      <div className="study">{member.study}</div>
       <div className="subteams" aria-hidden={!show_subteam}>
         {member.subteams.map((team) => (
           <div

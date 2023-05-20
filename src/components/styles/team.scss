@@ -105,10 +105,14 @@
       font-size: 24px;
     }
 
-    .title {
+    .title, .study {
       font-style: italic;
       color: #555;
-      font-size: 19px;
+      font-size: large;
+    }
+
+    .study {
+      font-size: medium;
     }
   }
 
