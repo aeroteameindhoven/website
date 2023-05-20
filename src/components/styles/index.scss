@@ -69,7 +69,6 @@ a.nolink {
 .reveal-video {
   position: relative;
   z-index: 1;
-  
 }
 
 .overlay-text {
@@ -91,23 +90,22 @@ a.nolink {
 }
 
 .interest-lunch {
-  position: absolute;
+  // position: absolute;
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 4rem;
+  margin-right: 4rem;
   z-index: 2;
   font-size: clamp(1rem, 1.5vw, 2rem);
 
   @media screen and (max-width: $breakpoint-md) {
     position: relative;
-    top: unset;
     left: unset;
+    bottom: unset;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
     font-size: 1rem;
-    margin: 2em;
   }
 }
 .studentteam {
@@ -135,4 +133,8 @@ a.nolink {
     background: darken($primary-pink, 10%);
     // background: $primary-light-blue;
   }
+}
+
+.HeaderMain {
+  min-height: 100vh;
 }
