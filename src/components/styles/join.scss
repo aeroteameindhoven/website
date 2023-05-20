@@ -1,11 +1,12 @@
 @import "./main.scss";
 
 .join-page {
-  padding-top: 100px;
+  padding-top: 5%;
   padding-bottom: 100px;
 
   .join-header {
     padding-bottom: 50px;
+    margin-top: 5%;
     h1 {
       font-size: 35px;
     }
@@ -33,77 +34,100 @@
     }
   }
 
-  .a {
-    height: 1100px;
-  }
-
   .vacancy {
     width: 100%;
     height: 350px;
-    position: relative;
-    margin-bottom: 30px;
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-
     overflow: hidden;
+    margin-bottom: 30px;
+    display: grid;
 
-    &.management {
-      background-image: url("../../images/join/management.jpg");
-    }
-
-    &.engineering {
-      background-image: url("../../images/join/engineer.jpg");
-    }
-
-    &.marketing {
-      background-image: url("../../images/join/marketing.jpg");
-    }
-
-    &.interactionresearch {
-      background-image: url("../../images/join/interaction.jpg");
-    }
-
-    .extra {
-      position: absolute;
-      width: 100%;
+    .image {
+      grid-area: 1/1;
       height: 100%;
-      top: 100%;
-      left: 0;
-      background-color: rgba($primary-blue, 0.8);
-      padding: 18px;
-      padding-top: 100px;
-      transition: all 300ms ease-in-out;
-      font-size: 18px;
     }
 
-    .text {
-      padding: 14px 20px;
-      font-size: 18px;
-      // background-color: $primary-blue;
-      background-color: rgba($primary-pink, 0.7);
-      margin-bottom: 15px;
-      z-index: 120;
+    .overlay {
+      grid-area: 1/1;
       position: relative;
-      transition: all 300ms ease-in-out;
-      clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
-    }
 
-    &:hover {
-      .text {
-        transform: translateY(-260px);
-        background-color: transparent;
-        text-decoration: underline;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
 
       .extra {
-        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        left: 0;
+        background-color: rgba($primary-blue, 0.8);
+        padding: 14px;
+        padding-top: 100px;
+        transition: all 300ms ease-in-out;
+        font-size: 18px;
       }
+
+      .text {
+        padding: 14px 20px;
+        font-size: 18px;
+        // background-color: $primary-blue;
+        background-color: rgba($primary-pink, 0.7);
+        margin-bottom: 15px;
+        z-index: 120;
+        position: relative;
+        transition: all 300ms ease-in-out;
+        clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+      }
+
+      &:hover {
+        .text {
+          transform: translateY(-260px);
+          background-color: transparent;
+          text-decoration: underline;
+        }
+
+        .extra {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .quotes {
+    display: block;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  .photo-container {
+    position: relative;
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    align-content: start;
+    mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
+    position: relative;
+    z-index: 1;
+  }
+
+  .join-aero {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: max(2rem, 5vw);
+    text-shadow: 0.2rem 0.2rem 0px rgba($primary-pink, 1);
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      top: unset;
+      text-shadow: 0.1rem 0.1rem 0px rgba($primary-pink, 1);
+      bottom: 0;
     }
   }
 }
