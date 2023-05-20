@@ -2,20 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 import Logo from "../../svg/white-horizontal.svg";
 import HamburgerIcon from "../../images/hamburger.svg";
-import "./compactNav.scss";
+import "./CompactNav.scss";
 import classNames from "classnames";
-import { navItems } from "./FullsizeNav";
+import { navItems } from "./FullSizeNav";
 
 const CompactNav = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const openNav = () => {
-    setIsOpen(true);
-  };
-
-  const closeNav = () => {
-    setIsOpen(false);
-  };
+  const openNav = () => setIsOpen(true);
+  const closeNav = () => setIsOpen(false);
 
   const compactNavItems = [
     {
