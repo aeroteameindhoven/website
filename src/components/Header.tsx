@@ -2,7 +2,7 @@ import React from "react";
 import { header } from "./styles/header.module.scss";
 import { Container, Visible } from "react-grid-system";
 import CompactNav from "./layout/CompactNav";
-import FullsizeNav from "./layout/FullsizeNav";
+import FullSizeNav from "./layout/FullSizeNav";
 
 /**
  * Main header of the page
@@ -18,7 +18,7 @@ export default function Header({ children }: React.PropsWithChildren) {
             <CompactNav />
           </Visible>
           <Visible lg xl xxl xxxl>
-            <FullsizeNav />
+            <FullSizeNav />
           </Visible>
         </header>
       </Container>
