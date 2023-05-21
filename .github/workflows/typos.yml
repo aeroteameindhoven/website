@@ -11,3 +11,5 @@ jobs:
 
     - name: Check spelling of file.txt
       uses: crate-ci/typos@v1.14.10
+      with:
+        config: .github/typos.toml
