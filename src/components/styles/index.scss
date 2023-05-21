@@ -1,91 +1,188 @@
 @import "./main.scss";
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
-// Make sure root wrapper has a full height
-#___gatsby,
-#gatsby-focus-wrapper {
-  min-height: 100vh;
+// Part of the homepage that in directly under the header
+// with the blue background
+.homepage-preheader {
+  height: 100%;
+
+  .content-wrapper {
+    color: white;
+    padding: 30px 0;
+    position: relative;
+    height: 100%;
+
+    .slogan {
+      margin-top: 0;
+      font-size: 2em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      color: $primary-pink;
+    }
+
+    .secondary {
+      font-size: 1em;
+    }
+
+    .pre-tue {
+      padding-right: 10px;
+    }
+
+    .tue-logo {
+      width: 180px;
+      display: inline;
+      position: relative;
+      top: 10px;
+    }
+
+    .tue-logo * {
+      fill: white !important;
+    }
+
+    .globe {
+      fill: rgba(255, 255, 255, 0.8);
+      display: block;
+      width: 90%;
+      max-width: min(1200px, 100vh);
+      position: absolute;
+      transform: translate(-50%, 50%);
+      left: 50%;
+      bottom: 0;
+
+      animation: glow 1500ms ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
 }
-// Background of website
-body {
-  min-height: 100vh;
-  font-family: "DM Sans", sans-serif;
-  margin: 0;
-  line-height: 1.4283;
-  width: 100%;
-  color: white;
-  // background: #021e3a;
-  background: radial-gradient(at bottom center, #103a8d 0%, #021e3a 70%) fixed;
-  font-size: 20px;
+
+// Animation for the glowing effect of the globe
+@keyframes glow {
+  from {
+    fill: rgba(255, 255, 255, 0.937);
+  }
+  to {
+    fill: rgb(216, 255, 205);
+  }
 }
 
-.blue-gradient-bg {
-  background: radial-gradient(at bottom center, #103a8d 0%, #021e3a 70%) fixed;
-  // background: radial-gradient(at bottom right, rgba(255, 255, 255, 0.4) 0%, $primary-blue 60%);
+.homepage {
+  // The part where the homepage background turns into the air background
+  .air-wrapper {
+    position: relative;
+    background: white;
+    box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.5) inset;
 
-  &.fullHeight {
-    height: 100vh;
-    overflow: hidden;
+    .air {
+      background-image: url("../../images/air.jpg");
+      background-size: cover;
+      // Offset the background so it starts at the lightblue part
+      background-position: bottom;
+      filter: blur(9px);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      opacity: 0.5;
+    }
+
+    .air-content {
+      position: relative;
+      height: 100%;
+      padding: 200px 80px 300px;
+
+      @media screen and (max-width: $breakpoint-lg) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .animation-video {
+        max-width: 100%;
+      }
+
+      .group-photo {
+        max-width: 600px;
+        min-width: 100%;
+        height: 300px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .render-container {
+    padding-left: 30px;
+    position: relative;
 
     @media screen and (max-width: $breakpoint-lg) {
-      height: fit-content;
+      padding-left: 0;
     }
-  }
-}
 
-h1,
-h2 {
-  font-weight: 400;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-.partner-page {
-  .partner {
-    background: white;
-    margin: 10px;
-    padding: 20px;
-
-    svg {
+    .render-background {
+      position: absolute;
+      max-width: 100%;
       display: block;
-      width: 100%;
-      height: 300px;
+    }
+
+    .render-image {
+      position: absolute;
+      max-width: 100%;
+      display: block;
+      filter: brightness(110%);
+    }
+  }
+
+  .each-photo {
+    height: 420px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.content-wrapper {
+  display: grid;
+
+  .reveal-video {
+    grid-area: 1/1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .overlay-text {
+    grid-area: 1/1;
+    position: relative;
+    margin: 2rem 4rem 0 4rem;
+    z-index: 2;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+
+    @media screen and (max-width: $breakpoint-md) {
+      position: relative;
+      top: unset;
+      left: unset;
+      font-size: 1rem;
+      margin: 2em;
     }
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-a.nolink {
-  text-decoration: none;
-  color: inherit;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.reveal-video {
-  position: relative;
-  z-index: 1;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 4rem;
+.interest-lunch {
+  // position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-right: 4rem;
   z-index: 2;
   font-size: clamp(1rem, 1.5vw, 2rem);
 
   @media screen and (max-width: $breakpoint-md) {
     position: relative;
-    top: unset;
     left: unset;
+    bottom: unset;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
     font-size: 1rem;
-    margin: 2em;
   }
 }
 .studentteam {
@@ -110,7 +207,7 @@ a.nolink {
   transition: all 200ms ease-in-out;
 
   &:hover {
-    background: darken($primary-pink, 10%);
+    background: darken($primary-pink, 5%);
     // background: $primary-light-blue;
   }
 }
