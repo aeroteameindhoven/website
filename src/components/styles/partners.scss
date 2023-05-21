@@ -39,6 +39,18 @@
 .partner-page {
   padding-bottom: 100px;
 
+  .partner {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 300px;
+    }
+  }
+
   .partner-header {
     padding-bottom: 50px;
 
