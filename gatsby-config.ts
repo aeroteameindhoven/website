@@ -41,6 +41,16 @@ const config: GatsbyConfig = {
         }
       }
     },
+    {
+      resolve: "gatsby-plugin-ackee-tracker",
+      options: {
+        domainId: "36fb18bc-3525-49a2-bed9-7bd1fcd372a4",
+        server: "https://insights.aeroteameindhoven.nl",
+        ignoreLocalhost: true,
+        ignoreOwnVisits: false,
+        detailed: false
+      }
+    },
 
     // {
     //   resolve: "gatsby-source-wordpress",
@@ -49,12 +59,6 @@ const config: GatsbyConfig = {
     //   },
     // },
     "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "G-WN8X4H8WCY"
-      }
-    },
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
