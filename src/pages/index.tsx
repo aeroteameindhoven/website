@@ -50,7 +50,7 @@ function PostHeader() {
             <h2 className="secondary">
               Want to know more?
               <br />
-              Join our interest lunch on <span className="bold-details">May 31st 12:30-14:00</span>
+              Join our interest lunch on <span className="bold-details">May 30th 12:30-13:30</span>
               <br /> at our office in <span className="bold-details">Momentum</span> to explore
               <br /> the opportunities to be part of our team!
               <br />
