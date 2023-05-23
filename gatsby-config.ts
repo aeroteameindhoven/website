@@ -51,7 +51,7 @@ const config: GatsbyConfig = {
         server: "https://insights.aeroteameindhoven.nl",
         ignoreLocalhost: true,
         ignoreOwnVisits: false,
-        detailed: false
+        detailed: true
       }
     },
 
