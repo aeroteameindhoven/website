@@ -13,6 +13,8 @@ const QUERY = graphql`
           subteam
           aero_email
           time
+          study
+          linkedin
         }
         parent {
           ... on File {
@@ -53,6 +55,10 @@ export interface MemberCSVInfo {
   function: string;
   subteam: string;
   time: "part-time" | "full-time";
+
+  // 22-23+ fields
+  study?: string;
+  linkedin?: string;
 }
 
 interface MemberPhotoFile extends FileNode {
@@ -119,8 +125,9 @@ export class TeamMember {
 
   public time: "part-time" | "full-time";
 
-  // New fields for 22-23
-  // TODO: linkedin?: string
+  // New fields for team 22-23
+  public study?: string;
+  public linkedin?: string;
 
   public photo?: IGatsbyImageData;
 
@@ -138,10 +145,18 @@ export class TeamMember {
 
     this.time = csv_info.time;
 
+    // Convert empty string to undefined
+    this.study = csv_info.study === "" ? undefined : csv_info.study;
+    this.linkedin = csv_info.linkedin === "" ? undefined : csv_info.linkedin;
+
     this.photo = photo;
   }
 
   public fullName() {
-    return this.first_name + " " + this.surname;
+    return `${this.first_name} ${this.surname}`;
+  }
+
+  public linkedInLink() {
+    return `https://www.linkedin.com/in/${this.linkedin}/`;
   }
 }

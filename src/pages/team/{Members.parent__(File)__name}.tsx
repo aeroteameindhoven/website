@@ -20,7 +20,7 @@ export default function Team(props: PageProps) {
   const year = props.params["parent__name"] as Years;
 
   const activeTeam = ALL_TEAMS.get(year)!;
-  // TODO: make these members show seperatly somehow
+  // TODO: make these members show separately somehow
   const current_members = useTeamMembers(year)!;
 
   // TODO: make this a dropdown, not a toggle

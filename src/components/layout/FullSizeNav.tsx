@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 import Logo from "../../svg/white-horizontal.svg";
-import "./FullsizeNav.scss";
+import "./FullSizeNav.scss";
 import classNames from "classnames";
 
-const FullsizeNav = () => {
+const FullSizeNav = () => {
   return (
-    <nav className="FullsizeNav">
+    <nav className="FullSizeNav">
       <Link to="/">
         <Logo className="logo" />
       </Link>
@@ -29,7 +29,7 @@ const FullsizeNav = () => {
   );
 };
 
-export default FullsizeNav;
+export default FullSizeNav;
 
 export interface NavItem {
   label: string;

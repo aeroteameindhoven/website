@@ -1,16 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
-import { sitefooter, mailLink, icon, appName } from "./styles/footer.module.scss";
+import { siteFooter, mailLink, icon, appName } from "./styles/footer.module.scss";
 import Mail from "../images/icons/email.svg";
 import Phone from "../images/icons/phone.svg";
 import LinkedIn from "../images/icons/icons-linkedin.svg";
 import Instagram from "../images/icons/icons-instagram.svg";
 import Youtube from "../images/icons/icons-youtube.svg";
-import PressKit from "../images/icons/presskit.svg";
+import PressKit from "../images/icons/press-kit.svg";
 
 export default function Footer() {
   return (
-    <footer className={sitefooter}>
+    <footer className={siteFooter}>
       <Container>
         <Row>
           <Col md={12} lg={4}>
