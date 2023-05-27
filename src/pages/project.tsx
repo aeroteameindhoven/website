@@ -14,6 +14,14 @@ export default function Project() {
   return (
     <Layout>
       <div className="project-page">
+        <div className="overlay-drone">
+          <StaticImage
+            className="render-background"
+            src="../images/project/overlay.png"
+            placeholder="blurred"
+            alt="drone flying"
+          />
+        </div>
         <Container>
           <Row className="center">
             <iframe
@@ -34,6 +42,7 @@ export default function Project() {
           <Row>
             <Col>
               <StaticImage
+                className="drone"
                 src="../images/project/Aegle2.png"
                 placeholder="blurred"
                 alt="3D Render of the drone concept"
