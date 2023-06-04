@@ -17,7 +17,7 @@ export default function Project() {
         <div className="overlay-drone">
           <StaticImage
             className="render-background"
-            src="../images/project/overlay.png"
+            src="../images/project/front-overlay.png"
             placeholder="blurred"
             alt="drone flying"
           />
@@ -27,7 +27,7 @@ export default function Project() {
             <iframe
               className="animation-video"
               title="YouTube video player"
-              src="https://www.youtube.com/embed/Bbd129OPXqo?autoplay=1&controls=0&showinfo=0&vq=720p&loop=1&cc_load_policy=1"
+              src="https://www.youtube.com/embed/Bbd129OPXqo?autoplay=0&controls=0&showinfo=0&vq=720p&loop=1&cc_load_policy=1"
               frameBorder="0"
               allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
