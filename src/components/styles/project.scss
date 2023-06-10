@@ -1,7 +1,7 @@
 @import "./main.scss";
 
 .project-page {
-  padding: 100vh 0;
+  padding: 0 0;
 
   .header {
     text-shadow: -2px 2px 0px rgba(255, 100, 100, 1);
@@ -26,15 +26,11 @@
   pointer-events: none;
 }
 
-.overlay-drone > * {
+.render-background {
   /* Adjust animation duration to change the element’s speed */
   animation: fly 5s linear;
-  pointer-events: none !important;
-  top: 0%;
-  left: 0%;
-  position: absolute;
-  animation-delay: 1s;
-  z-index: 999999;
+  position: relative;
+  z-index: 9999;
 }
 
 @keyframes fly {
@@ -43,6 +39,41 @@
   }
 
   to {
-    transform: translate(0%, 0vh);
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+.animation {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  background-position: bottom;
+  overflow:hidden;
+  mask-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255), rgb(255, 255, 255),transparent);
+
+}
+
+.animation .clouds {
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.clouds > * {
+  position: absolute;
+  max-width: 100%;
+  animation: cloudy calc(8s * var(--i)) linear infinite;
+}
+
+@keyframes cloudy {
+  0% {
+    transform: translateX(-100%) rotate(180deg);
+  }
+
+  100% {
+    transform: translateX(100%) rotate(180deg);
   }
 }
