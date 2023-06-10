@@ -1,0 +1,67 @@
+.scroll {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.main-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200vh;
+}
+
+.cloud2,
+.cloud1,
+.cloud3 {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+}
+
+.cloud1 {
+  top: 100%;
+}
+
+.cloud3 {
+  top: 50%;
+}
+
+.explore {
+  fill: #fff;
+  font-size: 6vw; /* Responsive font size */
+  text-anchor: middle;
+}
+
+.arrow {
+  fill: #fff;
+}
+
+.further {
+  fill: #162a43;
+  font-size: 6vw; /* Responsive font size */
+  text-anchor: middle;
+}
+
+.mask {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.mask-content {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: screen; /* Adjust blend mode as needed */
+}
+
+.cloud1 {
+  position: absolute;
+  top: 799px;
+  left: 0;
+  width: 100vw;
+  overflow: hidden;
+}
