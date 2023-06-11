@@ -6,6 +6,10 @@ import "../components/styles/partners.scss";
 import TUELogo from "../images/sponsors/tue.svg";
 import GLSLogo from "../images/sponsors/gls.svg";
 import NXPLogo from "../images/sponsors/nxp.svg";
+import KPNLogo from "../images/sponsors/kpn.svg";
+import LAB76Logo from "../images/sponsors/lab76.svg";
+import MAXONLogo from "../images/sponsors/Maxon.svg";
+import UAMLogo from "../images/sponsors/uam.svg";
 import ZoomworksLogo from "../images/sponsors/zoomworks.svg";
 import { InfoEmail } from "../components/Email";
 import { HeadContent } from "../components/HeadContent";
@@ -92,6 +96,30 @@ const partnerInfo: Record<"platinum" | "gold" | "silver", PartnerInfo[]> = {
       logo: <NXPLogo className="nxp-logo" />,
       url: "https://www.nxp.com/",
       text: "Across a broad spectrum of applications, NXP aims to advance our world by developing and supporting technological innovations. Their state-of-the-art components and extensive expertise allow them to actively compete in the world of technical parts, software and components. With a mindset of going towards a sustainable world they are one of the frontrunners in supporting sustainable innovation. NXP supports Aero in twofold by supplying both technical components for prototyping and product development, as well as professional technical support from experienced engineers."
+    },
+    {
+      name: "KPN IoT",
+      logo: <KPNLogo className="kpn-logo" />,
+      url: "https://www.kpn.com/",
+      text: "KPN, as a leading provider of Internet of Things (IoT) services, offers us the connectivity we need to establish a robust and reliable communication infrastructure for our drone fleet. The wide coverage of KPN's network ensures that our drones can stay connected even in remote areas, allowing us to explore and operate in various environments."
+    },
+    {
+      name: "Maxon",
+      logo: <MAXONLogo className="maxon-logo" />,
+      url: "https://www.maxongroup.com/",
+      text: "By partnering with Maxon, we gain access to their extensive range of top-of-the-line drive systems. Their motors are known for their exceptional quality, precision, and reliability, making them an ideal choice for our drone propulsion needs. With Maxon's drive systems, we can ensure that our drones have powerful and efficient propulsion, enabling them to achieve optimal flight performance and maneuverability."
+    },
+    {
+      name: "HTCE UAM Hub",
+      logo: <UAMLogo className="uam-logo" />,
+      url: "https://www.hightechcampus.com/uamhub",
+      text: "Our collaboration with the Urban Air Mobility Hub at the High Tech Campus in Eindhoven provides a perfect urban testing environment for our drones. With controlled access and guidance on certifications, we can optimize our drone technologies for urban scenarios and contribute to the advancement of urban air mobility."
+    },
+    {
+      name: "Lab76",
+      logo: <LAB76Logo className="lab76-logo" />,
+      url: "https://www.lab76.org/",
+      text: "Impressed by our cool project renders? You should check out Lab76! Our collaboration with Lab76, brings our ideas and story to life. Through their expertise in visual storytelling, Lab76 helps us effectively communicate and visualize our project's concepts, enhancing its overall impact and engagement. "
     }
   ],
   silver: [
