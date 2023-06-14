@@ -41,14 +41,13 @@
   width: 100vw;
   height: 90vh;
   // overflow:hidden;
-  mask-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255), rgb(255, 255, 255),transparent);
-
+  mask-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255), rgb(255, 255, 255), transparent);
 }
 
 .cloud-animation .clouds {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -58,10 +57,11 @@
 .cloud-animation .clouds > * {
   position: absolute;
   max-width: 100%;
-  animation: cloudy calc(10s * var(--i)) linear infinite ;
+  animation: cloudy calc(10s * var(--i)) linear infinite;
 }
 
-.clouds > *:nth-child(4), :nth-child(3){
+.clouds > *:nth-child(4),
+:nth-child(3) {
   animation-delay: 0s;
 }
 
@@ -92,11 +92,11 @@
   }
   80% {
     right: 35%;
-    opacity: .8;
+    opacity: 0.8;
   }
   90% {
     right: 28%;
-    opacity: .6;
+    opacity: 0.6;
   }
   100% {
     right: 30%;
