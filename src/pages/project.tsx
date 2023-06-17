@@ -17,8 +17,6 @@ export default function Project() {
       <Layout>
         <div className="project-page">
           {/* <div className="text">
-            <h1>Fun fact #1</h1>
-            <h1>Fun fact #2</h1>
           </div>
           <div className="cloud-animation">
             <div className="clouds">
@@ -55,7 +53,9 @@ export default function Project() {
               alt="drone flying"
             />
           </div> */}
-          <Scroll />
+          <div className="scroll-container">
+            <Scroll />
+          </div>
           <div>
             <Container>
               <Row className="center">
