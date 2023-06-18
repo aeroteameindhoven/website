@@ -1,9 +1,10 @@
 // import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
-import { Container, Row, Col } from "react-grid-system";
 import "../components/styles/project.scss";
 import { HeadContent } from "../components/HeadContent";
+import Scroll from "../components/Scroll";
+import { StaticImage } from "gatsby-plugin-image";
 
 export function Head() {
   return <HeadContent title="Project" />;
@@ -11,53 +12,76 @@ export function Head() {
 
 export default function Project() {
   return (
-    <Layout>
-      <div className="project-page">
-        <Container>
-          <Row>
-            <Col md={6}>
-              <h2 className="header">The problem</h2>
+    <div>
+      <Layout>
+        <div className="project-page">
+          <div className="scroll-container">
+            <Scroll />
+          </div>
+          <div className="drone-zone">
+            <StaticImage
+              src="../images/project/front-overlay.png"
+              alt="drone"
+              className="drone-render"
+              objectFit="fill"
+            />
+          </div>
+          <div className="text-zone">
+            <h3>Our mission</h3>
+            <p className="diagonal-rev">
+              Aero Team Eindhoven is on a mission to revolutionize long-range package delivery by drones. To address the
+              limitation of drone range, we have devised a new solution in-air battery swaps. Our goal is to use
+              battery-swap drones to swap the depleted battery of a cargo drone mid-flight, enabling the cargo drone to
+              fly endlessly!
+            </p>
+            <h3 className="shadow">This year we have started our journey by building the cargo drone, Aegle!</h3>
+            <div className="diagonal">
               <p>
-                Aviation contributes to a big part of emissions globally, this remains a huge problem. Around 80% of
-                aviation C02 emissions are emitted from flights of over 1500 kilometers, for which there is no practical
-                alternative mode of transport. Current solutions aren&apos;t there yet or don&apos;t scale well enough.
-                Therefore something has to change structurally. A transition needs to be started towards electric
-                aviation, possible of overcoming the problems the sector currently faces, to empower more important
-                players to embrace the transition towards a sustainable form of transport and aviation.
-              </p>
-            </Col>
-            <Col md={6}>
-              <h2 className="header">Our mission</h2>
-              <p>
-                Redefine flying. We want to redefine flying in order to make an impact in the world of sustainability.
-                Our goal of team Aero is not to increase the range of aerial vehicles, such as airplanes or drone. Multi
-                billionaire companies are investing a lot of money to increase the efficiency of aerial vehicles or the
-                efficiency of batteries. It might not take very long and we can make us of hydrogen batteries, which
-                improves the capacity of batteries significantly.
-              </p>
-              <p>
-                However, these remain relatively small improvements on the range of aerial vehicles. Most flights are
-                longer than 1500 km. In order to solve this problem we need to change the concept of flying. A single
-                aircraft will not be able to transport goods or people in the near future at this pace.
-              </p>
-              <p>
-                We envision a world where drones are interconnected in the sky. Our goal is to create a network of
-                drones that can interact with each other on a whole new level. Rather than increase the range of a
-                single drone, we are creating a network with a scalable range, practically endless. Using this network,
-                we can connect Europe through the sky, in a sustainable way, electrically. We want to create the
-                technology that enables the first steps of this network.
+                Aegle stands out for its impressive engineering and design. One notable feature is its 3D-printed
+                construction, which offers unparalleled customization and modularity. The use of additive manufacturing
+                has enabled our engineering team to push the boundaries of what is achievable in drone technology. The
+                modular design of Aegle is another highlight, allowing for easy component replacements and upgrades.
+                Modularity ensures adaptability to a wide range of mission requirements, making Aegle a versatile and
+                practical choice.
               </p>
               <p>
-                The idea is that a cargo drone, transporting high priority products or necessities, is refueled in air
-                by a second drone. The second drone carries a second battery and will switch the empty cargo battery
-                using artificial intelligence. The cargo drone flies past charging points, created by our network. By
-                creating this battery swap technology, we can innovate alongside the battery developments which will
-                reduce the amount of swaps in time.
+                When it comes to flight capabilities, Aegle utilizes five motors in a quad-plane configuration, each
+                capable of generating up to 8kg of thrust. This configuration enables stable quadcopter flight,
+                providing reliability and control in various scenarios. Powering Aegle is a 10000mAh 12S (44.4V) battery
+                pack, offering a hover flight time of 18 minutes or up to an hour of continuous forward flight. This
+                battery capacity provides ample time for capturing aerial footage or completing missions without
+                interruptions.
               </p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </Layout>
+              <p>
+                In terms of production efficiency, the entire assembly of Aegle can be 3D printed within a week. This
+                rapid manufacturing process allows us to streamline production and manufacture drones in a timely
+                manner. Aegle&apos;s design also prioritizes ease of repair, with a modular and rapidly repairable
+                structure. This feature ensures that maintenance and repairs can be carried out quickly, minimizing
+                downtime and maximizing operational efficiency. To ensure a robust and lightweight frame, the drone
+                incorporates carbon fiber and acrylic supports. This combination of materials provides both strength and
+                rigidity, while the flexible wings enhance maneuverability during flight. Aegle represents our
+                commitment to pushing the boundaries of drone technology through innovation, practicality, and reliable
+                performance.
+              </p>
+            </div>
+            <h3 className="shadow">
+              Next year we will use the knowledge we gathered while creating Aegle to start designing and building
+              Spearow, our battery-swap drone.
+            </h3>
+            <h2 className="shadow">Learn more about our project</h2>
+          </div>
+          <div className="video-container">
+            <iframe
+              className="animation-video"
+              title="YouTube video player"
+              src="https://www.youtube.com/embed/Bbd129OPXqo?autoplay=0&controls=0&showinfo=0&vq=720p&loop=1&cc_load_policy=1"
+              frameBorder="0"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </Layout>
+    </div>
   );
 }

@@ -3708,6 +3708,7 @@ __metadata:
     gatsby-source-wordpress: ^7.10.0
     gatsby-transformer-csv: ^5.10.0
     gatsby-transformer-sharp: ^5.10.0
+    gsap: ^3.12.1
     prettier: ^2.8.8
     prop-types: ^15.8.1
     react: ^18.2.0
@@ -8618,6 +8619,13 @@ __metadata:
   version: 16.6.0
   resolution: "graphql@npm:16.6.0"
   checksum: bf1d9e3c1938ce3c1a81e909bd3ead1ae4707c577f91cff1ca2eca474bfbc7873d5d7b942e1e9777ff5a8304421dba57a4b76d7a29eb19de8711cb70e3c2415e
+  languageName: node
+  linkType: hard
+
+"gsap@npm:^3.12.1":
+  version: 3.12.1
+  resolution: "gsap@npm:3.12.1"
+  checksum: 1d7051074ad4351fe76971ea133b0d95c0a6fb330cd0237917f63eff7bc10b32475d909c5960141761b0d7a8d9d50197b2df4f3e179dbcec817e0f6b385cda98
   languageName: node
   linkType: hard
 
