@@ -8,7 +8,7 @@ import GLSLogo from "../images/sponsors/gls.svg";
 import NXPLogo from "../images/sponsors/nxp.svg";
 import KPNLogo from "../images/sponsors/kpn.svg";
 import LAB76Logo from "../images/sponsors/lab76.svg";
-import MAXONLogo from "../images/sponsors/Maxon.svg";
+import MAXONLogo from "../images/sponsors/maxon.svg";
 import UAMLogo from "../images/sponsors/uam.svg";
 import ZoomworksLogo from "../images/sponsors/zoomworks.svg";
 import { InfoEmail } from "../components/Email";
