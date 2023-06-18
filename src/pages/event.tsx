@@ -68,9 +68,9 @@ function duration_until(start: Date, end: Date) {
 
   let minutes_string = null;
   if (minutes > 1) {
-    minutes_string = `and ${hours} minutes`;
+    minutes_string = `and ${minutes} minutes`;
   } else if (minutes == 1) {
-    minutes_string = `and ${hours} minute`;
+    minutes_string = `and ${minutes} minute`;
   }
 
   return [hours_string, minutes_string];
