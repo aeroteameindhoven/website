@@ -49,7 +49,7 @@ const Scroller = () => {
             <text x="450" y="150" fill="#002878" className="aegle">
               AEGLE
             </text>
-            <text x="45" y="400" fill="#002878" className="fun-fact">
+            {/* <text x="45" y="400" fill="#002878" className="fun-fact">
               3 meter wingspan
             </text>
             <text x="45" y="150" fill="#002878" className="fun-fact">
@@ -60,7 +60,7 @@ const Scroller = () => {
             </text>
             <text x="1000" y="400" fill="#002878" className="fun-fact">
               Modular
-            </text>
+            </text> */}
           </g>
           <rect
             ref={arrow_button}
