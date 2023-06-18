@@ -8,6 +8,7 @@
     grid-area: 1/1;
     position: relative;
     z-index: 5;
+    height: fit-content;
   }
 
   .scroll-container {
@@ -16,30 +17,19 @@
     z-index: 1;
   }
   .text-zone {
-    grid-area: 1/1;
+    grid-area: 2/1;
     position: relative;
     z-index: 7;
-    h1 {opacity: 0;
-    animation: fade-in 1s ease-in forwards;
-    color: blue;
-    }
-  }
-  
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
   }
 
-
-  .header {
-    text-shadow: -2px 2px 0px rgba(255, 100, 100, 1);
-    font-size: 44px;
-    margin-bottom: 0;
-    text-transform: uppercase;
+  .shadow {
+    text-shadow: #ff6464 3px 1px;
   }
 
   .animation-video {
@@ -47,16 +37,18 @@
     height: calc(50vw / 1.77);
   }
 
-  .center {
+  .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5vh;
   }
 }
 
 .drone-render {
   animation: fly 5s linear;
   z-index: 9999;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 28, 78, 0.5));
 }
 
 @keyframes fly {
@@ -66,5 +58,15 @@
 
   to {
     transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .drone-zone {
+    padding-top: 2rem;
+  }
+
+  .fun-fact {
+    font-size: 10px;
   }
 }

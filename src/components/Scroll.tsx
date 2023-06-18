@@ -15,6 +15,20 @@ const Scroller = () => {
       .fromTo(".cloud1", { y: 100 }, { y: -800 }, 0)
       .fromTo(".cloud2", { y: -150 }, { y: -500 }, 0)
       .fromTo(".cloud3", { y: 0 }, { y: -500 }, 0);
+
+    gsap.utils.toArray(".fun-fact").forEach((element) => {
+      gsap.from(element, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top bottom",
+          end: "center bottom",
+          scrub: true
+        }
+      });
+    });
   });
   return (
     <div className="scroll">
@@ -42,6 +56,18 @@ const Scroller = () => {
             <rect fill="#fff" width="100%" height="100%" />
             <text x="450" y="150" fill="#002878" className="aegle">
               AEGLE
+            </text>
+            <text x="45" y="400" fill="#002878" className="fun-fact">
+              3 meter wingspan
+            </text>
+            <text x="45" y="150" fill="#002878" className="fun-fact">
+              2 kg payload
+            </text>
+            <text x="1000" y="150" fill="#002878" className="fun-fact">
+              10 kg weight
+            </text>
+            <text x="1000" y="400" fill="#002878" className="fun-fact">
+              Modular
             </text>
           </g>
           <rect
