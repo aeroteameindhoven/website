@@ -19,10 +19,10 @@ const Scroller = () => {
   return (
     <div className="scroll">
       <div className="main">
-        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" className="svg">
           <mask id="m">
             <g className="cloud1">
-              <rect fill="#fff" width="100%" height="801" y="799" />
+              <rect fill="#fff" width="100%" height="801" y="799" className="background" />
               <image xlinkHref="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1200" height="800" />
             </g>
           </mask>
@@ -30,7 +30,7 @@ const Scroller = () => {
           <image className="cloud1" xlinkHref="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800" />
           <image className="cloud2" xlinkHref="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800" />
           <image className="cloud3" xlinkHref="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800" />
-          <text fill="#fff" x="400" y="200">
+          <text fill="#fff" x="400" y="150">
             Discover
           </text>
           <polyline
@@ -39,14 +39,8 @@ const Scroller = () => {
             points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250"
           />
           <g mask="url(#m)">
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" />
-                <stop offset="100%" stop-color="#ffffff" />
-              </linearGradient>
-            </defs>
-            <rect fill="url(#gradient)" width="100%" height="100vh" />
-            <text x="450" y="200" fill="#002878" className="aegle">
+            <rect fill="#fff" width="100%" height="100%" />
+            <text x="450" y="150" fill="#002878" className="aegle">
               AEGLE
             </text>
           </g>
@@ -57,7 +51,7 @@ const Scroller = () => {
             height="100"
             opacity="0"
             x="550"
-            y="220"
+            y="200"
             style={{ cursor: "pointer" }}
           />
         </svg>

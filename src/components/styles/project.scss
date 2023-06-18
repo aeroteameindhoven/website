@@ -2,6 +2,38 @@
 
 .project-page {
   padding: 0 0;
+  display: grid;
+
+  .drone-zone {
+    grid-area: 1/1;
+    position: relative;
+    z-index: 5;
+  }
+
+  .scroll-container {
+    grid-area: 1/1;
+    position: relative;
+    z-index: 1;
+  }
+  .text-zone {
+    grid-area: 1/1;
+    position: relative;
+    z-index: 7;
+    h1 {opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+    color: blue;
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 
   .header {
     text-shadow: -2px 2px 0px rgba(255, 100, 100, 1);
@@ -35,75 +67,4 @@
   to {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
-}
-.cloud-animation {
-  position: relative;
-  width: 100vw;
-  height: 90vh;
-  // overflow:hidden;
-  mask-image: linear-gradient(to bottom, transparent, rgb(255, 255, 255), rgb(255, 255, 255), transparent);
-}
-
-.cloud-animation .clouds {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 100;
-}
-
-.cloud-animation .clouds > * {
-  position: absolute;
-  max-width: 100%;
-  animation: cloudy calc(10s * var(--i)) linear infinite;
-}
-
-.clouds > *:nth-child(4),
-:nth-child(3) {
-  animation-delay: 0s;
-}
-
-.clouds > *:nth-child(1) {
-  animation-delay: -7s; /* Delay by one iteration */
-}
-
-@keyframes cloudy {
-  0% {
-    transform: translateX(-100%) rotate(180deg);
-  }
-
-  100% {
-    transform: translateX(100%) rotate(180deg);
-  }
-}
-
-.text {
-  position: fixed;
-  animation: slide-in 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slide-in {
-  0% {
-    right: -50%;
-    opacity: 0;
-  }
-  80% {
-    right: 35%;
-    opacity: 0.8;
-  }
-  90% {
-    right: 28%;
-    opacity: 0.6;
-  }
-  100% {
-    right: 30%;
-  }
-}
-
-.scroll-container {
-  mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1) 5vh);
-  overflow: hidden;
 }
