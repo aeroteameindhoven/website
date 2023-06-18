@@ -8,6 +8,24 @@ export function Head() {
 }
 
 export default function Event() {
+  return (
+    <Layout>
+      <div className={wrapper}>
+        <Countdown />
+        <a
+          href="https://www.youtube.com/channel/UC48Rt9YAXZIi9RsOdSUUcFQ/live"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={button}
+        >
+          Join us on Youtube
+        </a>
+      </div>
+    </Layout>
+  );
+}
+
+function Countdown() {
   const date = new Date("2023-06-19T15:00:00+02:00");
 
   const format = new Intl.DateTimeFormat("en", { dateStyle: "medium", timeStyle: "medium" });
@@ -22,7 +40,22 @@ export default function Event() {
     return () => clearInterval(interval);
   });
 
-  const total_minutes = Math.round((date.getTime() - now.getTime()) / (60 * 1000));
+  const [hours_string, minutes_string] = duration_until(now, date);
+
+  let relative_duration = null;
+  if (hours_string != null || minutes_string != null) {
+    relative_duration = `in ${hours_string} ${minutes_string}`;
+  }
+
+  return (
+    <div className={countdown}>
+      Event will be live {relative_duration} at {format.format(date)}
+    </div>
+  );
+}
+
+function duration_until(start: Date, end: Date) {
+  const total_minutes = Math.round((end.getTime() - start.getTime()) / (60 * 1000));
   const hours = Math.floor(total_minutes / 60);
   const minutes = total_minutes % 60;
 
@@ -40,21 +73,5 @@ export default function Event() {
     minutes_string = `and ${hours} minute`;
   }
 
-  return (
-    <Layout>
-      <div className={wrapper}>
-        <div className={countdown}>
-          Event will be live in {hours_string} {minutes_string} at {format.format(date)}
-        </div>
-        <a
-          href="https://www.youtube.com/channel/UC48Rt9YAXZIi9RsOdSUUcFQ/live"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={button}
-        >
-          Watch on Youtube
-        </a>
-      </div>
-    </Layout>
-  );
+  return [hours_string, minutes_string];
 }
