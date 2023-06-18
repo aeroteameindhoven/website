@@ -36,9 +36,9 @@ export default function Project() {
             <h1 className="shadow">This year we have started our journey by building the cargo drone, Aegle!</h1>
             <p>
               Aegle stands out with its 3D-printed construction, delivering unrivaled customization and modularity,
-              while providing a remarkable forward flight time of 45 minutes. . Through the power of additive
-              manufacturing, our engineering team has pushed the boundaries of what is possible. Aegle's modular design
-              allows for effortless component replacements and upgrades, ensuring adaptability to diverse mission
+              while providing a remarkable forward flight time of 45 minutes. Through the power of additive
+              manufacturing, our engineering team has pushed the boundaries of what is possible. Aegle`&apos;`s modular
+              design allows for effortless component replacements and upgrades, ensuring adaptability to diverse mission
               requirements.
             </p>
             <h1 className="shadow">Learn more about our project</h1>
