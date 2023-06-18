@@ -15,20 +15,12 @@ const Scroller = () => {
       .fromTo(".cloud1", { y: 100 }, { y: -800 }, 0)
       .fromTo(".cloud2", { y: -150 }, { y: -500 }, 0)
       .fromTo(".cloud3", { y: 0 }, { y: -500 }, 0);
-
-    gsap.utils.toArray<SVGTextElement>(".fun-fact").forEach((element: SVGTextElement) => {
-      gsap.from(element, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: element,
-          start: "top bottom",
-          end: "center bottom",
-          scrub: true
-        }
-      });
-    });
+    // .fromTo(
+    //   ".drone-render",
+    //   { x: "100vw", y: "-100vw", rotate: "30deg", scale: "-1" },
+    //   { x: "0vw", y: "0vw", rotate: "0deg", scale: "1" },
+    //   0
+    // );
   });
   return (
     <div className="scroll">

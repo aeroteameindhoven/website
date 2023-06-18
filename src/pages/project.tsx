@@ -41,6 +41,14 @@ export default function Project() {
               design allows for effortless component replacements and upgrades, ensuring adaptability to diverse mission
               requirements.
             </p>
+            <p>Using 4 motors with up to 8kg of thrust each for quadcopter flight</p>
+            <p>
+              using 10000mAh 12S (44.4V) battery pack gives us 18 minutes of hover flight, or up to an hour of forward
+              flight
+            </p>
+            <p>Whole assembly 3d printed in one week</p>
+            <p>modular and rapidly repairable</p>
+            <p>using carbon fiber and acrylic supports for a strong and rigid frame and flexible wings</p>
             <h1 className="shadow">Learn more about our project</h1>
           </div>
           <div className="video-container">
