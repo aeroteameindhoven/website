@@ -9,6 +9,7 @@ import "react-slideshow-image/dist/styles.css";
 import { HeadContent } from "../components/HeadContent";
 import { StaticImage } from "gatsby-plugin-image";
 import Video from "../components/Video";
+import { Link } from "gatsby";
 
 export function Head() {
   return <HeadContent />;
@@ -39,6 +40,9 @@ function PostHeader() {
             >
               Get your ticket!
             </a>
+            <Link to="/event" className="apply-button">
+              Watch live!
+            </Link>
             <div className="studentteam">
               <span className="pre-tue">Official student team of</span>
               <a href="https://tue.nl" target="_blank" rel="noreferrer">
