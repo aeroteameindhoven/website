@@ -4,6 +4,10 @@
   padding: 0 0;
   display: grid;
 
+  h3 {
+    font-size: 2em;
+  }
+
   .drone-zone {
     grid-area: 1/1;
     position: relative;
@@ -24,12 +28,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: left;
+    p {    padding: 1rem;
+    }
+  }
+
+  .next {
     text-align: center;
-    padding: 20px;
+  }
+
+  .diagonal {
+    isolation: isolate;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .diagonal::after {
+    content: '';
+    background-image: linear-gradient(#e08080,#ff6464, #fb4848);
+    position: absolute;
+    inset:0;
+    z-index: -1;
+    transform: skewY(3deg);
+  }
+
+  .diagonal-rev {
+    isolation: isolate;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .diagonal-rev::after {
+    content: '';
+    background-image: linear-gradient(#e08080,#ff6464, #fb4848);
+    position: absolute;
+    inset:0;
+    z-index: -1;
+    transform: skewY(-1deg);
   }
 
   .shadow {
-    text-shadow: #ff6464 3px 1px;
+    // text-shadow: #ff6464 3px 1px;
+    padding-inline: 2rem;
   }
 
   .animation-video {
