@@ -9,6 +9,7 @@ import "react-slideshow-image/dist/styles.css";
 import { HeadContent } from "../components/HeadContent";
 import { StaticImage } from "gatsby-plugin-image";
 import Video from "../components/Video";
+import { Link } from "gatsby";
 
 export function Head() {
   return <HeadContent />;
@@ -39,6 +40,9 @@ function PostHeader() {
             >
               Get your ticket!
             </a>
+            <Link to="/event" className="apply-button">
+              Watch live!
+            </Link>
             <div className="studentteam">
               <span className="pre-tue">Official student team of</span>
               <a href="https://tue.nl" target="_blank" rel="noreferrer">
@@ -46,24 +50,6 @@ function PostHeader() {
               </a>
             </div>
           </h2>
-          <div className="interest-lunch">
-            <h2 className="secondary">
-              Want to know more?
-              <br />
-              Join our interest lunch on <span className="bold-details">May 30th 12:30-13:30</span>
-              <br /> at our office in <span className="bold-details">Momentum</span> to explore
-              <br /> the opportunities to be part of our team!
-              <br />
-              <a
-                href="https://www.eventbrite.com/e/interest-lunch-tickets-637996152667"
-                target="_blank"
-                rel="noreferrer"
-                className="apply-button"
-              >
-                Sign up now!
-              </a>
-            </h2>
-          </div>
         </div>
         {/* <GlobeIllustration className="globe" /> */}
       </div>

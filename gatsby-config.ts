@@ -50,7 +50,7 @@ const config: GatsbyConfig = {
             : "36fb18bc-3525-49a2-bed9-7bd1fcd372a4", // production
         server: "https://insights.aeroteameindhoven.nl",
         ignoreLocalhost: true,
-        ignoreOwnVisits: false,
+        ignoreOwnVisits: true,
         detailed: true
       }
     },
