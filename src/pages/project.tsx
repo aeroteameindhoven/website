@@ -62,7 +62,7 @@ export default function Project() {
               drone technology through innovation, practicality, and reliable performance.
             </p>
             </div>
-              <h3 className="shadow">Next year we will use the knowledge we gathered while creating Aegle to start designing and building Spearrow, our battery-swap drone. 
+              <h3 className="shadow">Next year we will use the knowledge we gathered while creating Aegle to start designing and building Spearow, our battery-swap drone. 
               </h3>
             <h2 className="shadow">Learn more about our project</h2>
           </div>
