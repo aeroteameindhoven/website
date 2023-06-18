@@ -16,7 +16,7 @@ const Scroller = () => {
       .fromTo(".cloud2", { y: -150 }, { y: -500 }, 0)
       .fromTo(".cloud3", { y: 0 }, { y: -500 }, 0);
 
-    gsap.utils.toArray(".fun-fact").forEach((element) => {
+    gsap.utils.toArray<SVGTextElement>(".fun-fact").forEach((element: SVGTextElement) => {
       gsap.from(element, {
         opacity: 0,
         y: 50,
