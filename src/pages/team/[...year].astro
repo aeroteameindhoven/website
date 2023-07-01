@@ -1,8 +1,9 @@
 ---
-import type { GetStaticPathsResult } from "astro";
+import type { InferGetStaticPropsType } from "astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
-export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+export async function getStaticPaths() {
   const [teams, members] = await Promise.all([
     await getCollection("teams"),
     await getCollection("members"),
@@ -19,7 +20,7 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
       props: {
         teamYear: team.id,
         teamMetadata: team.data,
-        teamMembers: membersMap.get(team.id),
+        teamMembers: membersMap.get(team.id)!,
       },
     }))
     .concat({
@@ -27,16 +28,40 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
       props: {
         teamYear: currentTeam.id,
         teamMetadata: currentTeam.data,
-        teamMembers: membersMap.get(currentTeam.id),
+        teamMembers: membersMap.get(currentTeam.id)!,
       },
     });
 }
 
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
 const { teamYear, teamMetadata, teamMembers } = Astro.props;
+const teamMemberPhotos = await Astro.glob<{ default: ImageMetadata }>(
+  "../../assets/members/*/*.jpg"
+);
 ---
 
 <pre>{teamYear}</pre>
 <hr />
 <pre>{JSON.stringify(teamMetadata, null, 2)}</pre>
 <hr />
-<pre>{JSON.stringify(teamMembers, null, 2)}</pre>
+{
+  teamMemberPhotos.map(({ default: image }) => (
+    <img
+      src={image.src}
+      width={1000}
+      height={1500}
+      alt="alt"
+      decoding="async"
+      loading="lazy"
+    />
+  ))
+}
+<pre>{JSON.stringify(teamMemberPhotos, null, 2)}</pre>
+<!-- <pre>{teamMembers.map(member => {
+
+  return (<Fragment>
+    <img src={"../../assets/members/" + teamYear + "/" + (member["first name"] + member.surname).replace(/\s/g, "").toLowerCase() + ".jpg"} alt={member["first name"] + " " + member.surname} width="100" height="100" />
+    <pre>{JSON.stringify(member, null, 2)}</pre>
+  </Fragment>);
+})}</pre> -->
