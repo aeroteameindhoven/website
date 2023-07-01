@@ -1,0 +1,17 @@
+{
+  "name": "aeroteameindhoven.nl",
+  "type": "module",
+  "version": "0.0.0",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^2.7.2"
+  }
+}
