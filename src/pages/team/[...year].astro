@@ -1,0 +1,42 @@
+---
+import type { GetStaticPathsResult } from "astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+  const [teams, members] = await Promise.all([
+    await getCollection("teams"),
+    await getCollection("members"),
+  ]);
+
+  const membersMap = new Map(
+    members.map((entry) => [entry.id, entry.data.rows])
+  );
+  const currentTeam = teams.at(-1)!;
+
+  return teams
+    .map((team) => ({
+      params: { year: team.id as string | undefined },
+      props: {
+        teamYear: team.id,
+        teamMetadata: team.data,
+        teamMembers: membersMap.get(team.id),
+      },
+    }))
+    .concat({
+      params: { year: undefined },
+      props: {
+        teamYear: currentTeam.id,
+        teamMetadata: currentTeam.data,
+        teamMembers: membersMap.get(currentTeam.id),
+      },
+    });
+}
+
+const { teamYear, teamMetadata, teamMembers } = Astro.props;
+---
+
+<pre>{teamYear}</pre>
+<hr />
+<pre>{JSON.stringify(teamMetadata, null, 2)}</pre>
+<hr />
+<pre>{JSON.stringify(teamMembers, null, 2)}</pre>

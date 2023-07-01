@@ -1,0 +1,4 @@
+Contact: mailto:info@aeroteameindhoven.nl
+Expires: 2024-12-31T23:00:00.000Z
+Preferred-Languages: en
+Canonical: https://aeroteameindhoven.nl/.well-known/security.txt
