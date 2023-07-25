@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-grid-system";
 import { siteFooter, mailLink, icon, appName } from "./styles/footer.module.scss";
 import Mail from "../images/icons/email.svg";
-import Phone from "../images/icons/phone.svg";
+// import Phone from "../images/icons/phone.svg";
 import LinkedIn from "../images/icons/icons-linkedin.svg";
 import Instagram from "../images/icons/icons-instagram.svg";
 import Youtube from "../images/icons/icons-youtube.svg";
@@ -16,10 +16,11 @@ export default function Footer() {
           <Col md={12} lg={4}>
             <h2>Contact</h2>
             <p>
+              {/* FIXME: this is daan's phone number, not the aero team's number anymore
               <a className={mailLink} href="tel:+31619183031">
                 <Phone className={icon} />
                 +31 6 19183031
-              </a>
+              </a> */}
               <a className={mailLink} href="mailto:info@aeroteameindhoven.nl">
                 <Mail className={icon} />
                 info@aeroteameindhoven.nl
