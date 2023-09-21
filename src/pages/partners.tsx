@@ -11,6 +11,8 @@ import LAB76Logo from "../images/sponsors/lab76.svg";
 import MAXONLogo from "../images/sponsors/maxon.svg";
 import UAMLogo from "../images/sponsors/uam.svg";
 import ZoomworksLogo from "../images/sponsors/zoomworks.svg";
+import WurthLogo from "../images/sponsors/wurth.svg";
+
 import { InfoEmail } from "../components/Email";
 import { HeadContent } from "../components/HeadContent";
 
@@ -96,6 +98,12 @@ const partnerInfo: Record<"platinum" | "gold" | "silver", PartnerInfo[]> = {
       logo: <NXPLogo className="nxp-logo" />,
       url: "https://www.nxp.com/",
       text: "Across a broad spectrum of applications, NXP aims to advance our world by developing and supporting technological innovations. Their state-of-the-art components and extensive expertise allow them to actively compete in the world of technical parts, software and components. With a mindset of going towards a sustainable world they are one of the frontrunners in supporting sustainable innovation. NXP supports Aero in twofold by supplying both technical components for prototyping and product development, as well as professional technical support from experienced engineers."
+    },
+    {
+      name: "Würth Elektronik",
+      logo: <WurthLogo className="wurth-logo" />,
+      url: "https://www.we-online.com/en",
+      text: "Würth Elektronik is one of the most successful companies within the Würth Group. The Würth Elektronik Group is the preferred partner of many developers and manufacturers from a wide range of industries. With its electronic and electromechanical components, printed circuit boards, and intelligent power and control systems. "
     },
     {
       name: "KPN IoT",
