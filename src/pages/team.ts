@@ -22,6 +22,13 @@ export const ALL_TEAMS = new Map<Years, TeamInfo>([
       name: "22/23",
       text: "The second year of Aero Team, our focus is on the Battery Swap mechanism and the construction of our Cargo Drone"
     }
+  ],
+  [
+    "23-24",
+    {
+      name: "23/24",
+      text: "In our third year of Aero Team we will focus on building onto the success of last year's Cargo Drone, as well as on further developing the Battery Swap mechanism."
+    }
   ]
 ]);
 
