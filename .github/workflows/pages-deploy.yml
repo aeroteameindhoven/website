@@ -48,6 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PATH_PREFIX: ${{ format('/preview/pr-{0}/', github.event.number) }}
+      STAGING: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3

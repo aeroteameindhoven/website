@@ -41,6 +41,19 @@ const config: GatsbyConfig = {
         }
       }
     },
+    {
+      resolve: "gatsby-plugin-ackee-tracker",
+      options: {
+        domainId:
+          process.env["STAGING"] === "true"
+            ? "80cd5ceb-3499-4f35-b7ed-e5f5065e67f2" // staging
+            : "36fb18bc-3525-49a2-bed9-7bd1fcd372a4", // production
+        server: "https://insights.aeroteameindhoven.nl",
+        ignoreLocalhost: true,
+        ignoreOwnVisits: true,
+        detailed: true
+      }
+    },
 
     // {
     //   resolve: "gatsby-source-wordpress",
@@ -49,12 +62,6 @@ const config: GatsbyConfig = {
     //   },
     // },
     "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "G-WN8X4H8WCY"
-      }
-    },
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
