@@ -103,7 +103,7 @@ const partnerInfo: Record<"platinum" | "gold" | "silver", PartnerInfo[]> = {
       name: "Würth Elektronik",
       logo: <WurthLogo className="wurth-logo" />,
       url: "https://www.we-online.com/en",
-      text: "Würth Elektronik is one of the most successful companies within the Würth Group. The Würth Elektronik Group is the preferred partner of many developers and manufacturers from a wide range of industries. With its electronic and electromechanical components, printed circuit boards, and intelligent power and control systems. "
+      text: "Würth Elektronik is a highly successful company within the Würth Group. It's the top choice for many developers and manufacturers from various industries. By partnering with them, they provide Aero with electronic components, printed circuit boards, and smart power and control systems."
     },
     {
       name: "KPN IoT",
