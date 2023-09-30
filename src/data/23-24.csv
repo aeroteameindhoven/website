@@ -2,7 +2,6 @@ first_name,surname,email,study_level,study,linkedin,subteam,function
 Bernd,de Kruik,b.d.kruik@aeroteameindhoven.nl,Bachelor,Computer Science and Engineering,,"Communications, Software",Communications Lead
 Bianca,Eni,b.eni@aeroteameindhoven.nl,Bachelor,Computer Science and Engineering,bianca-eni-0b0589247,"PR, HR",PR & HR Lead
 Berk,Eraltan,b.eraltan@aeroteameindhoven.nl,Bachelor,Data Science,,"Finance, External, Structural Design, Manufacturing, Pilot",Finance Lead
-Pavel,Goor,p.goor@aeroteameindhoven.nl,Bachelor,Electrical Engineering,,"Aerodynamics, Structural Design",
 Zachary,Kohnen,z.kohnen@aeroteameindhoven.nl,Bachelor,Electrical Engineering,zachary-kohnen-a6755a25a,"HR, Aerodynamics, Avionics, Manufacturing, Pilot",Aerodynamics & Avionics Lead
 Harsh,Nagouda,h.nagouda@aeroteameindhoven.nl,Bachelor,Data Science,harsh-nagouda,"Manufacturing, Pilot",Manufacturing Lead
 Omar,Raafat,o.raafat@aeroteameindhoven.nl,Bachelor,Computer Science and Engineering,omar-raafat-b19813214,Software,Software Lead
@@ -11,6 +10,7 @@ Ivan,Vincze,i.vincze@aeroteameindhoven.nl,Bachelor,Electrical Engineering,,Exter
 Arda,Bulbul,a.bulbul@aeroteameindhoven.nl,Bachelor,Mechanical Engineering,,"External, Structural Design",
 Manuel,Costa,m.costa@aeroteameindhoven.nl,Masters,Artificial Intelligence & Engineering Systems,,Software,
 Ana,Dias,a.dias@aeroteameindhoven.nl,Bachelor,Computer Science and Engineering,,PR,
+Pavel,Goor,p.goor@aeroteameindhoven.nl,Bachelor,Electrical Engineering,,"Aerodynamics, Structural Design",
 Tim,Htet Yan Oo,t.htet.yan.oo@aeroteameindhoven.nl,Masters,Computer Science and Engineering,,Avionics,
 Dogan,Kapucu,d.kapucu@aeroteameindhoven.nl,Bachelor,Mechanical Engineering,,Aerodynamics,
 Yasaman,Kashefbahrami,y.kbahrami@aeroteameindhoven.nl,Masters,Artificial Intelligence and Engineering Systems,,Avionics,
