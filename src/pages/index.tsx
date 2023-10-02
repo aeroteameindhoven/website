@@ -9,7 +9,6 @@ import "react-slideshow-image/dist/styles.css";
 import { HeadContent } from "../components/HeadContent";
 import { StaticImage } from "gatsby-plugin-image";
 import Video from "../components/Video";
-import { Link } from "gatsby";
 
 export function Head() {
   return <HeadContent />;
@@ -22,27 +21,19 @@ function PostHeader() {
         <Video className="reveal-video" />
         <div className="overlay-text">
           <h1 className="slogan">
-            <span className="color-a">A</span>ero presents: <span className="color-a">A</span>egle takes flight
+            <span> Redefine flying</span>
             <span className="dot">.</span>
           </h1>
           <h2 className="secondary">
-            Join us on <span className="bold-details">June 19th</span> at the{" "}
-            <span className="bold-details">High Tech Campus</span>
-            <br /> for an extraordinary launch event,
-            <br /> where we will unveil and demonstrate the flight
-            <br /> of our new cutting-edge drone.
-            <br />
-            <a
-              href="https://www.eventbrite.com/e/aero-reveals-aegle-takes-flight-tickets-633934102967"
-              target="_blank"
-              rel="noreferrer"
-              className="apply-button"
-            >
-              Get your ticket!
-            </a>
-            <Link to="/event" className="apply-button">
-              Watch live!
-            </Link>
+            <span className="mission">
+              We are working towards the world &apos;s first aerial battery swap.
+              <br />
+              Discover how we are reshaping the future of aviation through
+              <br />
+              cutting-edge power solutions.
+              <br />
+              Join us in exploring the endless possibilities of flight!
+            </span>
             <div className="studentteam">
               <span className="pre-tue">Official student team of</span>
               <a href="https://tue.nl" target="_blank" rel="noreferrer">
