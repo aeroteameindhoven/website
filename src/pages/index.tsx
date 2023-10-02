@@ -26,12 +26,11 @@ function PostHeader() {
           </h1>
           <h2 className="secondary">
             <span className="mission">
-              We are working towards the world's first aerial battery swap.
+              We are working towards the world &apos;s first aerial battery swap.
               <br />
-              Discover how we're reshaping the future of aviation through
+              Discover how we are reshaping the future of aviation through
               <br />
               cutting-edge power solutions.
-              {/* <br /> */}
               <br />
               Join us in exploring the endless possibilities of flight!
             </span>
