@@ -9,7 +9,6 @@ import "react-slideshow-image/dist/styles.css";
 import { HeadContent } from "../components/HeadContent";
 import { StaticImage } from "gatsby-plugin-image";
 import Video from "../components/Video";
-import { Link } from "gatsby";
 
 export function Head() {
   return <HeadContent />;
