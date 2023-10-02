@@ -26,12 +26,15 @@ function PostHeader() {
           </h1>
           <h2 className="secondary">
             <span className="mission">
-          We are working towards the world's first aerial battery swap.
-               <br />Discover how we're reshaping the future of aviation through
-               <br />cutting-edge power solutions.
-               {/* <br /> */}
-               <br />Join us in exploring the endless possibilities of flight!
-               </span>
+              We are working towards the world's first aerial battery swap.
+              <br />
+              Discover how we're reshaping the future of aviation through
+              <br />
+              cutting-edge power solutions.
+              {/* <br /> */}
+              <br />
+              Join us in exploring the endless possibilities of flight!
+            </span>
             <div className="studentteam">
               <span className="pre-tue">Official student team of</span>
               <a href="https://tue.nl" target="_blank" rel="noreferrer">
