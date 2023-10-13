@@ -26,7 +26,7 @@ export default function Footer() {
                 <Mail className={icon} />
                 info@aeroteameindhoven.nl
               </a>
-              <br></br>
+              <br />
               <span>Partnership inquiries:</span>
               <a className={mailLink} href="mailto:partners@aeroteameindhoven.nl">
                 <Mail className={icon} />
