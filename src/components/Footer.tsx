@@ -14,28 +14,35 @@ export default function Footer() {
       <Container>
         <Row>
           <Col md={12} lg={4}>
-            <h2>Contact</h2>
+            <h2 className="title-footer">Contact</h2>
             <p>
               {/* FIXME: this is daan's phone number, not the aero team's number anymore
               <a className={mailLink} href="tel:+31619183031">
                 <Phone className={icon} />
                 +31 6 19183031
               </a> */}
+              <span>General inquiries:</span>
               <a className={mailLink} href="mailto:info@aeroteameindhoven.nl">
                 <Mail className={icon} />
                 info@aeroteameindhoven.nl
               </a>
+              <br />
+              <span>Partnership inquiries:</span>
+              <a className={mailLink} href="mailto:partners@aeroteameindhoven.nl">
+                <Mail className={icon} />
+                partners@aeroteameindhoven.nl
+              </a>
             </p>
           </Col>
           <Col md={12} lg={4}>
-            <h2>Visiting address</h2>
+            <h2 className="title-footer">Visiting address</h2>
             <div>Horsten 8</div>
             <div>5612 AX Eindhoven</div>
             <div>The Netherlands</div>
             <p>TU/e campus</p>
           </Col>
           <Col md={12} lg={4}>
-            <h2>Social Media</h2>
+            <h2 className="title-footer">Social Media</h2>
             <div>
               <a
                 className={mailLink}

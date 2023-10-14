@@ -13,7 +13,7 @@ import UAMLogo from "../images/sponsors/uam.svg";
 import ZoomworksLogo from "../images/sponsors/zoomworks.svg";
 import WurthLogo from "../images/sponsors/wurth.svg";
 
-import { InfoEmail } from "../components/Email";
+import { PartnersEmail } from "../components/Email";
 import { HeadContent } from "../components/HeadContent";
 
 export function Head() {
@@ -28,7 +28,7 @@ function PostHeader() {
           <h1>PARTNERS</h1>
           <p>Helping us lift off! Do you want to help us redefine flying? Feel free to contact us!</p>
           <div className="button-wrapper">
-            <InfoEmail className="contact-button">Contact Us!</InfoEmail>
+            <PartnersEmail className="contact-button">Contact Us!</PartnersEmail>
           </div>
         </div>
 

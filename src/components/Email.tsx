@@ -22,3 +22,11 @@ export function JoinEmail(props: React.PropsWithChildren<Props>) {
     </a>
   );
 }
+
+export function PartnersEmail(props: React.PropsWithChildren<Props>) {
+  return (
+    <a href={`mailto:partners@aeroteameindhoven.nl`} className={props.className}>
+      {props.children}
+    </a>
+  );
+}
