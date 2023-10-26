@@ -11,7 +11,7 @@ const QUERY = graphql`
           surname
           function
           subteam
-          aero_email
+          email
           time
           study
           linkedin
@@ -51,7 +51,7 @@ interface QueryResult {
 export interface MemberCSVInfo {
   first_name: string;
   surname: string;
-  aero_email: string;
+  email: string;
   function: string;
   subteam: string;
   time: "part-time" | "full-time";
@@ -135,7 +135,7 @@ export class TeamMember {
     this.first_name = csv_info.first_name;
     this.surname = csv_info.surname;
 
-    this.email = csv_info.aero_email;
+    this.email = csv_info.email;
 
     this.title = csv_info.function;
     this.subteams = csv_info.subteam
