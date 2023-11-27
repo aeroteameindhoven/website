@@ -9,9 +9,6 @@ export default defineConfig({
   site: "https://aeroteameindhoven.nl",
   output: "static",
   compressHTML: true,
-  experimental: {
-    assets: true,
-  },
   integrations: [prefetch(), sitemap(), csv_content()],
 });
 
