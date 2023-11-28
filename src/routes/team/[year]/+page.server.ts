@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit";
 import PapaParse from "papaparse";
-import z from "zod";
 import type { EntryGenerator, PageServerLoad } from "./$types";
+import z from "zod";
 
 // TODO: encapsulate, and allow other files to get the list of teams? (from export entry?)
 const teams = import.meta.glob("/src/members/*.csv", { eager: true, as: "raw" });
@@ -35,7 +35,14 @@ const Member = z
   })
   .strict()
   .readonly();
-export type Member = z.infer<typeof Member>;
+export type MemberType = z.infer<typeof Member>;
+
+function memberImage(member: MemberType) {
+  return (
+    member.first_name.toLowerCase().replace(" ", "") +
+    member.last_name.toLowerCase().replace(" ", "")
+  );
+}
 
 export const load: PageServerLoad = ({ params }) => {
   const file_name = `/src/members/${params.year}.csv`;
@@ -47,11 +54,14 @@ export const load: PageServerLoad = ({ params }) => {
     // FIXME: do something with these errors?
     console.error(csv.errors);
 
-    const members = csv.data.map<Member>((member) => {
+    const members = csv.data.map((member) => {
       const result = Member.safeParse(member);
 
       if (result.success) {
-        return result.data;
+        return {
+          photo: `/src/members/${params.year}/${memberImage(result.data)}.jpg`,
+          ...result.data
+        };
       } else {
         throw new Error(`Failed to parse ${file_name}: ${result.error.message}`);
       }
