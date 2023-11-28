@@ -1,7 +1,7 @@
 <script lang="ts">
   const pictures = import.meta.glob("/src/members/*/*.jpg", {
     eager: true,
-    // as: "raw"
+    import: "default",
     query: {
       enhanced: true
     }
@@ -29,11 +29,16 @@
   )}</pre>
 
 {#each data.members as member}
-  <enhanced:img
-    src={pictures[member.photo]}
-    sizes="(min-width:1920px) 800px, (min-width:1080px) 600px, (min-width:768px) 400px"
-    alt="{member.first_name} {member.last_name}"
-  />
+  {#if pictures[member.photo] === undefined}
+    TODO: PLACEHOLDER
+    {member.photo}
+  {:else}
+    <enhanced:img
+      src={pictures[member.photo]}
+      alt="{member.first_name} {member.last_name}"
+      sizes="(min-width:1920px) 800px, (min-width:1080px) 600px, (min-width:768px) 400px"
+    />
+  {/if}
   <h2>{member.first_name} {member.last_name}</h2>
   <p>
     {#if member.time !== undefined}{member.time}{/if}

@@ -39,8 +39,8 @@ export type MemberType = z.infer<typeof Member>;
 
 function memberImage(member: MemberType) {
   return (
-    member.first_name.toLowerCase().replace(" ", "") +
-    member.last_name.toLowerCase().replace(" ", "")
+    member.first_name.toLowerCase().replaceAll(" ", "") +
+    member.last_name.toLowerCase().replaceAll(" ", "")
   );
 }
 
