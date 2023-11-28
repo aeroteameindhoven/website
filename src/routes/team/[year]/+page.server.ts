@@ -44,6 +44,7 @@ export const load: PageServerLoad = ({ params }) => {
   if (team_csv !== undefined) {
     const csv = PapaParse.parse<unknown>(team_csv, { header: true });
 
+    // FIXME: do something with these errors?
     console.error(csv.errors);
 
     const members = csv.data.map<Member>((member) => {
@@ -56,7 +57,16 @@ export const load: PageServerLoad = ({ params }) => {
       }
     });
 
-    return { year: params.year, team_csv, file_name, members };
+    return {
+      year: params.year,
+      team_csv,
+      file_name,
+      members,
+      // FIXME: MERGE with entries(somehow)
+      entries: Object.keys(teams).map((file_path) => ({
+        year: filename(file_path)
+      }))
+    };
   }
 
   throw error(404, "Page not found");
