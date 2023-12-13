@@ -9,7 +9,7 @@ export function Head() {
   return (
     <>
       <HeadContent title="Link Tree" />
-      <meta http-equiv="refresh" content={`3; url=${LINKTREE}`} />
+      <meta httpEquiv="refresh" content={`3; url=${LINKTREE}`} />
     </>
   );
 }
@@ -20,10 +20,13 @@ export default function NotFoundPage() {
       <Container>
         <Row>
           <Col>
-            <h1>
-              Visit our LinkTree
-            </h1>
-            <p>If you are not automatically redirected in 5 seconds, manually navigate <a className="nav" href={LINKTREE}>here</a></p>
+            <h1>Visit our LinkTree</h1>
+            <p>
+              If you are not automatically redirected in 5 seconds, manually navigate{" "}
+              <a className="nav" href={LINKTREE}>
+                here
+              </a>
+            </p>
           </Col>
         </Row>
       </Container>
