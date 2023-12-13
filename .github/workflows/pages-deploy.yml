@@ -64,7 +64,9 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v3
         with:
-          path: .cache
+          path: |
+            .cache
+            public
           key: ${{ runner.os }}-gatsby-build
           restore-keys: |
             ${{ runner.os }}-gatsby-build
