@@ -8,9 +8,9 @@ const QUERY = graphql`
       nodes {
         members {
           first_name
-          surname
+          last_name
           function
-          subteam
+          subteams
           email
           time
           study
@@ -50,10 +50,10 @@ interface QueryResult {
 
 export interface MemberCSVInfo {
   first_name: string;
-  surname: string;
+  last_name: string;
   email: string;
   function: string;
-  subteam: string;
+  subteams: string;
   time: "part-time" | "full-time";
 
   // 22-23+ fields
@@ -123,12 +123,12 @@ function joinQuery(query: QueryResult): Map<Years, TeamMember[]> {
 }
 
 function getPictureFileName(member: MemberCSVInfo): string {
-  return (member.first_name + member.surname).replace(/\s/g, "").toLowerCase();
+  return (member.first_name + member.last_name).replace(/\s/g, "").toLowerCase();
 }
 
 export class TeamMember {
   public first_name: string;
-  public surname: string;
+  public last_name: string;
 
   public email: string;
 
@@ -145,12 +145,12 @@ export class TeamMember {
 
   public constructor(csv_info: MemberCSVInfo, photo: IGatsbyImageData | undefined) {
     this.first_name = csv_info.first_name;
-    this.surname = csv_info.surname;
+    this.last_name = csv_info.last_name;
 
     this.email = csv_info.email;
 
     this.title = csv_info.function;
-    this.subteams = csv_info.subteam
+    this.subteams = csv_info.subteams
       .split(",")
       .map((x) => x.trim())
       .filter((x) => x.length > 0);
@@ -165,7 +165,7 @@ export class TeamMember {
   }
 
   public fullName() {
-    return `${this.first_name} ${this.surname}`;
+    return `${this.first_name} ${this.last_name}`;
   }
 
   public linkedInLink() {
