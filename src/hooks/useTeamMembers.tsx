@@ -146,8 +146,8 @@ export class TeamMember {
     this.time = csv_info.time;
 
     // Convert empty string to undefined
-    this.study = csv_info.study === "" ? undefined : csv_info.study;
-    this.linkedin = csv_info.linkedin === "" ? undefined : csv_info.linkedin;
+    this.study = csv_info.study === "" || csv_info.study === null ? undefined : csv_info.study;
+    this.linkedin = csv_info.linkedin === "" || csv_info.linkedin === null ? undefined : csv_info.linkedin;
 
     this.photo = photo;
   }
