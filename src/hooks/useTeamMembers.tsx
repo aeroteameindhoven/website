@@ -72,7 +72,19 @@ export function useTeamMembers(team: Years): TeamMember[] | undefined {
 
   const all_members = joinQuery(query);
 
-  return all_members.get(team);
+  return all_members.get(team)?.sort((a, b) => {
+    const a_has_photo = a.photo !== undefined;
+    const b_has_photo = b.photo !== undefined;
+
+    // Sort members with photos first
+    if (a_has_photo && !b_has_photo) {
+      return -1;
+    } else if (b_has_photo && !a_has_photo) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
 }
 
 /**
