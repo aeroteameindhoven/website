@@ -58,20 +58,7 @@ function duration_until(start: Date, end: Date) {
   const total_minutes = Math.round((end.getTime() - start.getTime()) / (60 * 1000));
   const hours = Math.floor(total_minutes / 60);
   const minutes = total_minutes % 60;
-
-  let hours_string = null;
-  if (hours > 1) {
-    hours_string = `${hours} hours`;
-  } else if (hours == 1) {
-    hours_string = `${hours} hour`;
-  }
-
-  let minutes_string = null;
-  if (minutes > 1) {
-    minutes_string = `and ${minutes} minutes`;
-  } else if (minutes == 1) {
-    minutes_string = `and ${minutes} minute`;
-  }
-
+  let hours_string = hours == 1 ? `${hours} hour` : `${hours} hours`;
+  let minutes_string = minutes == 1 ? `and ${minutes} minute` :  `and ${minutes} minutes`;
   return [hours_string, minutes_string];
 }
