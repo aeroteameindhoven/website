@@ -30,15 +30,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.head_ref }}
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: yarn
+
       - name: Install dependencies
         run: yarn install
+
       - name: ${{ matrix.check.name }}
         run: yarn run ${{ matrix.check.command }}
 
@@ -52,8 +53,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.head_ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -118,8 +117,6 @@ jobs:
       # Initialize git repo for pr-preview-action
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.head_ref }}
 
       - uses: actions/download-artifact@v3
         with:
