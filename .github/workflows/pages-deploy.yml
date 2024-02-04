@@ -39,7 +39,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-        
+
       - name: ${{ matrix.check.name }}
         run: yarn run ${{ matrix.check.command }}
 
