@@ -12,6 +12,7 @@ import MAXONLogo from "../images/sponsors/maxon.svg";
 import UAMLogo from "../images/sponsors/uam.svg";
 import ZoomworksLogo from "../images/sponsors/zoomworks.svg";
 import WurthLogo from "../images/sponsors/wurth.svg";
+import EasyCompositesLogo from "../images/sponsors/easy-composites.svg";
 
 import { PartnersEmail } from "../components/Email";
 import { HeadContent } from "../components/HeadContent";
@@ -131,6 +132,12 @@ const partnerInfo: Record<"platinum" | "gold" | "silver", PartnerInfo[]> = {
     }
   ],
   silver: [
+    {
+      name: "Easy Composites",
+      logo: <EasyCompositesLogo className="easycomposites-logo" />,
+      url: "https://www.easycomposites.eu",
+      text: "Easy Composites Ltd is a leading supplier of advanced composite materials to individuals, businesses and educational institutions.\nOur extensive selection of materials ranges from everyday composites supplies to hard-to-find advanced materials, all sourced from leading manufactures around the world. Additionally, our comprehensive selection of composites tools and equipment ensures that technologies such as vacuum bagging, resin infusion, pre-preg, CNC tooling and rapid prototyping are as accessible and achievable and possible.\n\nThe Easy Composites team are passionate about advanced composites and what they can help people to achieve.\nWe believe in sharing knowledge, not protecting it and work tirelessly to evaluate, understand and perfect new processes and techniques that we can then share through our store, guides, video tutorials and forum."
+    },
     {
       name: "Zoomworks",
       logo: <ZoomworksLogo />,
