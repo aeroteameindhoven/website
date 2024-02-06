@@ -29,16 +29,14 @@ function PostHeader() {
           return (
             <>
               <h1>{package_name.toLocaleUpperCase()}</h1>
-              <div>
-                {partners.get(package_name)?.map((v) => (
-                  <div key={v.name} className="partner-info">
-                    <a href={v.url} className="partner-logo" target="_blank" rel="noreferrer">
-                      <img src={v.logo} />
-                    </a>
-                    <div className="text" dangerouslySetInnerHTML={{ __html: v.html }} />
-                  </div>
-                ))}
-              </div>
+              {partners.get(package_name)?.map((v) => (
+                <div key={v.name} className="partner-info">
+                  <a href={v.url} className="partner-logo" target="_blank" rel="noreferrer">
+                    <img src={v.logo} />
+                  </a>
+                  <div className="text" dangerouslySetInnerHTML={{ __html: v.html }} />
+                </div>
+              ))}
             </>
           );
         })}
