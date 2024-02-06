@@ -3,3 +3,6 @@ extend-exclude = ["*.svg"]
 
 [default]
 extend-ignore-re = ["TUe"]
+
+[default.extend-words]
+nam = "nam"
