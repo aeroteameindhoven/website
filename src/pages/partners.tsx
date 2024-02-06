@@ -32,9 +32,9 @@ function PostHeader() {
               <div>
                 {partners.get(package_name)?.map((v) => (
                   <div key={v.name} className="partner-info">
-                    <div className="partner-logo">
+                    <a href={v.url} className="partner-logo" target="_blank" rel="noreferrer">
                       <img src={v.logo} />
-                    </div>
+                    </a>
                     <div className="text" dangerouslySetInnerHTML={{ __html: v.html }} />
                   </div>
                 ))}
