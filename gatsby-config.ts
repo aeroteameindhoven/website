@@ -92,8 +92,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`
+        name: `team-members`,
+        path: `${__dirname}/src/members/`
       }
     },
     {
@@ -104,6 +104,24 @@ const config: GatsbyConfig = {
       }
     },
     // END member list
+
+    // BEGIN sponsor list
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sponsors`,
+        path: `${__dirname}/src/sponsors`
+      }
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sponsors-images`,
+        path: `${__dirname}/src/images/sponsors`
+      }
+    },
+    // END sponsor list
 
     {
       resolve: `gatsby-plugin-typescript`,
