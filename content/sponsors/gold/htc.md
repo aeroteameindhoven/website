@@ -2,6 +2,7 @@
 name: HTCE UAM Hub
 logo: uam.svg
 url: "https://www.hightechcampus.com/uamhub"
+package: gold
 ---
 
 Our collaboration with the Urban Air Mobility Hub at the High Tech Campus in

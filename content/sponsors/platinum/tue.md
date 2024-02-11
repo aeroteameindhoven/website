@@ -2,6 +2,7 @@
 name: TU/e
 logo: tue.svg
 url: https://www.tue.nl/en/
+package: platinum
 ---
 
 The Eindhoven University of Technology is one of the major frontrunners in Dutch

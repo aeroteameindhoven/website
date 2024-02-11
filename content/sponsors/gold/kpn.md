@@ -2,6 +2,7 @@
 name: KPN IoT
 logo: kpn.svg
 url: "https://www.kpn.com/"
+package: gold
 ---
 
 KPN, as a leading provider of Internet of Things (IoT) services, offers us the

@@ -2,6 +2,7 @@
 name: Easy Composites
 logo: easy-composites.svg
 url: "https://www.easycomposites.eu"
+package: silver
 ---
 
 Easy Composites Ltd is a leading supplier of advanced composite materials to

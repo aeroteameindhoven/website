@@ -2,6 +2,7 @@
 name: NXP
 logo: nxp.svg
 url: https://www.nxp.com/
+package: gold
 ---
 
 Across a broad spectrum of applications, NXP aims to advance our world by

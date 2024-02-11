@@ -2,6 +2,7 @@
 name: Zoomworks
 logo: zoomworks.svg
 url: "https://zoomworks.nl/"
+package: silver
 ---
 
 Do you want to give your marketing a strong boost with powerful video marketing?

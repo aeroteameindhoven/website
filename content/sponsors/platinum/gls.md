@@ -2,6 +2,7 @@
 name: GLS
 logo: gls.svg
 url: https://gls-group.com/NL/nl/home
+package: platinum
 ---
 
 GLS is one of the biggest players in the shipping industry. Aside from being a

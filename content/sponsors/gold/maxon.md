@@ -2,6 +2,7 @@
 name: Maxon
 logo: maxon.svg
 url: "https://www.maxongroup.com/"
+package: gold
 ---
 
 By partnering with Maxon, we gain access to their extensive range of top-of-the-line

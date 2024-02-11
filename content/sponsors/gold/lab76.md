@@ -2,6 +2,7 @@
 name: Lab76
 logo: lab76.svg
 url: "https://www.lab76.org/"
+package: gold
 ---
 
 Impressed by our cool project renders? You should check out Lab76! Our

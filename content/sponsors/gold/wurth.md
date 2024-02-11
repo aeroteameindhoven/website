@@ -2,6 +2,7 @@
 name: Würth Elektronik
 logo: wurth.svg
 url: "https://www.we-online.com/en"
+package: gold
 ---
 
 Würth Elektronik is a highly successful company within the Würth Group. It's the
