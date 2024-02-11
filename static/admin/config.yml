@@ -9,7 +9,7 @@ backend:
   branch: main
   use_graphql: true
   squash_merges: true
-  base_url: https://oauth.aeroteameindhoven.nl/
+  base_url: https://actively-working-fawn.edgecompute.app/
 
 
 collections:
