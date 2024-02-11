@@ -1,6 +1,6 @@
 ---
 name: test
-logo: /src/images/sponsors/gls.svg
+logo: /src/images/sponsors/icon.png
 url: test.com
 package: silver
 ---
