@@ -6,7 +6,7 @@ const QUERY = graphql`
       filter: { sourceInstanceName: { eq: "sponsors" } }
       sort: { childMarkdownRemark: { frontmatter: { name: ASC } } }
     ) {
-      group(field: { relativeDirectory: SELECT }) {
+      group(field: { childMarkdownRemark: { frontmatter: { package: SELECT } } }) {
         partner_package: fieldValue
         nodes {
           markdown: childMarkdownRemark {

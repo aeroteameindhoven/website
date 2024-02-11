@@ -86,14 +86,14 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "member-images",
-        path: `${__dirname}/src/images/members`
+        path: `${__dirname}/content/images/members`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `team-members`,
-        path: `${__dirname}/src/members/`
+        path: `${__dirname}/content/members/`
       }
     },
     {
@@ -110,7 +110,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sponsors`,
-        path: `${__dirname}/src/sponsors`
+        path: `${__dirname}/content/sponsors`
       }
     },
     `gatsby-transformer-remark`,
@@ -118,7 +118,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sponsors-images`,
-        path: `${__dirname}/src/images/sponsors`
+        path: `${__dirname}/content/images/sponsors`
       }
     },
     // END sponsor list

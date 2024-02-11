@@ -1,0 +1,43 @@
+publish_mode: editorial_workflow
+
+show_preview_links: true
+media_folder: "/content/images"
+
+backend:
+  name: github
+  repo: aeroteameindhoven/website
+  branch: main
+  use_graphql: true
+  squash_merges: true
+  base_url: https://actively-working-fawn.edgecompute.app/
+
+
+collections:
+  - name: "sponsors"
+    label: "Sponsors"
+    folder: "/content/sponsors"
+    media_folder: "/content/images/sponsors"
+    public_folder: "/"
+    preview_path: "/partners/"
+    create: true
+    slug: "{{slug}}"
+    path: "{{package}}/{{slug}}"
+    editor:
+      preview: false
+    identifier_field: "name"
+    extension: "md"
+    summary: "[{{package | upper}}] {{name}}"
+    view_groups:
+      - label: Packages
+        field: package
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image", choose_url: false, allow_multiple: false }
+      - { label: "URL", name: "url", widget: "string" }
+      - {
+          label: "Package",
+          name: "package",
+          widget: "select",
+          options: ["platinum", "gold", "silver"],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
