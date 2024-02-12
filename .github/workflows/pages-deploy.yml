@@ -66,9 +66,10 @@ jobs:
           path: |
             .cache
             public
-          key: ${{ runner.os }}-gatsby-build
+          key: gatsby-${{ hashFiles('gatsby-config.ts') }}-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-gatsby-build
+            gatsby-${{ hashFiles('gatsby-config.ts') }}
+            gatsby
 
       - name: Install dependencies
         run: yarn install
