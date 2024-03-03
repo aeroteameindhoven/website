@@ -1,6 +1,4 @@
 publish_mode: editorial_workflow
-
-show_preview_links: true
 media_folder: "/content/images"
 
 backend:
@@ -10,7 +8,6 @@ backend:
   use_graphql: true
   squash_merges: true
   base_url: https://actively-working-fawn.edgecompute.app/
-
 
 collections:
   - name: "sponsors"
