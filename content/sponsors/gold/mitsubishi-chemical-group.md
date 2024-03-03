@@ -1,6 +1,6 @@
 ---
 name: Mitsubishi Chemical Group
-logo: /MCG_MCE.svg
+logo: /mcg_mce.svg
 url: https://eu.mitsubishi-chemical.com
 package: gold
 ---
