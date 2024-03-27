@@ -1,0 +1,60 @@
+.project-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-card {
+  width: 20rem;
+  height: auto;
+  margin: 20px;
+  background: rgb(154,225,255);
+  background: linear-gradient(135deg, rgba(154,225,255,1) 0%, rgba(223,140,150,1) 53%, rgba(255,100,100,1) 100%); 
+  padding: 0.5rem 1rem 0.5rem;
+  box-sizing: border-box;
+
+  p {
+    font-size: small;
+    margin-left: 0;
+  }
+
+  .project-text { 
+    color: black;
+  }
+}
+
+@media (max-width: 300px) {
+  .project-carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card {
+    width: 100%;
+  }
+}
+
+.project-image {
+  width: 100%;
+  height: 15rem;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.project-button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  padding: 0;
+  text-align: center;
+  text-decoration: underline;
+  margin-left: auto; 
+}
+
+.project-button:hover {
+  color: white; 
+}
+
+
