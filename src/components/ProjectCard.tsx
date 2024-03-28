@@ -11,7 +11,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectName, description }) =
       <h3 className="project-text">{projectName} </h3>
       <p className="project-text">{description}</p>
       <div className="project-image"></div> 
-      <button className="project-button">Read more</button>
+      <a className="project-link">Read more</a>
     </div>
   );
 };

@@ -7,13 +7,12 @@ import ProjectCarousel from "../components/ProjectCarousel";
 export function Head() {
   return <HeadContent title="Project" />;
 }
-
 export default function Project() {
   return (
-    <div className="projects-page">
+<div className="projects-page">      
       <Layout>
         <div >
-        <h1>Projects</h1>
+        <h1 className="projects-title">Projects</h1>
         <p>Want to know more about what we&apos;ve been working on?</p>
         </div>
         <ProjectCarousel />
