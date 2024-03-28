@@ -16,7 +16,9 @@
     "__fmt": "prettier src types gatsby-config.ts .eslintrc .yarnrc.yml package.json tsconfig.json .prettierrc .github .vscode",
     "fmt:check": "yarn __fmt --check",
     "fmt:write": "yarn __fmt --write",
-    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\""
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
+    "decap": "decap-server",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "classnames": "^2.3.2",
@@ -47,6 +49,7 @@
     "@types/react": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
+    "decap-server": "^3.0.3",
     "eslint": "^8.41.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
