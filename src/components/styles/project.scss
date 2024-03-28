@@ -1,11 +1,11 @@
 @import "./main.scss";
 
-h1,p {
-  margin-left: 5%;
-
-}
-
 .projects-title {
   text-shadow: 0.15rem 0.15rem 0px rgba($primary-pink, 1);
   font-weight: bold;
+  margin-left: 5%;
+}
+
+.projects-description {
+  margin-left: 5%;
 }

@@ -13,7 +13,7 @@ export default function Project() {
       <Layout>
         <div >
         <h1 className="projects-title">Projects</h1>
-        <p>Want to know more about what we&apos;ve been working on?</p>
+        <p className="projects-description">Want to know more about what we&apos;ve been working on?</p>
         </div>
         <ProjectCarousel />
       </Layout>
