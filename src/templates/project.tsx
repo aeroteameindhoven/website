@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Aegle3D from "../../components/3DAegle2";
-import ProjectDescription from "../../components/ProjectDescription";
-import StatsSection from "../../components/StatsSection";
-import Gallery from "../../components/ImageGallery";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Aegle3D from "../components/3DAegle2";
+import ProjectDescription from "../components/ProjectDescription";
+import StatsSection from "../components/StatsSection";
+import Gallery from "../components/ImageGallery";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../../components/styles/imagegallery.scss";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
