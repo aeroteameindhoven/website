@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 const QUERY = graphql`
-  {
+  query Projects {
     projects: allFile(filter: { sourceInstanceName: { eq: "projects" } }) {
       nodes {
         slug: name
@@ -28,31 +28,6 @@ const QUERY = graphql`
   }
 `;
 
-interface QueryResult {
-  projects: {
-    nodes: {
-      slug: string;
-      markdown: {
-        meta: {
-          name: string;
-          image: string;
-          academic_year: number;
-          blurb: string;
-        };
-        html: string;
-      };
-    }[];
-  };
-  images: {
-    nodes: {
-      relativePath: string;
-      childImageSharp: {
-        gatsbyImageData: IGatsbyImageData;
-      };
-    }[];
-  };
-}
-
 export interface Project {
   name: string;
   image?: IGatsbyImageData;
@@ -63,18 +38,18 @@ export interface Project {
 }
 
 export function useProjects(): Project[] {
-  const query = useStaticQuery<QueryResult>(QUERY);
+  const query = useStaticQuery<Queries.ProjectsQuery>(QUERY);
 
   return query.projects.nodes.map((project): Project => {
-    const image_path_no_slash = project.markdown.meta.image.replace(/^\//, "");
+    const image_path_no_slash = project?.markdown?.meta?.image?.replace(/^\//, "");
     const image = query.images.nodes.find((image) => image.relativePath === image_path_no_slash);
 
     return {
-      html: project.markdown.html,
-      name: project.markdown.meta.name,
-      academic_year: project.markdown.meta.academic_year,
-      image: image?.childImageSharp.gatsbyImageData,
-      blurb: project.markdown.meta.blurb,
+      html: project?.markdown?.html ?? "",
+      name: project?.markdown?.meta?.name ?? "",
+      academic_year: project?.markdown?.meta?.academic_year ?? 0,
+      image: image?.childImageSharp?.gatsbyImageData,
+      blurb: project?.markdown?.meta?.blurb ?? "",
       slug: project.slug
     };
   });

@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 
 const QUERY = graphql`
-  {
+  query Partners {
     sponsors: allFile(
       filter: { sourceInstanceName: { eq: "sponsors" } }
       sort: { childMarkdownRemark: { frontmatter: { name: ASC } } }
@@ -29,33 +29,9 @@ const QUERY = graphql`
   }
 `;
 
-interface QueryResult {
-  sponsors: {
-    group: {
-      partner_package: string;
-      nodes: {
-        markdown: {
-          html: string;
-          frontmatter: {
-            name: string;
-            logo: string;
-            url: string;
-          };
-        };
-      }[];
-    }[];
-  };
-  images: {
-    nodes: {
-      relativePath: string;
-      publicURL: string;
-    }[];
-  };
-}
-
 export const partner_packages = ["platinum", "gold", "silver"] as const;
 export type PartnerPackage = (typeof partner_packages)[number];
-export function isPartnerPackage(package_type: string): package_type is PartnerPackage {
+export function isPartnerPackage(package_type: unknown): package_type is PartnerPackage {
   return partner_packages.includes(package_type as PartnerPackage);
 }
 
@@ -67,7 +43,7 @@ interface PartnerInfo {
 }
 
 export function usePartners(): Map<PartnerPackage, PartnerInfo[]> {
-  const query = useStaticQuery<QueryResult>(QUERY);
+  const query = useStaticQuery<Queries.PartnersQuery>(QUERY);
 
   // TODO: verify partner package in front matter matches folder
   return new Map(
@@ -78,21 +54,25 @@ export function usePartners(): Map<PartnerPackage, PartnerInfo[]> {
 
       return [
         g.partner_package,
-        g.nodes.map<PartnerInfo>(({ markdown }) => {
+        g.nodes.map<PartnerInfo>((node) => {
+          if (node.markdown == null) {
+            throw "Partner is missing markdown";
+          }
+
           // Remove leading slash in logo file names
-          const logo_file_no_slash = markdown.frontmatter.logo.replace(/^\//, "");
+          const logo_file_no_slash = node.markdown?.frontmatter?.logo?.replace(/^\//, "");
 
           const logo = query.images.nodes.find((img) => img.relativePath === logo_file_no_slash)?.publicURL;
 
-          if (logo === undefined) {
-            throw new Error(`Unable to find image '${markdown.frontmatter.logo}' for ${markdown.frontmatter.name}`);
+          if (logo === null || logo === undefined) {
+            throw new Error(`Unable to find image '${node.markdown?.frontmatter?.logo}' for ${node.markdown?.frontmatter?.name}`);
           }
 
           return {
-            name: markdown.frontmatter.name,
+            name: node.markdown?.frontmatter?.name || "",
             logo,
-            url: markdown.frontmatter.url,
-            html: markdown.html
+            url: node.markdown?.frontmatter?.url || "/",
+            html: node.markdown?.html || ""
           };
         })
       ];

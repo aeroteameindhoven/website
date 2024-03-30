@@ -68,7 +68,7 @@ interface MemberPhotoFile extends FileNode {
 export type Years = `${number}-${number}`;
 
 export function useTeamMembers(team: Years): TeamMember[] | undefined {
-  const query = useStaticQuery<QueryResult>(QUERY);
+  const query = useStaticQuery<QueryResult>(QUERY); // FIXME: use Queries.MembersQuery
 
   const all_members = joinQuery(query);
 

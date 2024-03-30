@@ -11,9 +11,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <div className="project-card">
       <h3 className="project-text">{project.name}</h3>
       <p className="project-text">{project.blurb}</p>
-      <div className="project-image">
-        {project.image !== undefined ? <GatsbyImage image={project.image} alt={project.name} /> : null}
-      </div>
+      {project.image !== undefined ? (
+        <GatsbyImage image={project.image} alt={project.name} className="project-image" />
+      ) : null}
       <a className="project-link" href={`projects/${project.slug}`}>
         Read more
       </a>

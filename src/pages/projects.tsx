@@ -16,7 +16,7 @@ export default function Project() {
     <div className="projects-page">
       <Header></Header>
       <h1 className="projects-title">Projects</h1>
-      <p className="projects-description">Want to know more about what we&apos;ve been working on?</p>
+      <p className="projects-question">Want to know more about what we&apos;ve been working on?</p>
       <ProjectCarousel />
       <Footer></Footer>
     </div>

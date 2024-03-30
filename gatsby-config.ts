@@ -1,6 +1,7 @@
 import { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  graphqlTypegen: true,
   pathPrefix: process.env["PATH_PREFIX"],
   siteMetadata: {
     title: `Aero Team Eindhoven`,
