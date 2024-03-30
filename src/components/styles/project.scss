@@ -1,7 +1,11 @@
-@import "./main.scss";
+// @import "./main.scss";
 
+.projects-page {
+  background-image: url('../../images/project/projects-background.svg');
+  background-size: cover;
+}
 .projects-title {
-  text-shadow: 0.15rem 0.15rem 0px rgba($primary-pink, 1);
+  text-shadow: 0.15rem 0.15rem 0px rgba(#ff6464, 1);
   font-weight: bold;
   margin-left: 5%;
 }
