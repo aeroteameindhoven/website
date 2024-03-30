@@ -69,6 +69,7 @@ interface PartnerInfo {
 export function usePartners(): Map<PartnerPackage, PartnerInfo[]> {
   const query = useStaticQuery<QueryResult>(QUERY);
 
+  // TODO: verify partner package in front matter matches folder
   return new Map(
     query.sponsors.group.map((g) => {
       if (!isPartnerPackage(g.partner_package)) {

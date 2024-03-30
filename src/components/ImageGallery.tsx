@@ -1,17 +1,16 @@
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import "../components/styles/imagegallery.scss";
-import React from "react";
+import React from 'react';
 
 interface GalleryProps {
-  images: IGatsbyImageData[];
+  images: string[];
 }
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
   return (
-    <div className="gallery">
+    <div className="gallery" data-aos="fade-up">
       <div>Gallery</div>
-      {images.map((image, index) => (
-        <GatsbyImage key={index} image={image} alt={`Drone View ${index}`} className="gallery-image" />
+      {images.map((image: string, index: number) => (
+        <img key={index} src={image} alt={`Drone View ${index}`} className="gallery-image" />
       ))}
     </div>
   );

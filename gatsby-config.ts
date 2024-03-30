@@ -123,6 +123,24 @@ const config: GatsbyConfig = {
     },
     // END sponsor list
 
+    // BEGIN sponsor list
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/content/projects`
+      }
+    },
+    // `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `project-images`,
+        path: `${__dirname}/content/images/projects`
+      }
+    },
+    // END sponsor list
+
     {
       resolve: `gatsby-plugin-typescript`,
       options: {

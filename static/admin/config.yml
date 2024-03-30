@@ -2,18 +2,18 @@ publish_mode: editorial_workflow
 media_folder: "/content/images"
 
 # Development (https://decapcms.org/docs/working-with-a-local-git-repository/)
-# local_backend: true
-# backend:
-#   name: git-gateway
-
-# Production
+local_backend: true
 backend:
-  name: github
-  repo: aeroteameindhoven/website
-  branch: main
-  use_graphql: true
-  squash_merges: true
-  base_url: https://actively-working-fawn.edgecompute.app/
+  name: git-gateway
+
+# # Production
+# backend:
+#   name: github
+#   repo: aeroteameindhoven/website
+#   branch: main
+#   use_graphql: true
+#   squash_merges: true
+#   base_url: https://actively-working-fawn.edgecompute.app/
 
 collections:
   - name: "sponsors"
@@ -35,20 +35,9 @@ collections:
         field: package
     fields:
       - { label: "Name", name: "name", widget: "string" }
-      - {
-          label: "Logo",
-          name: "logo",
-          widget: "image",
-          choose_url: false,
-          allow_multiple: false,
-        }
+      - { label: "Logo", name: "logo", widget: "image", choose_url: false, allow_multiple: false }
       - { label: "URL", name: "url", widget: "string" }
-      - {
-          label: "Package",
-          name: "package",
-          widget: "select",
-          options: ["platinum", "gold", "silver"],
-        }
+      - { label: "Package", name: "package", widget: "select", options: ["platinum", "gold", "silver"] }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "projects"
     label: "Projects"
@@ -57,21 +46,11 @@ collections:
     public_folder: "/"
     preview_path: "/projects/"
     create: true
-    slug: "{{academic_year}}-{{slug}}"
+    slug: "{{slug}}"
     identifier_field: "name"
     fields:
       - { label: "Name", name: "name", widget: "string" }
-      - {
-          label: "Image",
-          name: "image",
-          widget: "image",
-          choose_url: false,
-          allow_multiple: false,
-        }
-      - {
-          label: "Academic Year",
-          name: "academic_year",
-          widget: "number",
-          value_type: "int"
-        }
-      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image", choose_url: false, allow_multiple: false }
+      - { label: "Academic Year", name: "academic_year", widget: "number", value_type: "int" }
+      - { label: "Blurb", name: "blurb", widget: "text" }
+      - { label: "Extended Description", name: "body", widget: "markdown" }
