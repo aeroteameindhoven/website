@@ -48,9 +48,20 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: "name"
+    view_groups:
+      - label: Years
+        field: academic_year
+    editor:
+      preview: false
     fields:
       - { label: "Name", name: "name", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", choose_url: false, allow_multiple: false }
+      - {
+          label: "Images",
+          name: images,
+          widget: "list",
+          summary: "{{fields.image}}",
+          field: { label: "Image", name: "image", widget: "image", choose_url: false, allow_multiple: false }
+        }
       - { label: "Academic Year", name: "academic_year", widget: "number", value_type: "int" }
       - { label: "Blurb", name: "blurb", widget: "text" }
       - { label: "Extended Description", name: "body", widget: "markdown" }

@@ -1,6 +1,9 @@
 ---
 name: Aegle v2
 image: /me-and-andy-s-mouse-love-child.png
+images:
+  - /me-and-andy-s-mouse-love-child.png
+  - /untitled-design.png
 academic_year: 2023
 blurb: Drone 2
 ---
