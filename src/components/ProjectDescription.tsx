@@ -1,5 +1,6 @@
 import React from "react";
 import "../components/styles/projectdescription.scss";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface ProjectDescriptionProps {
   title: string;
@@ -15,7 +16,12 @@ const ProjectDescription: React.FC<ProjectDescriptionProps> = ({ title, descript
         <div className="description">{description}</div>
       </div>
       <div className="image-container">
-        <img src={imageSrc} />
+      <StaticImage
+        src={imageSrc}
+        alt="Aero team member performing management tasks"
+        objectFit="cover"
+        className="image"
+      />
       </div>
     </div>
   );
