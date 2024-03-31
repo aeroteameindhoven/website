@@ -11,10 +11,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <div className="project-card">
       <h3 className="project-text">{project.name}</h3>
       <p className="project-text">{project.blurb}</p>
-      {project.image !== undefined ? (
-        <GatsbyImage image={project.image} alt={project.name} className="project-image" />
+      {project.images[0] !== undefined ? (
+        <GatsbyImage image={project.images[0]} alt={project.name} className="project-image" />
       ) : null}
-      <a className="project-link" href={`projects/${project.slug}`}>
+      <a className="project-link" href={project.slug}>
         Read more
       </a>
     </div>

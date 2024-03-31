@@ -9,9 +9,10 @@ const QUERY = graphql`
         markdown: childMarkdownRemark {
           meta: frontmatter {
             name
-            image
+            images
             academic_year
             blurb
+            model
           }
           html
         }
@@ -25,32 +26,50 @@ const QUERY = graphql`
         }
       }
     }
+    models: allFile(filter: { sourceInstanceName: { eq: "project-models" } }) {
+      nodes {
+        relativePath
+        publicURL
+      }
+    }
   }
 `;
 
 export interface Project {
   name: string;
-  image?: IGatsbyImageData;
+  images: IGatsbyImageData[];
   academic_year: number;
   html: string;
   blurb: string;
   slug: string;
+  model?: string;
 }
 
 export function useProjects(): Project[] {
   const query = useStaticQuery<Queries.ProjectsQuery>(QUERY);
 
+  const all_images = new Map(
+    query.images.nodes.map((image) => [image.relativePath, image.childImageSharp!.gatsbyImageData!])
+  );
+
+  const all_models = new Map(query.models.nodes.map((image) => [image.relativePath, image.publicURL]));
+
   return query.projects.nodes.map((project): Project => {
-    const image_path_no_slash = project?.markdown?.meta?.image?.replace(/^\//, "");
-    const image = query.images.nodes.find((image) => image.relativePath === image_path_no_slash);
+    const initial_images = project?.markdown?.meta?.images ?? [];
+    const images = initial_images
+      .map((image_path) => all_images.get(image_path?.replace(/^\//, "") ?? ""))
+      .filter<IGatsbyImageData>((image): image is IGatsbyImageData => image !== undefined);
+
+    const model = all_models.get(project?.markdown?.meta?.model?.replace(/^\//, "") ?? "") ?? undefined;
 
     return {
       html: project?.markdown?.html ?? "",
       name: project?.markdown?.meta?.name ?? "",
       academic_year: project?.markdown?.meta?.academic_year ?? 0,
-      image: image?.childImageSharp?.gatsbyImageData,
+      images: images,
       blurb: project?.markdown?.meta?.blurb ?? "",
-      slug: project.slug
+      slug: project.slug,
+      model
     };
   });
 }

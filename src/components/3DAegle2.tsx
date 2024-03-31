@@ -1,37 +1,46 @@
-import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import React, { useEffect, useRef } from "react";
+import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-const DroneModel: React.FC = () => {
+// Define the component as a React Functional Component with no props
+interface ModelProps {
+  model_path: string;
+}
+
+const DroneModel: React.FC<ModelProps> = ({model_path}) => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!mountRef.current) return;
+    const mount = mountRef.current;
+    if (!mount) return;
 
     // Scene, camera, and renderer setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setClearColor(new THREE.Color(0x000000)); // Set background color to see if the renderer works
+    renderer.setClearColor(0x000000, 0);    
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
+    mount.appendChild(renderer.domElement);
 
     // Lighting
-    const ambientLight = new THREE.AmbientLight(0x404040, 2);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(1, 1, 1);
-    scene.add(ambientLight, directionalLight);
+    const ambientLight = new THREE.AmbientLight(0x404040, 5); // Increased intensity
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 5); // Increased intensity
+    directionalLight.position.set(0.5, 1, 1);
+    scene.add(ambientLight);
+    scene.add(directionalLight);
 
     // Load 3D model
     const loader = new GLTFLoader();
     loader.load(
-      '../images/project/plane.glb',
-      (glb) => {
-        scene.add(glb.scene);
+      model_path,
+      (gltf) => {
+        scene.add(gltf.scene);
+        gltf.scene.position.set(0, 0, 0); // Center the model
+        console.log("Model loaded:", gltf.scene); // Confirm model loads
       },
-      undefined, // onProgress callback not needed here
-      (error) => console.error('An error happened', error)
+      undefined,
+      (error) => console.error("An error happened", error)
     );
 
     // Controls to rotate the model
@@ -40,12 +49,13 @@ const DroneModel: React.FC = () => {
     controls.dampingFactor = 0.25;
     controls.enableZoom = true;
 
-    camera.position.z = 5;
+    camera.position.set(0, 1, 2); // Adjust if necessary to fit the model
+    camera.lookAt(scene.position);
 
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
-      controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
+      controls.update();
       renderer.render(scene, camera);
     };
     animate();
@@ -57,17 +67,27 @@ const DroneModel: React.FC = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
+    // Cleanup on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
-      if (mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement); // Cleanup on unmount
+      window.removeEventListener("resize", handleResize);
+      if (mount) {
+        mount.removeChild(renderer.domElement);
       }
     };
   }, []);
 
-  return <div ref={mountRef} style={{ width: '100%', height: '100vh' }} />;
+  return (
+    <div
+      ref={mountRef}
+      style={{
+        width: "100%",
+        height: "100vh",
+        background: "linear-gradient(135deg, #9ae1ff 0%, #df8c96 53%, #ff6464 100%)"
+      }}
+    />
+  );
 };
 
 export default DroneModel;

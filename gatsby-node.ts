@@ -1,8 +1,9 @@
 import { CreatePagesArgs } from "gatsby";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 // TODO: keep in sync with useProjects
 export const createPages = async function ({ actions, graphql }: CreatePagesArgs) {
-  const { data } = await graphql<Queries.ProjectsQuery>(`
+  const { data } = await graphql<Queries.ProjectsPagesQuery>(`
     query Projects {
       projects: allFile(filter: { sourceInstanceName: { eq: "projects" } }) {
         nodes {
@@ -10,9 +11,10 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
           markdown: childMarkdownRemark {
             meta: frontmatter {
               name
-              image
+              images
               academic_year
               blurb
+              model
             }
             html
           }
@@ -26,12 +28,32 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
           }
         }
       }
+      models: allFile(filter: { sourceInstanceName: { eq: "project-models" } }) {
+        nodes {
+          relativePath
+          publicURL
+        }
+      }
     }
   `);
 
+  if (data === undefined) {
+    return;
+  }
+
+  const all_images = new Map(
+    data.images.nodes.map((image) => [image.relativePath, image.childImageSharp!.gatsbyImageData!])
+  );
+
+  const all_models = new Map(data.models.nodes.map((image) => [image.relativePath, image.publicURL]));
+
   for (const project of data?.projects.nodes ?? []) {
-    const image_path_no_slash = project?.markdown?.meta?.image?.replace(/^\//, "");
-    const image = data?.images.nodes.find((image) => image.relativePath === image_path_no_slash);
+    const initial_images = project?.markdown?.meta?.images ?? [];
+    const images = initial_images
+      .map((image_path) => all_images.get(image_path?.replace(/^\//, "") ?? ""))
+      .filter((image): image is IGatsbyImageData => image !== undefined);
+
+    const model = all_models.get(project?.markdown?.meta?.model?.replace(/^\//, "") ?? "") ?? undefined;
 
     actions.createPage({
       path: `/projects/${project.slug}`,
@@ -40,9 +62,10 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
         html: project?.markdown?.html ?? "",
         name: project?.markdown?.meta?.name ?? "",
         academic_year: project?.markdown?.meta?.academic_year ?? 0,
-        image: image?.childImageSharp?.gatsbyImageData,
+        images: images,
         blurb: project?.markdown?.meta?.blurb ?? "",
-        slug: project.slug
+        slug: project.slug,
+        model
       }
     });
   }

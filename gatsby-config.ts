@@ -1,7 +1,9 @@
 import { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
-  graphqlTypegen: true,
+  graphqlTypegen: {
+    generateOnBuild: true
+  },
   pathPrefix: process.env["PATH_PREFIX"],
   siteMetadata: {
     title: `Aero Team Eindhoven`,
@@ -87,14 +89,14 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "member-images",
-        path: `${__dirname}/content/images/members`
+        path: `${__dirname}/content/members/images`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `team-members`,
-        path: `${__dirname}/content/members/`
+        path: `${__dirname}/content/members/csv`
       }
     },
     {
@@ -111,7 +113,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sponsors`,
-        path: `${__dirname}/content/sponsors`
+        path: `${__dirname}/content/sponsors/markdown`
       }
     },
     `gatsby-transformer-remark`,
@@ -119,7 +121,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sponsors-images`,
-        path: `${__dirname}/content/images/sponsors`
+        path: `${__dirname}/content/sponsors/images`
       }
     },
     // END sponsor list
@@ -129,7 +131,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
-        path: `${__dirname}/content/projects`
+        path: `${__dirname}/content/projects/markdown`
       }
     },
     // `gatsby-transformer-remark`,
@@ -137,7 +139,14 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `project-images`,
-        path: `${__dirname}/content/images/projects`
+        path: `${__dirname}/content/projects/images`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `project-models`,
+        path: `${__dirname}/content/projects/models`
       }
     },
     // END sponsor list

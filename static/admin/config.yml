@@ -18,13 +18,12 @@ backend:
 collections:
   - name: "sponsors"
     label: "Sponsors"
-    folder: "/content/sponsors"
-    media_folder: "/content/images/sponsors"
+    folder: "/content/sponsors/markdown"
+    media_folder: "/content/sponsors/images"
     public_folder: "/"
     preview_path: "/partners/"
     create: true
     slug: "{{slug}}"
-    path: "{{package}}/{{slug}}"
     editor:
       preview: false
     identifier_field: "name"
@@ -41,8 +40,8 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "projects"
     label: "Projects"
-    folder: "/content/projects"
-    media_folder: "/content/images/projects"
+    folder: "/content/projects/markdown"
+    media_folder: "/content/projects/images"
     public_folder: "/"
     preview_path: "/projects/"
     create: true
@@ -61,6 +60,16 @@ collections:
           widget: "list",
           summary: "{{fields.image}}",
           field: { label: "Image", name: "image", widget: "image", choose_url: false, allow_multiple: false }
+        }
+      - {
+          label: "3D Model",
+          name: model,
+          widget: file,
+          required: false,
+          allow_multiple: false,
+          choose_url: false,
+          media_folder: "/content/projects/models",
+          public_folder: "/"
         }
       - { label: "Academic Year", name: "academic_year", widget: "number", value_type: "int" }
       - { label: "Blurb", name: "blurb", widget: "text" }
