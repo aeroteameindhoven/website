@@ -96,7 +96,7 @@ jobs:
 
   # Typecheck
   check:
-    needs: [lint, build]
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -136,7 +136,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    needs: [build, check]
+    needs: [build, check, lint]
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
@@ -149,7 +149,7 @@ jobs:
       url: ${{ steps.deployment.outputs.deployment-url }}
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    needs: [build, check]
+    needs: [build, check, lint]
     steps:
       # Initialize git repo for pr-preview-action
       - name: Checkout
