@@ -3,7 +3,7 @@ import { IGatsbyImageData } from "gatsby-plugin-image";
 
 // TODO: keep in sync with useProjects
 export const createPages = async function ({ actions, graphql }: CreatePagesArgs) {
-  const { data } = await graphql<Queries.ProjectsPagesQuery>(`
+  const { data } = await graphql<Queries.ProjectsQuery>(`
     query Projects {
       projects: allFile(filter: { sourceInstanceName: { eq: "projects" } }) {
         nodes {
