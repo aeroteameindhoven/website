@@ -18,16 +18,12 @@ export default function Aegle2({ pageContext: project }: PageProps<object, Proje
 
   return (
     <div className="aegle2">
-      <Header></Header>
+      <Header />
       {project.model && <Aegle3D model_path={project.model} />}
-      <ProjectDescription
-        title={project.name}
-        description={project.html}
-        imageSrc={project.images[0]}
-      ></ProjectDescription>
+      <ProjectDescription title={project.name} description={project.html} imageSrc={project.images[0]} />
       <StatsSection />
       <Gallery images={project.images} />
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

@@ -14,11 +14,11 @@ export function Head() {
 export default function Project() {
   return (
     <div className="projects-page">
-      <Header></Header>
+      <Header />
       <h1 className="projects-title">Projects</h1>
       <p className="projects-question">Want to know more about what we&apos;ve been working on?</p>
       <ProjectCarousel />
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

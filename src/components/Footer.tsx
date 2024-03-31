@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-grid-system";
+import { Col } from "react-grid-system";
 import { siteFooter, mailLink, icon, appName } from "./styles/footer.module.scss";
 import Mail from "../images/icons/email.svg";
 // import Phone from "../images/icons/phone.svg";

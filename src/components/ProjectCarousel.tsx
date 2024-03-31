@@ -1,10 +1,9 @@
-import React from 'react';
-import ProjectCard from './ProjectCard';
+import React from "react";
+import ProjectCard from "./ProjectCard";
 import "./styles/projects.scss";
-import { useProjects } from '../hooks/useProjects';
+import { useProjects } from "../hooks/useProjects";
 
 const ProjectCarousel = () => {
-
   // const projects = [
   //   { name: 'Birb', description: 'Our self-care bird.', link: '/birb'},
   //   { name: 'Aegle', description: 'Our first iteration of the cargo drone.', link: '/aegle2'},

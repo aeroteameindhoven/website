@@ -65,7 +65,9 @@ export function usePartners(): Map<PartnerPackage, PartnerInfo[]> {
           const logo = query.images.nodes.find((img) => img.relativePath === logo_file_no_slash)?.publicURL;
 
           if (logo === null || logo === undefined) {
-            throw new Error(`Unable to find image '${node.markdown?.frontmatter?.logo}' for ${node.markdown?.frontmatter?.name}`);
+            throw new Error(
+              `Unable to find image '${node.markdown?.frontmatter?.logo}' for ${node.markdown?.frontmatter?.name}`
+            );
           }
 
           return {

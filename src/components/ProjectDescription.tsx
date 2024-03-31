@@ -13,11 +13,9 @@ const ProjectDescription: React.FC<ProjectDescriptionProps> = ({ title, descript
     <div className="project-description-section" data-aos="fade-up" data-aos-duration="2000">
       <div className="text-container">
         <h2>{title}</h2>
-        <div className="description" dangerouslySetInnerHTML={{__html: description}}></div>
+        <div className="description" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
-      <div className="image-container">
-        {imageSrc && <GatsbyImage image={imageSrc} alt={title} />}
-      </div>
+      <div className="image-container">{imageSrc && <GatsbyImage image={imageSrc} alt={title} />}</div>
     </div>
   );
 };

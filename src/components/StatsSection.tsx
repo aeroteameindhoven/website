@@ -1,6 +1,6 @@
 import "../components/styles/stats.scss";
 
-import React from 'react';
+import React from "react";
 
 const StatsSection = () => {
   return (
