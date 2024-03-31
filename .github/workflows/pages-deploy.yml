@@ -84,7 +84,7 @@ jobs:
         run: yarn run build
 
       - name: Upload built pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
 
@@ -140,7 +140,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 
   # Deploy PR-Preview
   deploy-preview:
