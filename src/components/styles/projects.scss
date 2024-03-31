@@ -1,4 +1,4 @@
-@import 'main.scss';
+@import "main.scss";
 
 .project-carousel {
   display: flex;
@@ -13,17 +13,17 @@
   width: 20rem;
   height: auto;
   margin: 20px;
-  background: rgb(154,225,255);
-  background: linear-gradient(135deg, #9ae1ff 0%, #df8c96 53%, #ff6464 100%); 
+  background: rgb(154, 225, 255);
+  background: linear-gradient(135deg, #9ae1ff 0%, #df8c96 53%, #ff6464 100%);
   padding: 0.5rem 1rem 0.5rem;
   box-sizing: border-box;
 
   p {
-    font-size:medium;
+    font-size: medium;
     margin-left: 0;
   }
 
-  .project-text { 
+  .project-text {
     color: black;
     margin: 0.5rem;
     margin-left: 0;
@@ -54,12 +54,10 @@
   padding: 0;
   text-align: center;
   text-decoration: underline;
-  margin-left: auto; 
+  margin-left: auto;
   font-size: medium;
 }
 
 .project-link:hover {
-  color: white; 
+  color: white;
 }
-
-
