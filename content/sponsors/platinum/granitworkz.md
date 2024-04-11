@@ -1,6 +1,6 @@
 ---
 name: Granitworkz
-logo: /zoomworks.svg
+logo: /squishedana.png
 url: google.com
 package: platinum
 ---
