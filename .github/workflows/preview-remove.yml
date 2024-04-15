@@ -14,7 +14,7 @@ jobs:
     steps:
       # Initialize git repo for pr-preview-action
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: main # PR branch may be deleted at this point
 
