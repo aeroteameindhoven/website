@@ -3,7 +3,7 @@ name: Deploy Gatsby site to Pages
 on:
   push:
     branches: ["main"]
-  merge_group: 
+  merge_group:
   pull_request:
     types:
       - opened
