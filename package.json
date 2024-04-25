@@ -19,6 +19,7 @@
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\""
   },
   "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.0.5",
     "classnames": "^2.3.2",
     "gatsby": "^5.10.0",
     "gatsby-plugin-ackee-tracker": "^4.0.4",
