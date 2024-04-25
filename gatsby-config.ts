@@ -57,6 +57,21 @@ const config: GatsbyConfig = {
         detailed: true
       }
     },
+    {
+      // https://www.gatsbyjs.com/plugins/gatsby-plugin-umami/
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId:
+          process.env["STAGING"] === "true"
+            ? "18e240ca-d978-4890-ba33-7a2851a5117c" // Staging
+            : "ba37d9c7-eb50-4d46-a038-448ec0ec9e44", // Production
+        srcUrl: "https://umami.aeroteameindhoven.nl/script.js",
+        includeInDevelopment: false,
+        autoTrack: true,
+        respectDoNotTrack: true,
+        dataCache: true
+      }
+    },
 
     // {
     //   resolve: "gatsby-source-wordpress",
