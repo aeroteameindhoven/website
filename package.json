@@ -28,6 +28,7 @@
     "gatsby-plugin-sass": "^6.10.0",
     "gatsby-plugin-sharp": "^5.10.0",
     "gatsby-plugin-sitemap": "^6.10.0",
+    "gatsby-plugin-umami": "^0.1.5",
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-source-wordpress": "^7.10.0",
     "gatsby-transformer-csv": "^5.10.0",

@@ -1,7 +1,7 @@
 node_modules/
 .cache/
 public
-src/gatsby-types.d.ts
+gatsby-types.d.ts
 
 # Yarn
 .pnp.*
