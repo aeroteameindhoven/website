@@ -3,6 +3,7 @@ name: Deploy Gatsby site to Pages
 on:
   push:
     branches: ["main"]
+  merge_group:
   pull_request:
     types:
       - opened
@@ -134,7 +135,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     needs: [build, check, lint]
     steps:
@@ -147,7 +148,7 @@ jobs:
     environment:
       name: github-pages-staging
       url: ${{ steps.deployment.outputs.deployment-url }}
-    if: github.event_name == 'pull_request'
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     needs: [build, check, lint]
     steps:
