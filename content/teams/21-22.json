@@ -1,0 +1,40 @@
+{
+  "year": "21-22",
+  "description": "In 2022 the first year of Aero Team started, and was founded by members from the old teams Blue Jay Eindhoven and Team Syfly.",
+  "members": [
+    {
+      "first_name": "Matthijs",
+      "last_name": "van de Vosse",
+      "function": "Team Manager",
+      "subteams": [
+        "Management"
+      ],
+      "email": "m.vandevosse@aeroteameindhoven.nl",
+      "photo": "matthijsvandevosse.jpg",
+      "time": "full-time"
+    },
+    {
+      "first_name": "Daan",
+      "last_name": "Hegger",
+      "function": "PR Manager",
+      "subteams": [
+        "Management",
+        "Promotion"
+      ],
+      "time": "full-time",
+      "email": "d.hegger@aeroteameindhoven.nl",
+      "photo": "daanhegger.jpg"
+    },
+    {
+      "first_name": "Marthe",
+      "last_name": "Post",
+      "function": "HR Manager",
+      "subteams": [
+        "Management"
+      ],
+      "email": "m.post@aeroteameindhoven.nl",
+      "time": "full-time",
+      "photo": "marthepost.jpg"
+    }
+  ]
+}

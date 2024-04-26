@@ -123,6 +123,29 @@ const config: GatsbyConfig = {
     },
     // END member list
 
+    // BEGIN team list
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "team-photos",
+        path: `${__dirname}/content/images/teams`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "teams",
+        path: `${__dirname}/content/teams`
+      }
+    },
+    {
+      resolve: "gatsby-transformer-json",
+      options: {
+        typeName: "json"
+      }
+    },
+    // END team list
+
     // BEGIN sponsor list
     {
       resolve: `gatsby-source-filesystem`,
