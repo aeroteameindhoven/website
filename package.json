@@ -24,7 +24,6 @@
     "@fontsource-variable/dm-sans": "^5.0.5",
     "@types/aos": "^3.0.7",
     "aos": "^2.3.4",
-    "autoprefixer": "^10.4.19",
     "classnames": "^2.3.2",
     "gatsby": "^5.10.0",
     "gatsby-plugin-ackee-tracker": "^4.0.4",
