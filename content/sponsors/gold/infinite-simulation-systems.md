@@ -1,6 +1,6 @@
 ---
 name: Infinite Simulation Systems
-logo: /innoptus_infinite-1.svg
+logo: innoptus_infinite-1.svg
 url: https://www.infinite.nl/nl
 package: gold
 ---

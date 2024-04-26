@@ -1,7 +1,7 @@
 ---
 name: Zoomworks
 logo: zoomworks.svg
-url: "https://zoomworks.nl/"
+url: https://zoomworks.nl/
 package: silver
 ---
 

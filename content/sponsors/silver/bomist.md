@@ -1,6 +1,6 @@
 ---
 name: BOMIST
-logo: /bomist_logo.svg
+logo: bomist_logo.svg
 url: https://bomist.com/
 package: silver
 ---
