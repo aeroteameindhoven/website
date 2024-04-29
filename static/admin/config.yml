@@ -76,8 +76,8 @@ collections:
           - { label: Last Name, name: last_name, widget: string }
           - { label: Function, name: function, widget: string }
           - { label: Subteams, name: subteams, widget: list }
-          - label: Commitment
-            name: time
+          - label: Time Commitment
+            name: time-commitment
             widget: select
             options:
               - { label: Full Time, value: full-time }

@@ -1,37 +1,32 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
-import { FileNode } from "gatsby-plugin-image/dist/src/components/hooks";
 
 const QUERY = graphql`
   query Members {
-    allMembers {
-      nodes {
-        members {
-          first_name
-          last_name
-          function
-          subteams
-          email
-          time
-          study
-          linkedin
-        }
-        parent {
-          ... on File {
-            name
+    photos: allFile(filter: { sourceInstanceName: { eq: "team-photos" } }) {
+      group(field: { relativeDirectory: SELECT }) {
+        year: fieldValue
+        files: nodes {
+          path: base
+          childImageSharp {
+            gatsbyImageData(width: 330)
           }
         }
       }
     }
-    allFile(filter: { sourceInstanceName: { eq: "member-images" } }) {
-      group(field: { relativeDirectory: SELECT }) {
-        fieldValue
-        nodes {
-          id
-          name
-          childImageSharp {
-            # 330px is width of member image card
-            gatsbyImageData(width: 330)
+    data: allFile(filter: { sourceInstanceName: { eq: "teams" } }) {
+      nodes {
+        data: childJson {
+          year
+          description
+          members {
+            first_name
+            last_name
+            function
+            subteams
+            email
+            photo
+            time_commitment
           }
         }
       }
@@ -39,36 +34,18 @@ const QUERY = graphql`
   }
 `;
 
-interface QueryResult {
-  allMembers: {
-    nodes: { members: MemberCSVInfo[]; parent: { name: Years } }[];
-  };
-  allFile: {
-    group: { fieldValue: Years; nodes: MemberPhotoFile[] }[];
-  };
-}
-
-export interface MemberCSVInfo {
-  first_name: string;
-  last_name: string;
-  email: string;
-  function: string;
-  subteams: string;
-  time: "part-time" | "full-time";
-
-  // 22-23+ fields
-  study?: string;
-  linkedin?: string;
-}
-
-interface MemberPhotoFile extends FileNode {
-  name: string;
-}
-
 export type Years = `${number}-${number}`;
+export function isYears(years: unknown): years is Years {
+  return typeof years === "string" && /[0-9]{2}-[0-9]{2}/.test(years);
+}
+
+export type TimeCommitment = "part-time" | "full-time";
+export function isTimeCommitment(time: unknown): time is TimeCommitment {
+  return typeof time === "string" && /(?:part|full)-time/.test(time);
+}
 
 export function useTeamMembers(team: Years): TeamMember[] | undefined {
-  const query = useStaticQuery<QueryResult>(QUERY);
+  const query = useStaticQuery<Queries.MembersQuery>(QUERY);
 
   const all_members = joinQuery(query);
 
@@ -88,42 +65,47 @@ export function useTeamMembers(team: Years): TeamMember[] | undefined {
 }
 
 /**
- * Join the member info CSV data with the member's profile photo
+ * Join the member info data with the member's profile photo
  *
  * @param query The result from the graqhql query
  * @returns The merged member info
  */
-function joinQuery(query: QueryResult): Map<Years, TeamMember[]> {
-  let photosMap = new Map<Years, Map<string, IGatsbyImageData | undefined>>();
-  for (let yearGroup of query.allFile.group) {
-    let photoNameMapping = new Map<string, IGatsbyImageData | undefined>();
-
-    for (let photo of yearGroup.nodes) {
-      photoNameMapping.set(photo.name, photo.childImageSharp?.gatsbyImageData);
+function joinQuery(query: Queries.MembersQuery): Map<Years, TeamMember[]> {
+  let photosMap = new Map<`${Years}|${string}`, IGatsbyImageData | undefined>();
+  for (let yearGroup of query.photos.group) {
+    if (!isYears(yearGroup.year)) {
+      throw new TypeError(`Year grouping is invalid: ${yearGroup.year}`);
     }
 
-    photosMap.set(yearGroup.fieldValue, photoNameMapping);
+    for (let photo of yearGroup.files) {
+      photosMap.set(`${yearGroup.year}|${photo.path}`, photo.childImageSharp?.gatsbyImageData);
+    }
   }
 
   let membersMap = new Map<Years, TeamMember[]>();
+  for (let membersNode of query.data.nodes) {
+    if (membersNode.data === null) throw new TypeError("No JSON data received from query");
 
-  for (let membersNode of query.allMembers.nodes) {
-    const year = membersNode.parent.name;
+    if (!isYears(membersNode.data.year)) throw new TypeError(`Year grouping is invalid: ${membersNode.data.year}`);
+    const year = membersNode.data.year;
 
-    let memberList = [];
+    if (membersNode.data.members === null) throw new TypeError(`No members found for year "${year}"`);
 
-    for (let member of membersNode.members) {
-      memberList.push(new TeamMember(member, photosMap.get(year)?.get(getPictureFileName(member))));
-    }
+    membersMap.set(
+      year,
+      membersNode.data.members.map((member) => {
+        if (member === null) throw new TypeError("Member is null");
 
-    membersMap.set(year, memberList);
+        const photo_path = member?.photo ?? undefined;
+
+        const photo = photo_path === undefined ? undefined : photosMap.get(`${year}|${photo_path}`);
+
+        return new TeamMember(member, photo);
+      })
+    );
   }
 
   return membersMap;
-}
-
-function getPictureFileName(member: MemberCSVInfo): string {
-  return (member.first_name + member.last_name).replace(/\s/g, "").toLowerCase();
 }
 
 export class TeamMember {
@@ -135,7 +117,7 @@ export class TeamMember {
   public title: string;
   public subteams: string[];
 
-  public time: "part-time" | "full-time";
+  public time_commitment: TimeCommitment;
 
   // New fields for team 22-23
   public study?: string;
@@ -143,23 +125,33 @@ export class TeamMember {
 
   public photo?: IGatsbyImageData;
 
-  public constructor(csv_info: MemberCSVInfo, photo: IGatsbyImageData | undefined) {
-    this.first_name = csv_info.first_name;
-    this.last_name = csv_info.last_name;
+  public constructor(query_info: Queries.jsonMembers, photo: IGatsbyImageData | undefined) {
+    if (query_info.first_name === null) throw new TypeError("Member has no first name");
+    this.first_name = query_info.first_name;
+    if (query_info.last_name === null) throw new TypeError("Member has no last name");
+    this.last_name = query_info.last_name;
 
-    this.email = csv_info.email;
+    if (query_info.email === null) throw new TypeError("Member has no email");
+    this.email = query_info.email;
 
-    this.title = csv_info.function;
-    this.subteams = csv_info.subteams
-      .split(",")
-      .map((x) => x.trim())
-      .filter((x) => x.length > 0);
+    if (query_info.function === null) throw new TypeError("Member has no function");
+    this.title = query_info.function;
 
-    this.time = csv_info.time;
+    if (query_info.subteams === null) throw new TypeError("Member has no subteams");
+    this.subteams = query_info.subteams.map((subteam) => {
+      if (subteam === null) throw new TypeError("null subteam in list");
+
+      return subteam;
+    });
+
+    if (query_info.time_commitment === null) throw new TypeError("Member has no time");
+    if (!isTimeCommitment(query_info.time_commitment))
+      throw new Error(`Member has an invalid time commitment: ${query_info.time_commitment}`);
+    this.time_commitment = query_info.time_commitment;
 
     // Convert empty string to undefined
-    this.study = csv_info.study === "" || csv_info.study === null ? undefined : csv_info.study;
-    this.linkedin = csv_info.linkedin === "" || csv_info.linkedin === null ? undefined : csv_info.linkedin;
+    this.study = query_info.study ?? undefined;
+    this.linkedin = query_info.linkedin ?? undefined;
 
     this.photo = photo;
   }

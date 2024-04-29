@@ -11,7 +11,7 @@
       ],
       "email": "m.vandevosse@aeroteameindhoven.nl",
       "photo": "matthijsvandevosse.jpg",
-      "time": "full-time"
+      "time-commitment": "full-time"
     },
     {
       "first_name": "Daan",
@@ -21,7 +21,7 @@
         "Management",
         "Promotion"
       ],
-      "time": "full-time",
+      "time-commitment": "full-time",
       "email": "d.hegger@aeroteameindhoven.nl",
       "photo": "daanhegger.jpg"
     },
@@ -33,7 +33,7 @@
         "Management"
       ],
       "email": "m.post@aeroteameindhoven.nl",
-      "time": "full-time",
+      "time-commitment": "full-time",
       "photo": "marthepost.jpg"
     },
     {
@@ -44,7 +44,7 @@
         "Management"
       ],
       "email": "m.wijnands@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "markwijnands.jpg"
     },
     {
@@ -55,7 +55,7 @@
         "Management"
       ],
       "email": "m.v.vugt@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "martijnvanvugt.jpg"
     },
     {
@@ -66,7 +66,7 @@
         "Battery Swap"
       ],
       "email": "t.koevoets@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "tomkoevoets.jpg"
     },
     {
@@ -77,7 +77,7 @@
         "Battery Swap"
       ],
       "email": "r.matsuo@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "ryogamatsuo.jpg"
     },
     {
@@ -88,7 +88,7 @@
         "Battery Swap"
       ],
       "email": "e.erturk@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "efeerturk.jpg"
     },
     {
@@ -99,7 +99,7 @@
         "Battery Swap"
       ],
       "email": "j.vangalen@aeroteameindhoven.nl",
-      "time": "full-time",
+      "time-commitment": "full-time",
       "photo": "joostvangalen.jpg"
     },
     {
@@ -110,7 +110,7 @@
         "Battery Swap"
       ],
       "email": "j.wientjes@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "jaiwientjes.jpg"
     },
     {
@@ -121,7 +121,7 @@
         "Promotion"
       ],
       "email": "o.sanlibayrak@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "oykusanlibayrak.jpg"
     },
     {
@@ -132,7 +132,7 @@
         "Autonomous Flight",
         "Harvesting"
       ],
-      "time": "part-time",
+      "time-commitment": "part-time",
       "email": "b.schut@aeroteameindhoven.nl",
       "photo": "bramschut.jpg"
     },
@@ -144,7 +144,7 @@
         "Autonomous Flight"
       ],
       "email": "b.driessen@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "basdriessen.jpg"
     },
     {
@@ -155,7 +155,7 @@
         "Autonomous Flight"
       ],
       "email": "h.nguyen@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "hoangnguyen.jpg"
     },
     {
@@ -166,7 +166,7 @@
         "Autonomous Flight"
       ],
       "email": "b.oren@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "bartanoren.jpg"
     },
     {
@@ -177,7 +177,7 @@
         "Autonomous Flight"
       ],
       "email": "r.zhang@aeroteameindhoven.nl",
-      "time": "part-time"
+      "time-commitment": "part-time"
     },
     {
       "first_name": "Ibrahim",
@@ -187,7 +187,7 @@
         "Autonomous Flight"
       ],
       "email": "i.nasr@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "ibrahimnasr.jpg"
     },
     {
@@ -198,7 +198,7 @@
         "Structure Design"
       ],
       "email": "q.missinne@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "quentinmissinne.jpg"
     },
     {
@@ -209,7 +209,7 @@
         "Structure Design"
       ],
       "email": "t.aben@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "tiesaben.jpg"
     },
     {
@@ -220,7 +220,7 @@
         "Structure Design"
       ],
       "email": "t.vanhattem@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "tomvanhattem.jpg"
     },
     {
@@ -231,7 +231,7 @@
         "Interaction Research"
       ],
       "email": "i.dantuma@aeroteameindhoven.nl",
-      "time": "full-time",
+      "time-commitment": "full-time",
       "photo": "isadantuma.jpg"
     },
     {
@@ -243,7 +243,7 @@
         "Promotion"
       ],
       "email": "m.vandekruijs@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "maureenvandekruijs.jpg"
     },
     {
@@ -254,7 +254,7 @@
         "Interaction Research"
       ],
       "email": "i.doornbusch@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "ilsedoornbusch.jpg"
     },
     {
@@ -265,7 +265,7 @@
         "Interaction Research"
       ],
       "email": "k.stolle@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "kajstolle.jpg"
     },
     {
@@ -276,7 +276,7 @@
         "Interaction Research"
       ],
       "email": "m.vermeulen@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "maudvermeulen.jpg"
     },
     {
@@ -287,7 +287,7 @@
         "Harvesting"
       ],
       "email": "t.aydin@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "tunaaydin.jpg"
     },
     {
@@ -298,7 +298,7 @@
         "Harvesting"
       ],
       "email": "a.guillot@aeroteameindhoven.nl",
-      "time": "part-time"
+      "time-commitment": "part-time"
     },
     {
       "first_name": "Sarath",
@@ -308,7 +308,7 @@
         "Harvesting"
       ],
       "email": "s.vasudevan@aeroteameindhoven.nl",
-      "time": "part-time",
+      "time-commitment": "part-time",
       "photo": "sarathvasudevan.jpg"
     },
     {
@@ -319,7 +319,7 @@
         "Harvesting"
       ],
       "email": "s.nakil@aeroteameindhoven.nl",
-      "time": "part-time"
+      "time-commitment": "part-time"
     }
   ]
 }
