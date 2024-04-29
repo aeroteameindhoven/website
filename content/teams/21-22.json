@@ -35,6 +35,291 @@
       "email": "m.post@aeroteameindhoven.nl",
       "time": "full-time",
       "photo": "marthepost.jpg"
+    },
+    {
+      "first_name": "Mark",
+      "last_name": "Wijnands",
+      "function": "Technical Manager",
+      "subteams": [
+        "Management"
+      ],
+      "email": "m.wijnands@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "markwijnands.jpg"
+    },
+    {
+      "first_name": "Martijn",
+      "last_name": "van Vugt",
+      "function": "Finance Manager & Promotion",
+      "subteams": [
+        "Management"
+      ],
+      "email": "m.v.vugt@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "martijnvanvugt.jpg"
+    },
+    {
+      "first_name": "Tom",
+      "last_name": "Koevoets",
+      "function": "Battery Swap Lead",
+      "subteams": [
+        "Battery Swap"
+      ],
+      "email": "t.koevoets@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "tomkoevoets.jpg"
+    },
+    {
+      "first_name": "Ryoga",
+      "last_name": "Matsuo",
+      "function": "Battery Swap",
+      "subteams": [
+        "Battery Swap"
+      ],
+      "email": "r.matsuo@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "ryogamatsuo.jpg"
+    },
+    {
+      "first_name": "Efe",
+      "last_name": "Erturk",
+      "function": "Battery Swap",
+      "subteams": [
+        "Battery Swap"
+      ],
+      "email": "e.erturk@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "efeerturk.jpg"
+    },
+    {
+      "first_name": "Joost",
+      "last_name": "van Galen",
+      "function": "Battery Swap",
+      "subteams": [
+        "Battery Swap"
+      ],
+      "email": "j.vangalen@aeroteameindhoven.nl",
+      "time": "full-time",
+      "photo": "joostvangalen.jpg"
+    },
+    {
+      "first_name": "Jai",
+      "last_name": "Wientjes",
+      "function": "Battery Swap & Promotion",
+      "subteams": [
+        "Battery Swap"
+      ],
+      "email": "j.wientjes@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "jaiwientjes.jpg"
+    },
+    {
+      "first_name": "Oyku",
+      "last_name": "Sanlibayrak",
+      "function": "Promotion",
+      "subteams": [
+        "Promotion"
+      ],
+      "email": "o.sanlibayrak@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "oykusanlibayrak.jpg"
+    },
+    {
+      "first_name": "Bram",
+      "last_name": "Schut",
+      "function": "Autonomous Flight Lead & Harvesting",
+      "subteams": [
+        "Autonomous Flight",
+        "Harvesting"
+      ],
+      "time": "part-time",
+      "email": "b.schut@aeroteameindhoven.nl",
+      "photo": "bramschut.jpg"
+    },
+    {
+      "first_name": "Bas",
+      "last_name": "Driessen",
+      "function": "Autonomous Flight",
+      "subteams": [
+        "Autonomous Flight"
+      ],
+      "email": "b.driessen@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "basdriessen.jpg"
+    },
+    {
+      "first_name": "Hoang",
+      "last_name": "Nguyen",
+      "function": "Autonomous Flight",
+      "subteams": [
+        "Autonomous Flight"
+      ],
+      "email": "h.nguyen@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "hoangnguyen.jpg"
+    },
+    {
+      "first_name": "Bartan",
+      "last_name": "Oren",
+      "function": "Autonomous Flight",
+      "subteams": [
+        "Autonomous Flight"
+      ],
+      "email": "b.oren@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "bartanoren.jpg"
+    },
+    {
+      "first_name": "Rundong",
+      "last_name": "Zhang",
+      "function": "Autonomous Flight",
+      "subteams": [
+        "Autonomous Flight"
+      ],
+      "email": "r.zhang@aeroteameindhoven.nl",
+      "time": "part-time"
+    },
+    {
+      "first_name": "Ibrahim",
+      "last_name": "Nasr",
+      "function": "Autonomous Flight",
+      "subteams": [
+        "Autonomous Flight"
+      ],
+      "email": "i.nasr@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "ibrahimnasr.jpg"
+    },
+    {
+      "first_name": "Quentin",
+      "last_name": "Missinne",
+      "function": "Structure Design Lead",
+      "subteams": [
+        "Structure Design"
+      ],
+      "email": "q.missinne@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "quentinmissinne.jpg"
+    },
+    {
+      "first_name": "Ties",
+      "last_name": "Aben",
+      "function": "Structure Design",
+      "subteams": [
+        "Structure Design"
+      ],
+      "email": "t.aben@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "tiesaben.jpg"
+    },
+    {
+      "first_name": "Tom",
+      "last_name": "van Hattem",
+      "function": "Structure Design",
+      "subteams": [
+        "Structure Design"
+      ],
+      "email": "t.vanhattem@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "tomvanhattem.jpg"
+    },
+    {
+      "first_name": "Isa",
+      "last_name": "Dantuma",
+      "function": "Interaction Research Lead",
+      "subteams": [
+        "Interaction Research"
+      ],
+      "email": "i.dantuma@aeroteameindhoven.nl",
+      "time": "full-time",
+      "photo": "isadantuma.jpg"
+    },
+    {
+      "first_name": "Maureen",
+      "last_name": "van de Kruijs",
+      "function": "Interaction Research & Promotion",
+      "subteams": [
+        "Interaction Research",
+        "Promotion"
+      ],
+      "email": "m.vandekruijs@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "maureenvandekruijs.jpg"
+    },
+    {
+      "first_name": "Ilse",
+      "last_name": "Doornbusch",
+      "function": "Interaction Research",
+      "subteams": [
+        "Interaction Research"
+      ],
+      "email": "i.doornbusch@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "ilsedoornbusch.jpg"
+    },
+    {
+      "first_name": "Kaj",
+      "last_name": "Stolle",
+      "function": "Interaction Research",
+      "subteams": [
+        "Interaction Research"
+      ],
+      "email": "k.stolle@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "kajstolle.jpg"
+    },
+    {
+      "first_name": "Maud",
+      "last_name": "Vermeulen",
+      "function": "Interaction Research",
+      "subteams": [
+        "Interaction Research"
+      ],
+      "email": "m.vermeulen@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "maudvermeulen.jpg"
+    },
+    {
+      "first_name": "Tuna",
+      "last_name": "Aydin",
+      "function": "Harvesting Lead",
+      "subteams": [
+        "Harvesting"
+      ],
+      "email": "t.aydin@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "tunaaydin.jpg"
+    },
+    {
+      "first_name": "Adrian",
+      "last_name": "Guillot",
+      "function": "Harvesting",
+      "subteams": [
+        "Harvesting"
+      ],
+      "email": "a.guillot@aeroteameindhoven.nl",
+      "time": "part-time"
+    },
+    {
+      "first_name": "Sarath",
+      "last_name": "Vasudevan",
+      "function": "Harvesting",
+      "subteams": [
+        "Harvesting"
+      ],
+      "email": "s.vasudevan@aeroteameindhoven.nl",
+      "time": "part-time",
+      "photo": "sarathvasudevan.jpg"
+    },
+    {
+      "first_name": "Sagar",
+      "last_name": "Nakil",
+      "function": "Harvesting",
+      "subteams": [
+        "Harvesting"
+      ],
+      "email": "s.nakil@aeroteameindhoven.nl",
+      "time": "part-time"
     }
   ]
 }
