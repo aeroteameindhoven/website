@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import { TeamMember } from "../../hooks/useTeamMembers";
+import { TeamMember } from "../../queries/team_members";
 import Mail from "../../images/icons/email.svg";
 import LinkedIn from "../../images/icons/linkedin-minimalist.svg";
 

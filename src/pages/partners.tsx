@@ -5,7 +5,7 @@ import "../components/styles/partners.scss";
 
 import { PartnersEmail } from "../components/Email";
 import { HeadContent } from "../components/HeadContent";
-import { PartnerPackage, partner_packages, usePartners } from "../hooks/usePartners";
+import { PartnerPackage, partner_packages, usePartners } from "../queries/partners";
 
 export function Head() {
   return <HeadContent title="Partners" />;

@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
-const QUERY = graphql`
+const MEMBERS_QUERY = graphql`
   query Members {
     photos: allFile(filter: { sourceInstanceName: { eq: "team-photos" } }) {
       group(field: { relativeDirectory: SELECT }) {
@@ -14,7 +14,7 @@ const QUERY = graphql`
         }
       }
     }
-    data: allFile(filter: { sourceInstanceName: { eq: "teams" } }) {
+    teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }) {
       nodes {
         data: childJson {
           year
@@ -45,7 +45,7 @@ export function isTimeCommitment(time: unknown): time is TimeCommitment {
 }
 
 export function useTeamMembers(team: Years): TeamMember[] | undefined {
-  const query = useStaticQuery<Queries.MembersQuery>(QUERY);
+  const query = useStaticQuery<Queries.MembersQuery>(MEMBERS_QUERY);
 
   const all_members = joinQuery(query);
 
@@ -83,17 +83,15 @@ function joinQuery(query: Queries.MembersQuery): Map<Years, TeamMember[]> {
   }
 
   let membersMap = new Map<Years, TeamMember[]>();
-  for (let membersNode of query.data.nodes) {
+  for (let membersNode of query.teams.nodes) {
     if (membersNode.data === null) throw new TypeError("No JSON data received from query");
 
     if (!isYears(membersNode.data.year)) throw new TypeError(`Year grouping is invalid: ${membersNode.data.year}`);
     const year = membersNode.data.year;
 
-    if (membersNode.data.members === null) throw new TypeError(`No members found for year "${year}"`);
-
     membersMap.set(
       year,
-      membersNode.data.members.map((member) => {
+      (membersNode.data.members || []).map((member) => {
         if (member === null) throw new TypeError("Member is null");
 
         const photo_path = member?.photo ?? undefined;
