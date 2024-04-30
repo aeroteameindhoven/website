@@ -74,18 +74,20 @@ collections:
         fields:
           - { label: First Name, name: first_name, widget: string }
           - { label: Last Name, name: last_name, widget: string }
+          - { label: Study, name: study, widget: string, required: false }
+          - { label: LinkedIn, name: linkedin, widget: string, required: false, hint: "LinkedIn username" }
           - { label: Function, name: function, widget: string }
           - { label: Subteams, name: subteams, widget: list }
+          - label: Aero Email
+            name: email
+            widget: string
+            pattern: [".*@aeroteameindhoven.nl$", "must end in @aeroteameindhoven.nl"]
           - label: Time Commitment
             name: time-commitment
             widget: select
             options:
               - { label: Full Time, value: full-time }
               - { label: Part Time, value: part-time }
-          - label: Aero Email
-            name: email
-            widget: string
-            pattern: [".*@aeroteameindhoven.nl$", "must end in @aeroteameindhoven.nl"]
           - label: Photo
             name: photo
             widget: image

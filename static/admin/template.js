@@ -27,9 +27,13 @@ CMS.registerPreviewTemplate("teams", ({ widgetFor, widgetsFor, getAsset }) => {
               h("br"),
               member.getIn(["data", "function"]) ?? "",
               h("br"),
+              member.getIn(["data", "study"]) ?? "",
+              h("br"),
               (member.getIn(["data", "subteams"]) ?? []).join(" + "),
               h("br"),
-              member.getIn(["data", "email"]) ?? ""
+              member.getIn(["data", "email"]) ?? "",
+              h("br"),
+              member.getIn(["data", "linkedin"]) ?? ""
             )
           );
         })

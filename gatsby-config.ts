@@ -99,30 +99,6 @@ const config: GatsbyConfig = {
       }
     },
 
-    // BEGIN member list
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "member-images",
-        path: `${__dirname}/content/images/members`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `team-members`,
-        path: `${__dirname}/content/members/`
-      }
-    },
-    {
-      resolve: `gatsby-transformer-csv`,
-      options: {
-        typeName: "members",
-        nodePerFile: "members"
-      }
-    },
-    // END member list
-
     // BEGIN team list
     {
       resolve: "gatsby-source-filesystem",

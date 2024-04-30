@@ -26,6 +26,8 @@ const MEMBERS_QUERY = graphql`
             subteams
             email
             photo
+            study
+            linkedin
             time_commitment
           }
         }
@@ -135,12 +137,15 @@ export class TeamMember {
     if (query_info.function === null) throw new TypeError("Member has no function");
     this.title = query_info.function;
 
-    if (query_info.subteams === null) throw new TypeError("Member has no subteams");
-    this.subteams = query_info.subteams.map((subteam) => {
-      if (subteam === null) throw new TypeError("null subteam in list");
+    if (query_info.subteams === null) {
+      this.subteams = [];
+    } else {
+      this.subteams = query_info.subteams.map((subteam) => {
+        if (subteam === null) throw new TypeError("null subteam in list");
 
-      return subteam;
-    });
+        return subteam;
+      });
+    }
 
     if (query_info.time_commitment === null) throw new TypeError("Member has no time");
     if (!isTimeCommitment(query_info.time_commitment))
