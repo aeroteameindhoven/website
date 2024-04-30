@@ -11,12 +11,20 @@ export interface TeamMemberCardProps {
   member: TeamMember;
   above_fold: boolean;
   show_subteam: boolean;
+  disable_emails: boolean;
 
   currentSelection: string | null;
   onSelect(subteam: string): void;
 }
 
-export function TeamMemberCard({ member, above_fold, show_subteam, currentSelection, onSelect }: TeamMemberCardProps) {
+export function TeamMemberCard({
+  member,
+  above_fold,
+  disable_emails,
+  show_subteam,
+  currentSelection,
+  onSelect
+}: TeamMemberCardProps) {
   let image;
   if (member.photo === undefined) {
     image = (
@@ -43,12 +51,16 @@ export function TeamMemberCard({ member, above_fold, show_subteam, currentSelect
       <div className={styles.photoContainer}>
         {image}
         <div className={styles.contactDetails}>
-          <a href={`mailto:${member.email}`}>
-            <Mail className={classNames(styles.icon, styles.mail)} />
+          <a
+            href={disable_emails ? undefined : `mailto:${member.email}`}
+            aria-disabled={disable_emails}
+            aria-label={`${member.fullName()}'s email`}
+          >
+            <Mail className={classNames(styles.icon, styles.mail)} aria-label="Mail Icon" />
           </a>
           {member.linkedin === undefined ? null : (
             <a href={member.linkedInLink()} target="_blank" rel="noreferrer">
-              <LinkedIn className={classNames(styles.icon, styles.linkedin)} />
+              <LinkedIn className={classNames(styles.icon, styles.linkedin)} aria-label="LinkedIn Logo" />
             </a>
           )}
         </div>

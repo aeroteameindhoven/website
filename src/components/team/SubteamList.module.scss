@@ -22,6 +22,9 @@
     font-size: 18px;
     cursor: pointer;
     user-select: none;
+    font-family: inherit;
+    text-transform: none;
+    background: none;
 
     &.selected {
       background-color: $primary-blue;

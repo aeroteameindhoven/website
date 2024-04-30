@@ -20,13 +20,14 @@ export default function SubTeamList({
   return (
     <div className={classNames(styles.subTeamList, className)} aria-hidden={hidden}>
       {subTeams.map((team) => (
-        <div
+        <button
           className={classNames(styles.subTeam, currentSelection === team ? styles.selected : undefined)}
           key={team}
           onClick={() => onSelect(team)}
+          tabIndex={0}
         >
           {team}
-        </div>
+        </button>
       ))}
     </div>
   );

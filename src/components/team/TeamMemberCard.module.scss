@@ -49,6 +49,17 @@
             fill: $primary-blue;
           }
         }
+
+        &[aria-disabled="true"] {
+          // display: none;
+          .icon {
+            fill: hsl(0, 0%, 75%);
+
+            &:hover {
+              fill: hwb(0 30% 44%);
+            }
+          }
+        }
       }
     }
   }

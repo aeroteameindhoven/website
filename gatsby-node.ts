@@ -41,6 +41,8 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
       component: `${__dirname}/src/templates/team.tsx`,
       context: {
         year: team.year,
+        year_index: i,
+
         description: team.description,
 
         previous_year: teams.at((i + 1) % teams.length)!.year

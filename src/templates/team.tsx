@@ -12,7 +12,10 @@ import SubTeamList from "../components/team/SubteamList";
 
 export interface TeamContext {
   year: Years;
+  year_index: number;
+
   description: string;
+
   previous_year: Years;
 }
 
@@ -90,6 +93,7 @@ export default function Team(props: PageProps<object, TeamContext>) {
                     // FIXME: less janky
                     // Do not show the subteams under the 21-22 year
                     show_subteam={year !== "21-22"}
+                    disable_emails={props.pageContext.year_index !== 0}
                   />
                 </Col>
               ))
