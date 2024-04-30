@@ -39,6 +39,7 @@ export function useCurrentTeamContext(): TeamContext {
   return {
     ...current_team,
 
-    previous_year: next_team.year
+    previous_year: next_team.year,
+    year_index: 0
   };
 }
