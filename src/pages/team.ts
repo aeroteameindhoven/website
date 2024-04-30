@@ -1,4 +1,3 @@
-import "../components/styles/team.scss";
 import { HeadProps, navigate, PageProps } from "gatsby";
 import TeamPage, { TeamContext, Head as TeamHead } from "../templates/team";
 import { useEffect } from "react";

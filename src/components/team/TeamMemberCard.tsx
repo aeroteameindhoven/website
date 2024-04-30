@@ -4,6 +4,8 @@ import React from "react";
 import { TeamMember } from "../../queries/team_members";
 import Mail from "../../images/icons/email.svg";
 import LinkedIn from "../../images/icons/linkedin-minimalist.svg";
+import * as styles from "./TeamMemberCard.module.scss";
+import SubTeamList from "./SubteamList";
 
 export interface TeamMemberCardProps {
   member: TeamMember;
@@ -21,7 +23,7 @@ export function TeamMemberCard({ member, above_fold, show_subteam, currentSelect
       <StaticImage
         src="../../images/placeholders/member.png"
         alt={member.fullName()}
-        className="photo"
+        className={styles.photo}
         loading="eager"
       />
     );
@@ -30,43 +32,39 @@ export function TeamMemberCard({ member, above_fold, show_subteam, currentSelect
       <GatsbyImage
         image={member.photo}
         alt={member.fullName()}
-        className="photo"
+        className={styles.photo}
         loading={above_fold ? "eager" : "lazy"}
       />
     );
   }
 
   return (
-    <div className="TeamMember">
-      <div className="photo-container">
+    <div className={styles.teamMember}>
+      <div className={styles.photoContainer}>
         {image}
-        <div className="contact-details">
+        <div className={styles.contactDetails}>
           <a href={`mailto:${member.email}`}>
-            <Mail className="icon mail" />
+            <Mail className={classNames(styles.icon, styles.mail)} />
           </a>
           {member.linkedin === undefined ? null : (
             <a href={member.linkedInLink()} target="_blank" rel="noreferrer">
-              <LinkedIn className="icon linkedin" />
+              <LinkedIn className={classNames(styles.icon, styles.linkedin)} />
             </a>
           )}
         </div>
       </div>
-      <div className="line" />
+      <div className={styles.line} />
       {/* TODO: style first and last names differently */}
-      <div className="name">{member.fullName()}</div>
-      <div className="title">{member.title}</div>
-      {member.study === undefined ? null : <div className="study">{member.study}</div>}
-      <div className="subteams" aria-hidden={!show_subteam}>
-        {member.subteams.map((team) => (
-          <div
-            className={classNames("subteam", currentSelection === team ? "selected" : undefined)}
-            key={team}
-            onClick={() => onSelect(team)}
-          >
-            {team}
-          </div>
-        ))}
-      </div>
+      <div className={styles.name}>{member.fullName()}</div>
+      <div className={styles.title}>{member.title}</div>
+      {member.study === undefined ? null : <div className={styles.study}>{member.study}</div>}
+      <SubTeamList
+        className={styles.subTeamList}
+        currentSelection={currentSelection}
+        subTeams={member.subteams}
+        onSelect={onSelect}
+        hidden={!show_subteam}
+      />
     </div>
   );
 }

@@ -2,12 +2,13 @@ import React from "react";
 import { HeadProps, Link, navigate, PageProps } from "gatsby";
 import { HeadContent } from "../components/HeadContent";
 import { useTeamMembers, Years } from "../queries/team_members";
-import Layout from "../components/Layout";
 import { Col, Container, Row } from "react-grid-system";
 import { StaticImage } from "gatsby-plugin-image";
-import "../components/styles/team.scss";
-import { SubTeamSelector } from "../components/team/SubTeamSelector";
+import * as styles from "./team.module.scss";
 import { TeamMemberCard } from "../components/team/TeamMemberCard";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import SubTeamList from "../components/team/SubteamList";
 
 export interface TeamContext {
   year: Years;
@@ -54,26 +55,28 @@ export default function Team(props: PageProps<object, TeamContext>) {
     subteam !== null ? current_members.filter((m) => m.subteams.includes(subteam)) : current_members;
 
   return (
-    <Layout>
-      <div className="TeamPage">
-        <Container className="teamcontainer">
+    <>
+      <Header />
+
+      <main className={styles.teamPage}>
+        <Container className={styles.teamContainer}>
           <h1>
             OUR TEAM
             {/* TODO: make this a dropdown, not a toggle */}
-            <Link className="year" to={nextTeam}>
+            <Link className={styles.yearDisplay} to={nextTeam}>
               {props.pageContext.year}
               <StaticImage
                 // FIXME: this really should be SVG
                 src="../images/switch.png"
                 alt="Switch to a different team"
-                className="switch-team"
+                className={styles.switchTeam}
                 loading="eager"
                 placeholder="none"
               />
             </Link>
           </h1>
           <p>{props.pageContext.description}</p>
-          <SubTeamSelector subTeams={sub_teams} currentSelection={subteam} onSelect={toggleSubteam} />
+          <SubTeamList subTeams={sub_teams} currentSelection={subteam} onSelect={toggleSubteam} />
           <Row>
             {
               // Loop over all members
@@ -93,7 +96,9 @@ export default function Team(props: PageProps<object, TeamContext>) {
             }
           </Row>
         </Container>
-      </div>
-    </Layout>
+      </main>
+
+      <Footer />
+    </>
   );
 }
