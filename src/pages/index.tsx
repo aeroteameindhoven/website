@@ -5,7 +5,6 @@ import Layout from "../components/Layout";
 import "../components/styles/index.scss";
 // import GlobeIllustration from "../images/globe.svg";
 import TUELogo from "/content/images/sponsors/tue.svg";
-import "react-slideshow-image/dist/styles.css";
 import { HeadContent } from "../components/HeadContent";
 import { StaticImage } from "gatsby-plugin-image";
 import Video from "../components/Video";
