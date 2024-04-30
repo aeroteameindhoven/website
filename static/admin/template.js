@@ -10,19 +10,25 @@ CMS.registerPreviewTemplate("teams", ({ widgetFor, widgetsFor, getAsset }) => {
     widgetFor("description"),
     h(
       "div",
-      {},
+      {
+        style: {
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, 8em minmax(30ch, 1fr))",
+          gridTemplateRows: "10em",
+          gap: "1em"
+        }
+      },
       Array.isArray(members_widgets) &&
         widgetsFor("members").map((member, index) => {
-          return h(
-            "div",
-            { key: index, style: { display: "flex", flexDirection: "row", marginBlock: "1em" } },
+          return [
             h("img", {
-              style: { maxHeight: "10em", marginInlineEnd: "1em", backgroundColor: "#808080", aspectRatio: "2/3" },
+              key: index,
+              style: { height: "100%", width: "100%", objectFit: "contain" },
               src: getAsset(member.getIn(["data", "photo"])).toString() // TODO: Placeholder image
             }),
             h(
               "div",
-              { style: { marginBlock: "auto" } },
+              { style: { marginBlock: "auto" }, key: index },
               `${member.getIn(["data", "first_name"]) ?? ""} ${member.getIn(["data", "last_name"]) ?? ""}`,
               h("br"),
               member.getIn(["data", "function"]) ?? "",
@@ -35,7 +41,7 @@ CMS.registerPreviewTemplate("teams", ({ widgetFor, widgetsFor, getAsset }) => {
               h("br"),
               member.getIn(["data", "linkedin"]) ?? ""
             )
-          );
+          ];
         })
     )
   );
