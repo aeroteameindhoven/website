@@ -27,6 +27,7 @@ const MEMBERS_QUERY = graphql`
             email
             photo
             study
+            study_level
             linkedin
             time_commitment
           }
@@ -39,11 +40,6 @@ const MEMBERS_QUERY = graphql`
 export type Years = `${number}-${number}`;
 export function isYears(years: unknown): years is Years {
   return typeof years === "string" && /[0-9]{2}-[0-9]{2}/.test(years);
-}
-
-export type TimeCommitment = "part-time" | "full-time";
-export function isTimeCommitment(time: unknown): time is TimeCommitment {
-  return typeof time === "string" && /(?:part|full)-time/.test(time);
 }
 
 export function useTeamMembers(team: Years): TeamMember[] | undefined {
@@ -114,10 +110,8 @@ export class TeamMember {
 
   public email: string;
 
-  public title: string;
+  public title?: string;
   public subteams: string[];
-
-  public time_commitment: TimeCommitment;
 
   // New fields for team 22-23
   public study?: string;
@@ -134,8 +128,7 @@ export class TeamMember {
     if (query_info.email === null) throw new TypeError("Member has no email");
     this.email = query_info.email;
 
-    if (query_info.function === null) throw new TypeError("Member has no function");
-    this.title = query_info.function;
+    this.title = query_info.function ?? undefined;
 
     if (query_info.subteams === null) {
       this.subteams = [];
@@ -146,11 +139,6 @@ export class TeamMember {
         return subteam;
       });
     }
-
-    if (query_info.time_commitment === null) throw new TypeError("Member has no time");
-    if (!isTimeCommitment(query_info.time_commitment))
-      throw new Error(`Member has an invalid time commitment: ${query_info.time_commitment}`);
-    this.time_commitment = query_info.time_commitment;
 
     // Convert empty string to undefined
     this.study = query_info.study ?? undefined;
