@@ -9,7 +9,7 @@ function isYears(years: unknown): years is Years {
 export const createPages = async function ({ actions, graphql }: CreatePagesArgs) {
   const { data } = await graphql<Queries.AllTeamsQuery>(`
     query AllTeams {
-      teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }) {
+      teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }, sort: { childJson: { year: DESC } }) {
         nodes {
           data: childJson {
             year
@@ -43,7 +43,7 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
         year: team.year,
         description: team.description,
 
-        previous_year: teams.at(i - 1)!.year
+        previous_year: teams.at((i + 1) % teams.length)!.year
       }
     });
   }

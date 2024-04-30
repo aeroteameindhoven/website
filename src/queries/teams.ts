@@ -4,7 +4,7 @@ import { TeamContext } from "../templates/team";
 
 const QUERY = graphql`
   query AllTeams {
-    teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }) {
+    teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }, sort: { childJson: { year: DESC } }) {
       nodes {
         data: childJson {
           year
@@ -33,8 +33,8 @@ export function useTeams() {
 export function useCurrentTeamContext(): TeamContext {
   const teams = useTeams();
 
-  const current_team = teams.at(-1)!;
-  const next_team = teams.at(-2 % teams.length)!;
+  const current_team = teams.at(0)!;
+  const next_team = teams.at(1 % teams.length)!;
 
   return {
     ...current_team,
