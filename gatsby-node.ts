@@ -9,7 +9,7 @@ function isYears(years: unknown): years is Years {
 export const createPages = async function ({ actions, graphql }: CreatePagesArgs) {
   const { data } = await graphql<Queries.AllTeamsQuery>(`
     query AllTeams {
-      teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }, sort: { childJson: { year: DESC } }) {
+      teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }, sort: { name: DESC }) {
         nodes {
           data: childJson {
             year

@@ -4,7 +4,7 @@ import { TeamContext } from "../templates/team";
 
 const QUERY = graphql`
   query AllTeams {
-    teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }, sort: { childJson: { year: DESC } }) {
+    teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }, sort: { name: DESC }) {
       nodes {
         data: childJson {
           year
