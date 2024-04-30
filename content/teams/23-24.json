@@ -3,6 +3,19 @@
   "description": "In our third year of Aero Team we will focus on building onto the success of last year's Cargo Drone, as well as on further developing the Battery Swap mechanism.",
   "members": [
     {
+      "study": "Electrical Engineering",
+      "study_level": "Bachelor",
+      "photo": "ivanvincze.jpg",
+      "last_name": "Vincze",
+      "subteams": [
+        "Management"
+      ],
+      "function": "Team Lead",
+      "first_name": "Ivan",
+      "email": "i.vincze@aeroteameindhoven.nl",
+      "linkedin": ""
+    },
+    {
       "study": "Computer Science and Engineering",
       "study_level": "Bachelor",
       "photo": "biancaeni.jpg",
@@ -15,20 +28,6 @@
       "first_name": "Bianca",
       "email": "b.eni@aeroteameindhoven.nl",
       "linkedin": "bianca-eni-0b0589247"
-    },
-    {
-      "first_name": "Berk",
-      "last_name": "Eraltan",
-      "subteams": [
-        "Finance",
-        "External",
-        "Manufacturing",
-        "Pilot"
-      ],
-      "email": "b.eraltan@aeroteameindhoven.nl",
-      "study_level": "Bachelor",
-      "study": "Data Science",
-      "function": "Finance Manager"
     },
     {
       "study": "Electrical Engineering",
@@ -47,6 +46,30 @@
       "linkedin": "zachary-kohnen-a6755a25a"
     },
     {
+      "first_name": "Dave",
+      "last_name": "Leunissen",
+      "email": "d.leunissen@aeroteameindhoven.nl",
+      "study": "Sustainable Innovation",
+      "study_level": "Bachelor",
+      "subteams": [
+        "External"
+      ],
+      "function": "External Manager"
+    },
+    {
+      "study": "Computer Science and Engineering",
+      "study_level": "Bachelor",
+      "photo": "omarraafat.jpg",
+      "last_name": "Raafat",
+      "subteams": [
+        "Software"
+      ],
+      "function": "Software Manager",
+      "first_name": "Omar",
+      "email": "o.raafat@aeroteameindhoven.nl",
+      "linkedin": "omar-raafat-b19813214"
+    },
+    {
       "study": "Data Science",
       "study_level": "Bachelor",
       "photo": "harshnagouda.jpg",
@@ -63,30 +86,18 @@
       "linkedin": "harsh-nagouda"
     },
     {
-      "study": "Computer Science and Engineering",
-      "study_level": "Bachelor",
-      "photo": "omarraafat.jpg",
-      "last_name": "Raafat",
+      "first_name": "Berk",
+      "last_name": "Eraltan",
       "subteams": [
-        "Software"
+        "Finance",
+        "External",
+        "Manufacturing",
+        "Pilot"
       ],
-      "function": "Software Manager",
-      "first_name": "Omar",
-      "email": "o.raafat@aeroteameindhoven.nl",
-      "linkedin": "omar-raafat-b19813214"
-    },
-    {
-      "study": "Electrical Engineering",
+      "email": "b.eraltan@aeroteameindhoven.nl",
       "study_level": "Bachelor",
-      "photo": "ivanvincze.jpg",
-      "last_name": "Vincze",
-      "subteams": [
-        "Management"
-      ],
-      "function": "Team Lead",
-      "first_name": "Ivan",
-      "email": "i.vincze@aeroteameindhoven.nl",
-      "linkedin": ""
+      "study": "Data Science",
+      "function": "Finance Manager"
     },
     {
       "first_name": "Robin",
@@ -152,17 +163,6 @@
         "PR"
       ],
       "photo": "seraphinakorompis.jpg"
-    },
-    {
-      "first_name": "Dave",
-      "last_name": "Leunissen",
-      "email": "d.leunissen@aeroteameindhoven.nl",
-      "study": "Sustainable Innovation",
-      "study_level": "Bachelor",
-      "subteams": [
-        "External"
-      ],
-      "function": "External Manager"
     },
     {
       "first_name": "Khanh",
