@@ -1,15 +1,18 @@
+import React from "react";
 import "../components/styles/stats.scss";
 
-import React from "react";
+interface StatsSectionProps {
+  title: string;
+  stats: { label: string, value: string }[];
+}
 
-const StatsSection = () => {
+const StatsSection: React.FC<StatsSectionProps> = ({ title, stats }) => {
   return (
     <div className="stats-section" data-aos="fade-up" data-aos-duration="2000">
-      <h2>Aegle v2 Specs</h2>
-      <div className="stat">Flight Time: 30 minutes</div>
-      <div className="stat">Max Speed: 1000 km/h</div>
-      <div className="stat">Battery: big boi</div>
-      <div className="stat">Wingspan: 3 meters</div>
+      <h2>{title}</h2>
+      {stats.map((stat, index) => (
+        <div key={index} className="stat">{stat.label}: {stat.value}</div>
+      ))}
     </div>
   );
 };

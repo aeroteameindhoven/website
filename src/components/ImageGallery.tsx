@@ -8,11 +8,13 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
   return (
-    <div className="gallery" data-aos="fade-up">
-      <div>Gallery</div>
-      {images.map((image, index) => (
-        <GatsbyImage key={index} image={image} alt={`Drone View ${index}`} className="gallery-image" />
-      ))}
+    <div className="gallery">
+      <div className="gallery-title">Gallery</div>
+      <div className="gallery-grid">
+        {images.map((image, index) => (
+          <GatsbyImage key={index} image={image} alt={`Drone View ${index}`} className="gallery-image" />
+        ))}
+      </div>
     </div>
   );
 };

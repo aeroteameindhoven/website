@@ -30,6 +30,13 @@
     padding: 2rem;
     width: 40vw;
     box-shadow: 1rem 1rem #ff6464;
+
+    .project-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
   }
 
   [data-aos="fade-up"] {

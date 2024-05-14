@@ -16,13 +16,20 @@ export default function Aegle2({ pageContext: project }: PageProps<object, Proje
     AOS.init({ duration: 2000 });
   }, []);
 
+  const stats = [
+    { label: "Flight Time", value: "30 minutes" },
+    { label: "Max Speed", value: "1000 km/h" },
+    { label: "Battery", value: "big boi" },
+    { label: "Wingspan", value: "3 meters" },
+  ];
+
   return (
     <div className="aegle2">
       <Header />
-      {project.model && <Aegle3D model_path={project.model} />}
       <ProjectDescription title={project.name} description={project.html} imageSrc={project.images[0]} />
-      <StatsSection />
+      <StatsSection title="Aegle v2 Specs" stats={stats}/>
       <Gallery images={project.images} />
+      {project.model && <Aegle3D model_path={project.model} />}
       <Footer />
     </div>
   );
