@@ -1,6 +1,6 @@
 ---
 name: ST Microelectronics
-logo: /st_logo_2020_blue_v.svg.png
+logo: st_logo_2020_blue_v.svg.png
 url: https://www.st.com/content/st_com/en.html
 package: gold
 ---

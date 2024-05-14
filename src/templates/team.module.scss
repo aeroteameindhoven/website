@@ -1,0 +1,42 @@
+@import "../components/styles/main.scss";
+
+.team-page {
+  background-color: white;
+  min-height: 1000px;
+  color: black;
+  padding: 30px 0px;
+
+  .team-container {
+    max-width: 1100px !important;
+  }
+
+  h1 {
+    color: $primary-blue;
+    text-shadow: none;
+    font-weight: bolder;
+    margin-bottom: 10px;
+
+    .year-display {
+      all: unset;
+      display: inline-block;
+      margin-left: 20px;
+      color: #7689af;
+      border-bottom: 3px solid white;
+      transition: border-bottom 0.2s ease-in-out;
+
+      .switch-team {
+        vertical-align: baseline;
+        margin-left: 5px;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        margin-block: auto;
+      }
+
+      &:is(:hover, :focus, :active) {
+        border-bottom: 3px solid #7689af;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 ---
 name: WorkWear4All B.V.
-logo: /workwear4all-coupon-codes.png
+logo: workwear4all-coupon-codes.png
 url: https://www.workwear4all.nl/?gad_source=1&gclid=CjwKCAjwoPOwBhAeEiwAJuXRh20f8JUGv5To9w_MULDzD7HCJG58UH_C6UxVnQOVSzfId90MiJFZaxoC664QAvD_BwE
 package: silver
 ---

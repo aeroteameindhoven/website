@@ -1,6 +1,6 @@
 ---
 name: Volz Servos GmbH & Co. KG
-logo: /volz_servos_gmbh__co_kg_logo.svg
+logo: volz_servos_gmbh__co_kg_logo.svg
 url: https://www.volz-servos.com/
 package: gold
 ---

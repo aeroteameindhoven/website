@@ -99,29 +99,28 @@ const config: GatsbyConfig = {
       }
     },
 
-    // BEGIN member list
+    // BEGIN team list
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "member-images",
-        path: `${__dirname}/content/images/members`
+        name: "team-photos",
+        path: `${__dirname}/content/images/teams`
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `team-members`,
-        path: `${__dirname}/content/members/`
+        name: "teams",
+        path: `${__dirname}/content/teams`
       }
     },
     {
-      resolve: `gatsby-transformer-csv`,
+      resolve: "gatsby-transformer-json",
       options: {
-        typeName: "members",
-        nodePerFile: "members"
+        typeName: "json"
       }
     },
-    // END member list
+    // END team list
 
     // BEGIN sponsor list
     {

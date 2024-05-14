@@ -79,9 +79,7 @@ export function usePartners(): Map<PartnerPackage, PartnerInfo[]> {
         g.partner_package,
         g.nodes.map<PartnerInfo>(({ markdown }) => {
           // Remove leading slash in logo file names
-          const logo_file_no_slash = markdown.frontmatter.logo.replace(/^\//, "");
-
-          const logo = query.images.nodes.find((img) => img.relativePath === logo_file_no_slash)?.publicURL;
+          const logo = query.images.nodes.find((img) => img.relativePath === markdown.frontmatter.logo)?.publicURL;
 
           if (logo === undefined) {
             throw new Error(`Unable to find image '${markdown.frontmatter.logo}' for ${markdown.frontmatter.name}`);

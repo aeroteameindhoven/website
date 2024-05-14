@@ -1,6 +1,14 @@
 publish_mode: editorial_workflow
 media_folder: "/content/images"
+site_url: https://aeroteameindhoven.nl/
+logo_url: https://aeroteameindhoven.nl/icons/icon-512x512.png
 
+# # Development (https://decapcms.org/docs/working-with-a-local-git-repository/)
+# local_backend: true
+# backend:
+#   name: git-gateway
+
+# Production
 backend:
   name: github
   repo: aeroteameindhoven/website
@@ -12,9 +20,10 @@ backend:
 collections:
   - name: "sponsors"
     label: "Sponsors"
+    label_singular: Sponsor
     folder: "/content/sponsors"
     media_folder: "/content/images/sponsors"
-    public_folder: "/"
+    public_folder: ""
     preview_path: "/partners/"
     create: true
     slug: "{{slug}}"
@@ -25,16 +34,59 @@ collections:
     extension: "md"
     summary: "[{{package | upper}}] {{name}}"
     view_groups:
-      - label: Packages
+      - label: Package
         field: package
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Logo", name: "logo", widget: "image", choose_url: false, allow_multiple: false }
       - { label: "URL", name: "url", widget: "string" }
-      - {
-          label: "Package",
-          name: "package",
-          widget: "select",
-          options: ["platinum", "gold", "silver"],
-        }
+      - { label: "Package", name: "package", widget: "select", options: ["platinum", "gold", "silver"] }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: teams
+    label: Teams
+    label_singular: Team
+    folder: /content/teams
+    create: true
+
+    media_folder: "/content/images/teams/{{slug}}"
+    public_folder: ""
+
+    preview_path: "/team/{{slug}}"
+
+    identifier_field: "year"
+    format: json
+
+    summary: "{{slug}}: {{description}}"
+
+    fields:
+      - label: Academic Year
+        name: year
+        widget: string
+        hint: "The academic years in the form XX-XX"
+        pattern: ["[0-9]{2}-[0-9]{2}", "must match the form XX-XX"]
+      - { label: Short Description, name: description, widget: string }
+      - label: Members
+        name: members
+        widget: list
+        label_singular: Member
+        summary: "{{first_name}} {{last_name}}"
+        fields:
+          # - { label: Hidden, name: hidden, widget: boolean, default: false }
+          - { label: First Name, name: first_name, widget: string }
+          - { label: Last Name, name: last_name, widget: string }
+          - { label: Study, name: study, widget: string, required: false }
+          - { label: Study Level, name: study_level, widget: string, required: false }
+          - { label: LinkedIn, name: linkedin, widget: string, required: false, hint: "LinkedIn username" }
+          - { label: Function, name: function, widget: string, required: false }
+          - { label: Subteams, name: subteams, widget: list }
+          - label: Aero Email
+            name: email
+            widget: string
+            pattern: [".*@aeroteameindhoven.nl$", "must end in @aeroteameindhoven.nl"]
+          - label: Photo
+            name: photo
+            widget: image
+            required: false
+            choose_url: false
+            allow_multiple: false

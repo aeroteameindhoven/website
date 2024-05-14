@@ -22,8 +22,8 @@ const CompactNav = () => {
 
   return (
     <nav className="CompactNav">
-      <Link to="/">
-        <Logo className="main-logo" />
+      <Link to="/" aria-label="Aero Team Home">
+        <Logo className="main-logo" aria-label="Aero Team Eindhoven Logo" />
       </Link>
       <div>
         <HamburgerIcon className="hamburger-icon" onClick={openNav} />

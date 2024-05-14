@@ -23,13 +23,13 @@ export default function Footer() {
               </a> */}
               <span>General inquiries:</span>
               <a className={mailLink} href="mailto:info@aeroteameindhoven.nl">
-                <Mail className={icon} />
+                <Mail className={icon} aria-label="Mail icon" />
                 info@aeroteameindhoven.nl
               </a>
               <br />
               <span>Partnership inquiries:</span>
               <a className={mailLink} href="mailto:partners@aeroteameindhoven.nl">
-                <Mail className={icon} />
+                <Mail className={icon} aria-label="Mail icon" />
                 partners@aeroteameindhoven.nl
               </a>
             </p>
@@ -50,12 +50,12 @@ export default function Footer() {
                 rel="noreferrer"
                 href="https://www.linkedin.com/company/aeroteamehv"
               >
-                <LinkedIn /> <span className={appName}>LinkedIn</span>
+                <LinkedIn aria-label="LinkedIn logo" /> <span className={appName}>LinkedIn</span>
               </a>
             </div>
             <div>
               <a className={mailLink} target="_blank" rel="noreferrer" href="https://www.instagram.com/aeroteamehv/">
-                <Instagram /> <span className={appName}>Instagram</span>
+                <Instagram aria-label="Instagram logo" /> <span className={appName}>Instagram</span>
               </a>
             </div>
             <div>
@@ -65,7 +65,7 @@ export default function Footer() {
                 rel="noreferrer"
                 href="https://www.youtube.com/channel/UC48Rt9YAXZIi9RsOdSUUcFQ"
               >
-                <Youtube /> <span className={appName}>Youtube</span>
+                <Youtube aria-label="Youtube logo" /> <span className={appName}>Youtube</span>
               </a>
             </div>
             <div>
@@ -75,7 +75,7 @@ export default function Footer() {
                 rel="noreferrer"
                 href="https://drive.google.com/drive/folders/1mH-nZTwSS00_Fjs5461rFtP1sns_o-v2?usp=sharing"
               >
-                <PressKit /> <span className={appName}>Press Kit</span>
+                <PressKit aria-label="Press icon" /> <span className={appName}>Press Kit</span>
               </a>
             </div>
           </Col>

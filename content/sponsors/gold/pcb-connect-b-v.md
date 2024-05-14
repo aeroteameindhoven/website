@@ -1,6 +1,6 @@
 ---
 name: PCB Connect B.V.
-logo: /pcb-connect-png.png
+logo: pcb-connect-png.png
 url: https://www.pcbconnectgroup.com/
 package: gold
 ---
