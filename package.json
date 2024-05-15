@@ -2,6 +2,7 @@
   "name": "aero-team-eindhoven",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "Aero Team Eindhoven Website",
   "author": "aeroteameindhoven",
   "keywords": [
@@ -12,10 +13,9 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "typecheck": "tsc",
-    "lint": "eslint src/**/*.{ts,tsx}",
-    "__fmt": "prettier src types gatsby-config.ts .eslintrc .yarnrc.yml package.json tsconfig.json .prettierrc .github .vscode",
-    "fmt:check": "yarn __fmt --check",
-    "fmt:write": "yarn __fmt --write",
+    "lint": "eslint .",
+    "fmt:check": "prettier . --check",
+    "fmt:write": "prettier . --write",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
     "decap": "decap-server",
     "serve": "gatsby serve"
@@ -47,12 +47,13 @@
     "three": "^0.164.1"
   },
   "devDependencies": {
+    "@types/eslint": "^8.56.10",
     "@types/react": "^18.3.2",
     "@types/three": "^0.164.0",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "decap-server": "^3.0.4",
-    "eslint": "^9.2.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
