@@ -8,8 +8,7 @@
   background: hsl(210, 100%, 94%);
   border: none;
   max-width: fit-content;
-  box-shadow:
-    transparentize($color: $primary-pink, $amount: 0.4) 5px 5px,
+  box-shadow: transparentize($color: $primary-pink, $amount: 0.4) 5px 5px,
     transparentize($color: $primary-pink, $amount: 0.5) 10px 10px,
     transparentize($color: $primary-pink, $amount: 0.6) 15px 15px,
     transparentize($color: $primary-pink, $amount: 0.95) 25px 25px;
