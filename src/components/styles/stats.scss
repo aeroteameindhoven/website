@@ -5,7 +5,9 @@
   background: linear-gradient(45deg, rgba(0, 40, 127, 1) 0%, rgb(232, 60, 80) 62%, rgba(255, 100, 100, 1) 100%);
   color: #fff;
   height: 100vh;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .stats-section h2 {
@@ -33,7 +35,10 @@
   width: 0;
   height: 2px;
   background-color: #fff;
-  box-shadow: 1px 1px 2px red, 0 0 1em #ff6464, 0 0 0.2em #ff6464;
+  box-shadow:
+    1px 1px 2px red,
+    0 0 1em #ff6464,
+    0 0 0.2em #ff6464;
   transition: all 0.3s ease;
 }
 
@@ -43,7 +48,10 @@
 }
 
 .stat:hover {
-  text-shadow: 1px 1px 2px red, 0 0 1em #ff6464, 0 0 0.2em #ff6464;
+  text-shadow:
+    1px 1px 2px red,
+    0 0 1em #ff6464,
+    0 0 0.2em #ff6464;
 }
 
 @media (max-width: 768px) {
