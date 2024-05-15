@@ -13,6 +13,10 @@ const QUERY = graphql`
             academic_year
             blurb
             model
+            stats {
+              label
+              value
+            }
           }
           html
         }
@@ -43,6 +47,12 @@ export interface Project {
   blurb: string;
   slug: string;
   model?: string;
+  stats?: Statistic[];
+}
+
+export interface Statistic {
+  label: string;
+  value: string;
 }
 
 export function useProjects(): Project[] {
@@ -69,7 +79,19 @@ export function useProjects(): Project[] {
       images: images,
       blurb: project?.markdown?.meta?.blurb ?? "",
       slug: project.slug,
-      model
+      model,
+      stats: (() => {
+        const stats = project.markdown?.meta?.stats ?? undefined;
+        if (stats === undefined) return undefined;
+
+        return stats.filter((stat): stat is Statistic => {
+          if (stat === null) throw TypeError("empty statistic");
+          if (stat.label === null) throw TypeError("statistic missing field label");
+          if (stat.value === null) throw TypeError("statistic missing field value");
+
+          return true;
+        });
+      })()
     };
   });
 }

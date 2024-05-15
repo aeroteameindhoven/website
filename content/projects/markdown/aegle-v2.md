@@ -3,6 +3,15 @@ name: Aegle v2
 images:
   - /me-and-andy-s-mouse-love-child.png
   - /untitled-design.png
+stats:
+  - label: Flight Time
+    value: 30 minutes
+  - label: Max Speed
+    value: 1000 km/h
+  - label: Battery
+    value: big boi
+  - label: Wingspan
+    value: 3 meters
 model: /bear.glb
 academic_year: 2023
 blurb: Drone 2

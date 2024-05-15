@@ -2,6 +2,7 @@ import type { Actions, CreatePagesArgs } from "gatsby";
 import type { TeamContext } from "./src/templates/team";
 import type { Years } from "./src/queries/team_members";
 import type { IGatsbyImageData } from "gatsby-plugin-image";
+import type { Statistic } from "./src/queries/projects";
 
 function isYears(years: unknown): years is Years {
   return typeof years === "string" && /[0-9]{2}-[0-9]{2}/.test(years);
@@ -10,8 +11,8 @@ function isYears(years: unknown): years is Years {
 // TODO: keep in sync with useProjects and useTeams
 export const createPages = async function ({ actions, graphql }: CreatePagesArgs) {
   const [{ data: teams }, { data: projects }] = await Promise.all([
-    graphql<Queries.AllTeamsQuery>(`
-      query AllTeams {
+    graphql<Queries.NodeAllTeamsQuery>(`
+      query NodeAllTeams {
         teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }, sort: { name: DESC }) {
           nodes {
             data: childJson {
@@ -22,8 +23,8 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
         }
       }
     `),
-    graphql<Queries.ProjectsQuery>(`
-      query Projects {
+    graphql<Queries.NodeProjectsQuery>(`
+      query NodeProjects {
         projects: allFile(filter: { sourceInstanceName: { eq: "projects" } }) {
           nodes {
             slug: name
@@ -34,6 +35,10 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
                 academic_year
                 blurb
                 model
+                stats {
+                  label
+                  value
+                }
               }
               html
             }
@@ -72,7 +77,7 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
   create_project_pages(projects, actions);
 };
 
-function create_project_pages({ projects, images, models }: Queries.ProjectsQuery, actions: Actions) {
+function create_project_pages({ projects, images, models }: Queries.NodeProjectsQuery, actions: Actions) {
   const all_images = new Map(
     images.nodes.map((image) => [image.relativePath, image.childImageSharp!.gatsbyImageData!])
   );
@@ -97,13 +102,25 @@ function create_project_pages({ projects, images, models }: Queries.ProjectsQuer
         images: images,
         blurb: project?.markdown?.meta?.blurb ?? "",
         slug: project.slug,
-        model
+        model,
+        stats: (() => {
+          const stats = project.markdown?.meta?.stats ?? undefined;
+          if (stats === undefined) return undefined;
+
+          return stats.filter((stat): stat is Statistic => {
+            if (stat === null) throw TypeError("empty statistic");
+            if (stat.label === null) throw TypeError("statistic missing field label");
+            if (stat.value === null) throw TypeError("statistic missing field value");
+
+            return true;
+          });
+        })()
       }
     });
   }
 }
 
-function create_team_pages({ teams: teams_raw }: Queries.AllTeamsQuery, actions: Actions) {
+function create_team_pages({ teams: teams_raw }: Queries.NodeAllTeamsQuery, actions: Actions) {
   const teams = teams_raw.nodes.map((team) => {
     if (team.data === null) throw new TypeError("team data null");
     if (!isYears(team.data.year)) throw new TypeError("team year is malformed");

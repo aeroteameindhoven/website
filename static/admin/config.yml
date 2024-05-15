@@ -65,6 +65,19 @@ collections:
           summary: "{{fields.image}}",
           field: { label: "Image", name: "image", widget: "image", choose_url: false, allow_multiple: false }
         }
+
+      - label: Statistics
+        name: stats
+        widget: list
+        summary: "{{fields.label}}: {{fields.value}}"
+        fields:
+          - label: Statistic
+            name: label
+            widget: string
+          - label: Value
+            name: value
+            widget: string
+
       - {
           label: "3D Model",
           name: model,
