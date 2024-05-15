@@ -43,7 +43,7 @@ export default function Carousel(props: Props) {
   const slideRight = () => setCurrentSlide((slide) => (slide + 1) % slides.length);
   const slideLeft = () => setCurrentSlide((slide) => (slide - 1) % slides.length);
 
-  console.log(leftSlide, currentSlide, rightSlide);
+  // console.log(leftSlide, currentSlide, rightSlide);
 
   return (
     <div className={carouselContainer} {...handlers}>

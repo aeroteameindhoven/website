@@ -1,5 +1,5 @@
 import React from "react";
-import { Project } from "../hooks/useProjects";
+import { Project } from "../queries/projects";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 interface ProjectCardProps {

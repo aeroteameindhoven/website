@@ -1,53 +1,85 @@
-import { CreatePagesArgs } from "gatsby";
-import { IGatsbyImageData } from "gatsby-plugin-image";
+import type { Actions, CreatePagesArgs } from "gatsby";
+import type { TeamContext } from "./src/templates/team";
+import type { Years } from "./src/queries/team_members";
+import type { IGatsbyImageData } from "gatsby-plugin-image";
 
-// TODO: keep in sync with useProjects
+function isYears(years: unknown): years is Years {
+  return typeof years === "string" && /[0-9]{2}-[0-9]{2}/.test(years);
+}
+
+// TODO: keep in sync with useProjects and useTeams
 export const createPages = async function ({ actions, graphql }: CreatePagesArgs) {
-  const { data } = await graphql<Queries.ProjectsQuery>(`
-    query Projects {
-      projects: allFile(filter: { sourceInstanceName: { eq: "projects" } }) {
-        nodes {
-          slug: name
-          markdown: childMarkdownRemark {
-            meta: frontmatter {
-              name
-              images
-              academic_year
-              blurb
-              model
+  const [{ data: teams }, { data: projects }] = await Promise.all([
+    graphql<Queries.AllTeamsQuery>(`
+      query AllTeams {
+        teams: allFile(filter: { sourceInstanceName: { eq: "teams" } }, sort: { name: DESC }) {
+          nodes {
+            data: childJson {
+              year
+              description
             }
-            html
           }
         }
       }
-      images: allFile(filter: { sourceInstanceName: { eq: "project-images" } }) {
-        nodes {
-          relativePath
-          childImageSharp {
-            gatsbyImageData
+    `),
+    graphql<Queries.ProjectsQuery>(`
+      query Projects {
+        projects: allFile(filter: { sourceInstanceName: { eq: "projects" } }) {
+          nodes {
+            slug: name
+            markdown: childMarkdownRemark {
+              meta: frontmatter {
+                name
+                images
+                academic_year
+                blurb
+                model
+              }
+              html
+            }
+          }
+        }
+        images: allFile(filter: { sourceInstanceName: { eq: "project-images" } }) {
+          nodes {
+            relativePath
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+        models: allFile(filter: { sourceInstanceName: { eq: "project-models" } }) {
+          nodes {
+            relativePath
+            publicURL
           }
         }
       }
-      models: allFile(filter: { sourceInstanceName: { eq: "project-models" } }) {
-        nodes {
-          relativePath
-          publicURL
-        }
-      }
-    }
-  `);
+    `)
+  ]);
 
-  if (data === undefined) {
-    return;
+  if (teams === undefined) {
+    throw new TypeError("teams query empty");
   }
 
+  console.info("creating team pages");
+  create_team_pages(teams, actions);
+
+  if (projects === undefined) {
+    throw new TypeError("projects query empty");
+  }
+
+  console.info("creating project pages");
+  create_project_pages(projects, actions);
+};
+
+function create_project_pages({ projects, images, models }: Queries.ProjectsQuery, actions: Actions) {
   const all_images = new Map(
-    data.images.nodes.map((image) => [image.relativePath, image.childImageSharp!.gatsbyImageData!])
+    images.nodes.map((image) => [image.relativePath, image.childImageSharp!.gatsbyImageData!])
   );
 
-  const all_models = new Map(data.models.nodes.map((image) => [image.relativePath, image.publicURL]));
+  const all_models = new Map(models.nodes.map((image) => [image.relativePath, image.publicURL]));
 
-  for (const project of data?.projects.nodes ?? []) {
+  for (const project of projects.nodes ?? []) {
     const initial_images = project?.markdown?.meta?.images ?? [];
     const images = initial_images
       .map((image_path) => all_images.get(image_path?.replace(/^\//, "") ?? ""))
@@ -69,4 +101,32 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
       }
     });
   }
-};
+}
+
+function create_team_pages({ teams: teams_raw }: Queries.AllTeamsQuery, actions: Actions) {
+  const teams = teams_raw.nodes.map((team) => {
+    if (team.data === null) throw new TypeError("team data null");
+    if (!isYears(team.data.year)) throw new TypeError("team year is malformed");
+    if (team.data.description === null) throw new TypeError("Team has no description");
+
+    return {
+      year: team.data.year,
+      description: team.data.description
+    };
+  });
+
+  for (const [i, team] of teams.entries()) {
+    actions.createPage<TeamContext>({
+      path: `/team/${team.year}`,
+      component: `${__dirname}/src/templates/team.tsx`,
+      context: {
+        year: team.year,
+        year_index: i,
+
+        description: team.description,
+
+        previous_year: teams.at((i + 1) % teams.length)!.year
+      }
+    });
+  }
+}

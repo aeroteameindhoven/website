@@ -8,7 +8,7 @@ import Gallery from "../components/ImageGallery";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../components/styles/imagegallery.scss";
-import { Project } from "../hooks/useProjects";
+import { Project } from "../queries/projects";
 import { PageProps } from "gatsby";
 
 export default function Aegle2({ pageContext: project }: PageProps<object, Project>) {

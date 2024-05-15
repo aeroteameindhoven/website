@@ -1,15 +1,9 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import "./styles/projects.scss";
-import { useProjects } from "../hooks/useProjects";
+import { useProjects } from "../queries/projects";
 
 const ProjectCarousel = () => {
-  // const projects = [
-  //   { name: 'Birb', description: 'Our self-care bird.', link: '/birb'},
-  //   { name: 'Aegle', description: 'Our first iteration of the cargo drone.', link: '/aegle2'},
-  //   { name: 'Battery Swap', description: 'Our new and improved drone', link:'/batteryswap' },
-  // ];
-
   const projects = useProjects();
 
   console.log(projects);

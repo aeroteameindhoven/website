@@ -1,6 +1,6 @@
 ---
 name: Epsilon3
-logo: /epsilon-3.png
+logo: epsilon-3.png
 url: https://www.epsilon3.io/
 package: gold
 ---

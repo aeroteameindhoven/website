@@ -7,8 +7,8 @@ import classNames from "classnames";
 const FullSizeNav = () => {
   return (
     <nav className="FullSizeNav">
-      <Link to="/">
-        <Logo className="logo" />
+      <Link to="/" aria-label="Aero Team Home">
+        <Logo className="logo" aria-label="Aero Team Eindhoven Logo" />
       </Link>
       <ul className="navList">
         {navItems.map((item) => (

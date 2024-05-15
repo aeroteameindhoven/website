@@ -1,6 +1,6 @@
 ---
 name: Easy Composites
-logo: /easy-composites.svg
+logo: easy-composites.svg
 url: https://www.easycomposites.eu
 package: silver
 ---
