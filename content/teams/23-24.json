@@ -5,7 +5,7 @@
     {
       "study": "Electrical Engineering",
       "study_level": "Bachelor",
-      "photo": "ivanvincze.jpg",
+      "photo": "ivavin.jpg",
       "last_name": "Vincze",
       "subteams": [
         "Management"
@@ -18,7 +18,7 @@
     {
       "study": "Computer Science and Engineering",
       "study_level": "Bachelor",
-      "photo": "biancaeni.jpg",
+      "photo": "biaeni.jpg",
       "last_name": "Eni",
       "subteams": [
         "PR",
@@ -32,7 +32,7 @@
     {
       "study": "Electrical Engineering",
       "study_level": "Bachelor",
-      "photo": "zacharykohnen.jpg",
+      "photo": "zackho2.jpg",
       "last_name": "Kohnen",
       "subteams": [
         "Communications",
@@ -59,7 +59,7 @@
     {
       "study": "Computer Science and Engineering",
       "study_level": "Bachelor",
-      "photo": "omarraafat.jpg",
+      "photo": "omaraa.jpg",
       "last_name": "Raafat",
       "subteams": [
         "Software"
@@ -72,7 +72,7 @@
     {
       "study": "Data Science",
       "study_level": "Bachelor",
-      "photo": "harshnagouda.jpg",
+      "photo": "harnag.jpg",
       "last_name": "Nagouda",
       "subteams": [
         "Aerodynamics",
@@ -97,7 +97,20 @@
       "email": "b.eraltan@aeroteameindhoven.nl",
       "study_level": "Bachelor",
       "study": "Data Science",
-      "function": "Finance Manager"
+      "function": "Finance Manager",
+      "photo": "berera.jpg"
+    },
+    {
+      "first_name": "Deloy",
+      "last_name": "Stultiens",
+      "study": "Electrical Engineering",
+      "study_level": "Bachelor",
+      "function": "Intern",
+      "subteams": [
+        "Battery Swap"
+      ],
+      "email": "d.stultiens@aeroteameindhoven.nl",
+      "photo": "deljen.jpg"
     },
     {
       "first_name": "Robin",
@@ -107,18 +120,8 @@
       "study": "Computer Science and Engineering",
       "subteams": [
         "Software"
-      ]
-    },
-    {
-      "first_name": "Manuel",
-      "last_name": "Costa",
-      "email": "m.costa@aeroteameindhoven.nl",
-      "study_level": "Masters",
-      "study": "Artificial Intelligence & Engineering Systems",
-      "subteams": [
-        "Software"
       ],
-      "photo": "manuelcosta.jpg"
+      "photo": "robchu.jpg"
     },
     {
       "first_name": "Bernd",
@@ -129,7 +132,7 @@
       "subteams": [
         "Software"
       ],
-      "photo": "bernddekruik.jpg"
+      "photo": "berkru.jpg"
     },
     {
       "first_name": "Ana",
@@ -140,7 +143,19 @@
       "subteams": [
         "PR"
       ],
-      "photo": "anadias.jpg"
+      "photo": "anadia.jpg"
+    },
+    {
+      "first_name": "Ben",
+      "last_name": "Penningsfeld",
+      "study": "Mechanical Engineering",
+      "study_level": "Bachelor",
+      "function": "Intern",
+      "subteams": [
+        "UAS Challenge"
+      ],
+      "email": "b.penningsfeld@aeroteameindhoven.nl",
+      "photo": "benpen.jpg"
     },
     {
       "first_name": "Dogan",
@@ -151,18 +166,18 @@
         "Structural Design"
       ],
       "study": "Mechanical Engineering",
-      "photo": "dogankapucu.jpg"
+      "photo": "dogkap.jpg"
     },
     {
-      "first_name": "Seraphina",
-      "last_name": "Korompis",
-      "email": "s.korompis@aeroteameindhoven.nl",
+      "first_name": "Nam",
+      "last_name": "Nguyen",
+      "email": "n.nguyen@aeroteameindhoven.nl",
       "study_level": "Bachelor",
-      "study": "Computer Science and Engineering",
+      "study": "Mechanical Engineering",
       "subteams": [
-        "PR"
+        "Structural Design"
       ],
-      "photo": "seraphinakorompis.jpg"
+      "photo": "amngu.jpg"
     },
     {
       "first_name": "Khanh",
@@ -173,17 +188,18 @@
       "subteams": [
         "Avionics"
       ],
-      "photo": "khanhlo.jpg"
+      "photo": "khalo.jpg"
     },
     {
-      "first_name": "Nam",
-      "last_name": "Nguyen",
-      "email": "n.nguyen@aeroteameindhoven.nl",
+      "first_name": "Seraphina",
+      "last_name": "Korompis",
+      "email": "s.korompis@aeroteameindhoven.nl",
       "study_level": "Bachelor",
-      "study": "Mechanical Engineering",
+      "study": "Computer Science and Engineering",
       "subteams": [
-        "Structural Design"
-      ]
+        "PR"
+      ],
+      "photo": "serkor.jpg"
     },
     {
       "first_name": "Khoi",
@@ -193,7 +209,8 @@
       "study": "Data Science",
       "subteams": [
         "Avionics"
-      ]
+      ],
+      "photo": "khoingu.jpg"
     },
     {
       "first_name": "Egor",
@@ -206,7 +223,7 @@
         "Avionics",
         "Pilot"
       ],
-      "photo": "egorobidin.jpg"
+      "photo": "egorobi.jpg"
     },
     {
       "first_name": "Keynan",
@@ -217,21 +234,19 @@
       "subteams": [
         "Software"
       ],
-      "photo": "keynanomar.jpg"
+      "photo": "keyomar.jpg"
     },
     {
-      "first_name": "Matthieu",
-      "last_name": "Pommier",
-      "email": "m.pommier@aeroteameindhoven.nl",
+      "first_name": "Abdirahman",
+      "last_name": "Sabrie-Jamalle",
+      "study": "Mechanical Engineering",
       "study_level": "Bachelor",
-      "study": "Engineering",
+      "function": "Intern",
       "subteams": [
-        "Aerodynamics",
-        "Structural Design",
-        "Intern"
+        "UAS Challenge"
       ],
-      "function": "Engineering Intern",
-      "photo": "matthieupommier.jpg"
+      "email": "a.sabrie-jamalle@aeroteameindhoven.nl",
+      "photo": "abdirah.jpg"
     },
     {
       "first_name": "Pranav",
@@ -242,18 +257,8 @@
       "linkedin": "pranav-natesh",
       "subteams": [
         "Structural Design"
-      ]
-    },
-    {
-      "first_name": "Kourosh",
-      "last_name": "Sajjadi",
-      "email": "k.sajjadi@aeroteameindhoven.nl",
-      "study": "Computer Engineering, Data Science",
-      "study_level": "Masters",
-      "subteams": [
-        "Software"
       ],
-      "photo": "kouroshsajjadi.jpg"
+      "photo": "praram.jpg"
     },
     {
       "first_name": "David",
@@ -285,7 +290,32 @@
       "subteams": [
         "Avionics"
       ],
-      "photo": "danieltyukov.jpg"
+      "photo": "dantyu.jpg"
+    },
+    {
+      "first_name": "Grant",
+      "last_name": "van Vuuren",
+      "email": "g.vuuren@aeroteameindhoven.nl",
+      "study_level": "Bachelor",
+      "study": "Computer Science",
+      "subteams": [
+        "Structural Design"
+      ],
+      "photo": "gravuu.jpg"
+    },
+    {
+      "first_name": "Hua-Tai",
+      "last_name": "Yao",
+      "email": "h.yao@aeroteameindhoven.nl",
+      "study_level": "Bachelor",
+      "study": "Mechanical Engineering",
+      "subteams": [
+        "Aerodynamics",
+        "Structural Design",
+        "Intern"
+      ],
+      "function": "Engineering Intern",
+      "photo": "huayao.jpg"
     },
     {
       "first_name": "Tygo",
@@ -300,14 +330,40 @@
       "photo": "tygovandenhurk.jpg"
     },
     {
-      "first_name": "Grant",
-      "last_name": "van Vuuren",
-      "email": "g.vuuren@aeroteameindhoven.nl",
-      "study_level": "Bachelor",
-      "study": "Computer Science",
+      "first_name": "Kourosh",
+      "last_name": "Sajjadi",
+      "email": "k.sajjadi@aeroteameindhoven.nl",
+      "study": "Computer Engineering, Data Science",
+      "study_level": "Masters",
       "subteams": [
-        "Structural Design"
-      ]
+        "Software"
+      ],
+      "photo": "kouroshsajjadi.jpg"
+    },
+    {
+      "first_name": "Manuel",
+      "last_name": "Costa",
+      "email": "m.costa@aeroteameindhoven.nl",
+      "study_level": "Masters",
+      "study": "Artificial Intelligence & Engineering Systems",
+      "subteams": [
+        "Software"
+      ],
+      "photo": "manuelcosta.jpg"
+    },
+    {
+      "first_name": "Matthieu",
+      "last_name": "Pommier",
+      "email": "m.pommier@aeroteameindhoven.nl",
+      "study_level": "Bachelor",
+      "study": "Engineering",
+      "subteams": [
+        "Aerodynamics",
+        "Structural Design",
+        "Intern"
+      ],
+      "function": "Engineering Intern",
+      "photo": "matthieupommier.jpg"
     },
     {
       "first_name": "Gijs",
@@ -319,20 +375,6 @@
         "Software"
       ],
       "photo": "gijsvanweert.jpg"
-    },
-    {
-      "first_name": "Hua-Tai",
-      "last_name": "Yao",
-      "email": "h.yao@aeroteameindhoven.nl",
-      "study_level": "Bachelor",
-      "study": "Mechanical Engineering",
-      "subteams": [
-        "Aerodynamics",
-        "Structural Design",
-        "Intern"
-      ],
-      "function": "Engineering Intern",
-      "photo": "hua-taiyao.jpg"
     }
   ]
 }
