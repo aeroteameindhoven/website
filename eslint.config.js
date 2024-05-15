@@ -2,7 +2,7 @@ import plugin_typescript from "@typescript-eslint/eslint-plugin";
 import plugin_prettier from "eslint-config-prettier";
 import plugin_react_hooks from "eslint-plugin-react-hooks";
 import plugin_jsx_a11y from "eslint-plugin-jsx-a11y";
-import plugin_import from "eslint-plugin-import";
+import plugin_import from "eslint-plugin-import-x";
 
 import parser from "@typescript-eslint/parser";
 
@@ -26,17 +26,12 @@ export default [
         }
       }
     },
-    // env: {
-    //   browser: true,
-    //   es2021: true
-    // },
-    // extends: ["plugin:react/recommended", "prettier"],
     plugins: {
-      "@typescript-eslint": plugin_typescript,
-      prettier: plugin_prettier,
-      "react-hooks": plugin_react_hooks,
-      "jsx-a11y": plugin_jsx_a11y,
-      import: plugin_import
+      "@typescript-eslint": /** @type {import("eslint").ESLint.Plugin} */ (/** @type {unknown} */ (plugin_typescript)),
+      prettier: /** @type {import("eslint").ESLint.Plugin} */ (/** @type {unknown} */ (plugin_prettier)),
+      "react-hooks": /** @type {import("eslint").ESLint.Plugin} */ (/** @type {unknown} */ (plugin_react_hooks)),
+      "jsx-a11y": /** @type {import("eslint").ESLint.Plugin} */ (/** @type {unknown} */ (plugin_jsx_a11y)),
+      import: /** @type {import("eslint").ESLint.Plugin} */ (/** @type {unknown} */ (plugin_import))
     },
     rules: {
       semi: 2,
