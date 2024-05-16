@@ -1,0 +1,23 @@
+.gallery {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .gallery-title {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+}

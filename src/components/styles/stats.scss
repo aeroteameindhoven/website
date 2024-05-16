@@ -1,0 +1,65 @@
+.stats-section {
+  text-align: center;
+  padding: 40px;
+  // background: linear-gradient(135deg, #002878 0%, #df8c96 50%, #ff6464 80%, #002878 100%);
+  background: linear-gradient(45deg, rgba(0, 40, 127, 1) 0%, rgb(232, 60, 80) 62%, rgba(255, 100, 100, 1) 100%);
+  color: #fff;
+  height: 100vh;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.stats-section h2 {
+  font-size: 4rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.stat {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 20px 0;
+  position: relative;
+  padding: 15px 0;
+  border-bottom: 2px solid #eee;
+}
+
+.stat::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  box-shadow:
+    1px 1px 2px red,
+    0 0 1em #ff6464,
+    0 0 0.2em #ff6464;
+  transition: all 0.3s ease;
+}
+
+.stat:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.stat:hover {
+  text-shadow:
+    1px 1px 2px red,
+    0 0 1em #ff6464,
+    0 0 0.2em #ff6464;
+}
+
+@media (max-width: 768px) {
+  .stats-section h2 {
+    font-size: 3rem;
+  }
+
+  .stat {
+    font-size: 1.5rem;
+  }
+}
