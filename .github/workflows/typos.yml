@@ -12,6 +12,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check spelling of file.txt
-        uses: crate-ci/typos@v1.22.7
+        uses: crate-ci/typos@v1.22.9
         with:
           config: .github/typos.toml
