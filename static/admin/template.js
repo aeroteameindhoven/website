@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: remove?
+
 // CMS.registerPreviewStyle("preview.css");
 
 CMS.registerPreviewTemplate("teams", ({ widgetFor, widgetsFor, getAsset }) => {

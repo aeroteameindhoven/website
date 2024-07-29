@@ -4,7 +4,7 @@ import HomePageSideSection from "../components/HomePageSideSection";
 import Layout from "../components/Layout";
 import "../components/styles/index.scss";
 // import GlobeIllustration from "../images/globe.svg";
-import TUELogo from "/content/images/sponsors/tue.svg";
+import TUELogo from "/content/sponsors/images/tue.svg";
 import { HeadContent } from "../components/HeadContent";
 import { StaticImage } from "gatsby-plugin-image";
 import Video from "../components/Video";

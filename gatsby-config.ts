@@ -103,21 +103,21 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "team-photos",
-        path: `${__dirname}/content/images/teams`
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: "teams",
-        path: `${__dirname}/content/teams`
+        path: `${__dirname}/content/teams/json`
       }
     },
     {
       resolve: "gatsby-transformer-json",
       options: {
         typeName: "json"
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "team-photos",
+        path: `${__dirname}/content/teams/images`
       }
     },
     // END team list
@@ -127,7 +127,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sponsors`,
-        path: `${__dirname}/content/sponsors`
+        path: `${__dirname}/content/sponsors/markdown`
       }
     },
     `gatsby-transformer-remark`,
@@ -135,7 +135,32 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sponsors-images`,
-        path: `${__dirname}/content/images/sponsors`
+        path: `${__dirname}/content/sponsors/images`
+      }
+    },
+    // END sponsor list
+
+    // BEGIN sponsor list
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/content/projects/markdown`
+      }
+    },
+    // `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `project-images`,
+        path: `${__dirname}/content/projects/images`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `project-models`,
+        path: `${__dirname}/content/projects/models`
       }
     },
     // END sponsor list

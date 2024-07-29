@@ -37,8 +37,9 @@ export const navItems: NavItem[] = [
     link: "/team"
   },
   {
-    label: "Project",
-    link: "/project"
+    label: "Projects",
+    link: "/projects",
+    disabled: true
   },
   // {
   //   label: "Our Journey",
