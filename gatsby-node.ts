@@ -76,6 +76,8 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
 
   // console.info("creating project pages");
   // create_project_pages(projects, actions);
+  void projects; // Make ESLint Happy
+  void create_project_pages; // Make ESLint Happy
 };
 
 function create_project_pages({ projects, images, models }: Queries.NodeProjectsQuery, actions: Actions) {

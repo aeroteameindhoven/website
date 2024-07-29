@@ -53,7 +53,7 @@ export const navItems: NavItem[] = [
   {
     label: "Join",
     link: "/join"
-  },
+  }
   // {
   //   label: "Internships",
   //   link: "/internships",
