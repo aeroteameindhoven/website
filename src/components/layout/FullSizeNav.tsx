@@ -38,7 +38,8 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Projects",
-    link: "/projects"
+    link: "/projects",
+    disabled: true
   },
   // {
   //   label: "Our Journey",
@@ -52,7 +53,7 @@ export const navItems: NavItem[] = [
   {
     label: "Join",
     link: "/join"
-  }
+  },
   // {
   //   label: "Internships",
   //   link: "/internships",

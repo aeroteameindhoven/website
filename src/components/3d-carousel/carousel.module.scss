@@ -63,13 +63,13 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
   &[data-position="focus"] {
     position: relative;
 
-    .slider-arrow {
-      display: block;
-    }
-
     z-index: 2;
     opacity: 1;
     transform: translateX(0%) scale(1);
+
+    .slider-arrow {
+      display: block;
+    }
   }
 
   img {

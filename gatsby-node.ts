@@ -69,12 +69,13 @@ export const createPages = async function ({ actions, graphql }: CreatePagesArgs
   console.info("creating team pages");
   create_team_pages(teams, actions);
 
-  if (projects === undefined) {
-    throw new TypeError("projects query empty");
-  }
+  // TODO: FIXME: Projects pages hidden for now
+  // if (projects === undefined) {
+  //   throw new TypeError("projects query empty");
+  // }
 
-  console.info("creating project pages");
-  create_project_pages(projects, actions);
+  // console.info("creating project pages");
+  // create_project_pages(projects, actions);
 };
 
 function create_project_pages({ projects, images, models }: Queries.NodeProjectsQuery, actions: Actions) {
