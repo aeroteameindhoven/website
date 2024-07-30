@@ -3,19 +3,19 @@ media_folder: "/content/images"
 site_url: https://aeroteameindhoven.nl/
 logo_url: https://aeroteameindhoven.nl/icons/icon-512x512.png
 
-# Development (https://decapcms.org/docs/working-with-a-local-git-repository/)
-local_backend: true
-backend:
-  name: git-gateway
-
-# # Production
+# # Development (https://decapcms.org/docs/working-with-a-local-git-repository/)
+# local_backend: true
 # backend:
-#   name: github
-#   repo: aeroteameindhoven/website
-#   branch: main
-#   use_graphql: true
-#   squash_merges: true
-#   base_url: https://actively-working-fawn.edgecompute.app/
+#   name: git-gateway
+
+# Production
+backend:
+  name: github
+  repo: aeroteameindhoven/website
+  branch: main
+  use_graphql: true
+  squash_merges: true
+  base_url: https://actively-working-fawn.edgecompute.app/
 
 collections:
   - name: "sponsors"
