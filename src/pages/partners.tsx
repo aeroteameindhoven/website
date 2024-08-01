@@ -8,7 +8,9 @@ import {
   partnerPage,
   partnerHeader,
   buttonWrapper,
-  contactButton
+  contactButton,
+  partnerGroup,
+  details
 } from "./partners.module.scss"; // TODO: https://www.npmjs.com/package/typed-scss-modules
 import { PartnersEmail } from "../components/Email";
 import { HeadContent } from "../components/HeadContent";
@@ -36,14 +38,19 @@ function PostHeader() {
           return (
             <>
               <h1>{package_name.toLocaleUpperCase()}</h1>
-              {partners.get(package_name)?.map((v) => (
-                <div key={v.name} className={partnerInfo}>
-                  <a href={v.url} className={partnerLogo} target="_blank" rel="noreferrer">
-                    <img src={v.logo} />
-                  </a>
-                  <div className={text} dangerouslySetInnerHTML={{ __html: v.html }} />
-                </div>
-              ))}
+              <div className={partnerGroup}>
+                {partners.get(package_name)?.map((v) => (
+                  <div key={v.name} className={partnerInfo}>
+                    <a href={v.url} className={partnerLogo} target="_blank" rel="noreferrer">
+                      <img src={v.logo} />
+                    </a>
+                    <details className={details}>
+                      <summary>Learn More...</summary>
+                      <div className={text} dangerouslySetInnerHTML={{ __html: v.html }} />
+                    </details>
+                  </div>
+                ))}
+              </div>
             </>
           );
         })}
